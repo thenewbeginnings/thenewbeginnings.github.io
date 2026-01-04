@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About | The New Beginning</title>
+
+  <!-- Mobile responsiveness -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+  <h1>The New Beginning</h1>
+
+  <button class="menu-toggle" aria-label="Open menu">
+    ☰
+  </button>
+
+  <nav class="site-nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="projects.html">Projects</a>
+    <a href="impact.html">Impact</a>
+    <a href="trust.html">Trust</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="donate.html">Donate</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<div class="slogan-bar">
+  <div class="slogan-text">
+    Empowering Rural Communities Through Education, Bitcoin, and Digital Access
+  </div>
+</div>
+
+<main class="content">
+  <section class="reveal">
+
+    <h2>About The New Beginning</h2>
+
+    <p>
+      The New Beginning is a community-driven initiative dedicated to empowering
+      rural communities through education, digital access, and innovative financial
+      tools. We work with underserved rural populations to expand opportunity,
+      strengthen local capacity, and support sustainable community development.
+    </p>
+
+    <p>
+      We believe that education and access to technology are essential for improving
+      livelihoods and building resilient communities. By combining learning,
+      digital inclusion, and responsible use of Bitcoin, we help rural communities
+      connect to knowledge, opportunity, and the wider digital economy.
+    </p>
+
+    <p>
+      Our work is grounded in local realities. We collaborate closely with community
+      members, educators, youth, and leaders to design practical initiatives that
+      respond to real needs while introducing tools that support long-term growth.
+    </p>
+
+    <h3>Our Approach</h3>
+
+    <h4>Community-Centered Development</h4>
+    <p>
+      We place rural communities at the center of our work, ensuring that programs
+      are locally informed, culturally relevant, and driven by community priorities.
+    </p>
+
+    <h4>Education as a Foundation</h4>
+    <p>
+      Education is the foundation of development. We focus on learning support,
+      digital literacy, and skills-building that enable individuals and communities
+      to improve outcomes in education and daily life.
+    </p>
+
+    <h4>Digital Access & Innovation</h4>
+    <p>
+      We promote digital access and responsible technology use to reduce isolation,
+      improve communication, and expand access to information and learning resources
+      in rural areas.
+    </p>
+
+    <h4>Bitcoin for Inclusion</h4>
+    <p>
+      We introduce Bitcoin as a tool for financial inclusion, transparency, and
+      economic participation—particularly where traditional financial systems
+      are limited or inaccessible.
+    </p>
+
+    <h3>Our Values</h3>
+
+    <ul>
+      <li>Community participation and local ownership</li>
+      <li>Access to education and knowledge</li>
+      <li>Inclusion and opportunity for rural populations</li>
+      <li>Transparency and responsible innovation</li>
+      <li>Sustainable, people-centered development</li>
+    </ul>
+
+    <h3>Our Vision</h3>
+
+    <p>
+      We envision rural communities that are educated, digitally connected, and
+      economically empowered—able to access learning, adopt innovation, and shape
+      their own development with confidence and dignity.
+    </p>
+
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© 2025 The New Beginning. All rights reserved.</p>
+</footer>
+
+<!-- WhatsApp Floating Button -->
+<a
+  href="https://wa.me/237677441880?text=Hello%20I%20would%20like%20to%20learn%20more%20about%20The%20New%20Beginning"
+  class="whatsapp-float"
+  target="_blank"
+  aria-label="Chat with us on WhatsApp"
+>
+  💬
+</a>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const links = document.querySelectorAll("a");
+
+    links.forEach(link => {
+      const href = link.getAttribute("href");
+      if (href && !href.startsWith("http") && !href.startsWith("#")) {
+        link.addEventListener("click", function (e) {
+          e.preventDefault();
+          document.body.classList.add("fade-out");
+          setTimeout(() => {
+            window.location.href = href;
+          }, 400);
+        });
+      }
+    });
+  });
+</script>
+
+<script>
+  const reveals = document.querySelectorAll(".reveal");
+
+  function revealOnScroll() {
+    const windowHeight = window.innerHeight;
+    const revealPoint = 100;
+
+    reveals.forEach(el => {
+      const elementTop = el.getBoundingClientRect().top;
+      if (elementTop < windowHeight - revealPoint) {
+        el.classList.add("active");
+      }
+    });
+  }
+
+  window.addEventListener("scroll", revealOnScroll);
+  revealOnScroll();
+</script>
+
+<script>
+  const menuToggle = document.querySelector(".menu-toggle");
+  const nav = document.querySelector(".site-nav");
+
+  menuToggle.addEventListener("click", () => {
+    nav.classList.toggle("active");
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Donate | The New Beginning</title>
+
+  <!-- Mobile responsiveness -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+  <h1>The New Beginning</h1>
+
+  <button class="menu-toggle" aria-label="Open menu">
+    ☰
+  </button>
+
+  <nav class="site-nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="projects.html">Projects</a>
+    <a href="impact.html">Impact</a>
+    <a href="trust.html">Trust</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="donate.html">Donate</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<div class="slogan-bar">
+  <div class="slogan-text">
+    Empowering Rural Communities Through Education, Bitcoin, and Digital Access
+  </div>
+</div>
+
+<main class="content">
+  <section class="reveal">
+
+    <h2>Support Rural Community Development</h2>
+
+    <p>
+      Your support helps <strong>The New Beginning</strong> strengthen rural education,
+      expand digital access, and empower communities through transparent and inclusive
+      tools. Every contribution supports practical, community-driven development.
+    </p>
+
+    <h3>Why Your Support Matters</h3>
+
+    <p>
+      Many rural communities face challenges accessing quality education, digital
+      tools, and economic opportunities. Limited connectivity and financial exclusion
+      restrict learning, innovation, and growth.
+    </p>
+
+    <p>
+      Your contribution helps us:
+    </p>
+
+    <ul>
+      <li>Support education and digital learning in rural communities</li>
+      <li>Improve access to information and digital tools</li>
+      <li>Promote responsible Bitcoin education and financial inclusion</li>
+      <li>Strengthen community-led development initiatives</li>
+    </ul>
+
+    <h3>Why We Use Bitcoin</h3>
+
+    <p>
+      Bitcoin enables direct, transparent, and borderless support for our work. It
+      allows us to receive contributions efficiently while promoting digital
+      financial literacy and independence in communities we serve.
+    </p>
+
+    <ul>
+      <li>Direct and transparent support</li>
+      <li>Reduced dependence on restrictive financial systems</li>
+      <li>Global solidarity with rural communities</li>
+      <li>Learning opportunities around digital finance</li>
+    </ul>
+
+    <h3>How Your Contribution Is Used</h3>
+
+    <ul>
+      <li>Educational materials and learning support</li>
+      <li>Digital tools, connectivity, and access resources</li>
+      <li>Community workshops and outreach programs</li>
+      <li>Local capacity building and sustainability efforts</li>
+    </ul>
+
+    <h3>Donate with Bitcoin</h3>
+
+    <p>
+      You can support our work by sending Bitcoin directly to the wallet address
+      below. Every contribution—large or small—helps expand opportunity and
+      strengthen rural communities.
+    </p>
+
+    <!-- BITCOIN ADDRESS BOX -->
+    <div style="background:#f9f9f9; padding:15px; border-radius:10px; word-break:break-all;">
+      <strong>Bitcoin Wallet Address:</strong><br>
+      <code>
+        bc1qmxkpr5k2yvvlsnmtyrg6gkqten5wz5pusr28aqe6lgt49r003qxs209qrn
+      </code>
+    </div>
+
+    <p style="margin-top:15px;">
+      You may copy the address above or scan the QR code below.
+    </p>
+
+    <img
+      src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=bc1qmxkpr5k2yvvlsnmtyrg6gkqten5wz5pusr28aqe6lgt49r003qxs209qrn"
+      alt="Bitcoin donation QR code"
+      style="margin-top:20px; border-radius:10px;"
+    >
+
+    <p style="margin-top:20px; font-size:14px; color:#555;">
+      ⚠️ Please send only Bitcoin (BTC) to this address.
+      Sending other cryptocurrencies may result in loss of funds.
+    </p>
+
+    <h3>Transparency & Accountability</h3>
+
+    <p>
+      We are committed to responsible and transparent use of all contributions.
+      Funds are used solely to support education, digital access, and rural
+      community development. Updates and reports will be shared as our work
+      progresses.
+    </p>
+
+    <h3>Thank You</h3>
+
+    <p>
+      By supporting <strong>The New Beginning</strong>, you are investing in rural
+      education, digital inclusion, and long-term community resilience.
+    </p>
+
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© 2025 The New Beginning. All rights reserved.</p>
+</footer>
+
+<!-- WhatsApp Floating Button -->
+<a
+  href="https://wa.me/237677441880?text=Hello%20I%20would%20like%20to%20learn%20more%20about%20The%20New%20Beginning"
+  class="whatsapp-float"
+  target="_blank"
+  aria-label="Chat with us on WhatsApp"
+>
+  💬
+</a>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const links = document.querySelectorAll("a");
+
+    links.forEach(link => {
+      const href = link.getAttribute("href");
+      if (href && !href.startsWith("http") && !href.startsWith("#")) {
+        link.addEventListener("click", function (e) {
+          e.preventDefault();
+          document.body.classList.add("fade-out");
+          setTimeout(() => {
+            window.location.href = href;
+          }, 400);
+        });
+      }
+    });
+  });
+</script>
+
+<script>
+  const reveals = document.querySelectorAll(".reveal");
+
+  function revealOnScroll() {
+    const windowHeight = window.innerHeight;
+    const revealPoint = 100;
+
+    reveals.forEach(el => {
+      const elementTop = el.getBoundingClientRect().top;
+      if (elementTop < windowHeight - revealPoint) {
+        el.classList.add("active");
+      }
+    });
+  }
+
+  window.addEventListener("scroll", revealOnScroll);
+  revealOnScroll();
+</script>
+
+<script>
+  const menuToggle = document.querySelector(".menu-toggle");
+  const nav = document.querySelector(".site-nav");
+
+  menuToggle.addEventListener("click", () => {
+    nav.classList.toggle("active");
+  });
+</script>
+
+</body>
+</html>

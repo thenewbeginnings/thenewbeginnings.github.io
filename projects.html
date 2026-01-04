@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Projects | The New Beginning</title>
+
+  <!-- Mobile responsiveness -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+  <h1>The New Beginning</h1>
+
+  <button class="menu-toggle" aria-label="Open menu">
+    ☰
+  </button>
+
+  <nav class="site-nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="projects.html">Projects</a>
+    <a href="impact.html">Impact</a>
+    <a href="trust.html">Trust</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="donate.html">Donate</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<div class="slogan-bar">
+  <div class="slogan-text">
+    Empowering Rural Communities Through Education, Bitcoin, and Digital Access
+  </div>
+</div>
+
+<main class="content">
+  <section class="reveal">
+
+    <h2>Our Projects</h2>
+
+    <p>
+      Our projects focus on strengthening rural education, expanding digital access,
+      and empowering communities to use technology and Bitcoin to support learning,
+      economic participation, and sustainable local development.
+    </p>
+
+    <h3>1. Rural Education & Learning Support</h3>
+
+    <p>
+      We support education in rural communities by working with teachers, learners,
+      and community leaders to improve access to learning resources and opportunities.
+    </p>
+
+    <ul>
+      <li>Support for digital and blended learning initiatives</li>
+      <li>Teacher and youth capacity building</li>
+      <li>Access to educational content and learning tools</li>
+    </ul>
+
+    <p>
+      These activities are designed to strengthen learning outcomes and reduce
+      educational gaps in underserved rural areas.
+    </p>
+
+    <h3>2. Digital Access & Literacy</h3>
+
+    <p>
+      Limited digital access continues to exclude many rural communities from
+      opportunity. Our digital access initiatives focus on:
+    </p>
+
+    <ul>
+      <li>Improving access to information and communication tools</li>
+      <li>Building basic digital skills and online safety awareness</li>
+      <li>Supporting the use of technology for education and community collaboration</li>
+    </ul>
+
+    <h3>3. Bitcoin & Financial Inclusion</h3>
+
+    <p>
+      We introduce Bitcoin as a tool for financial inclusion and learning, particularly
+      in contexts where traditional banking services are limited or inaccessible.
+    </p>
+
+    <ul>
+      <li>Introduction to digital finance and Bitcoin basics</li>
+      <li>Responsible and secure use of financial technology</li>
+      <li>Exploring transparent support for community initiatives</li>
+    </ul>
+
+    <p>
+      Our approach emphasizes responsibility, security, and community benefit rather
+      than speculation.
+    </p>
+
+    <h3>4. Community Development & Outreach</h3>
+
+    <p>
+      Through outreach activities, workshops, and partnerships, we work with rural
+      communities to support locally driven development efforts.
+    </p>
+
+    <ul>
+      <li>Community engagement and dialogue</li>
+      <li>Youth and local leadership development</li>
+      <li>Collaboration around education, technology, and innovation</li>
+    </ul>
+
+    <h3>Our Impact Focus</h3>
+
+    <p>
+      All our projects are designed to:
+    </p>
+
+    <ul>
+      <li>Strengthen rural community resilience</li>
+      <li>Expand access to education and digital resources</li>
+      <li>Promote inclusive and sustainable development</li>
+      <li>Build local capacity and long-term ownership</li>
+    </ul>
+
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© 2025 The New Beginning. All rights reserved.</p>
+</footer>
+
+<!-- WhatsApp Floating Button -->
+<a
+  href="https://wa.me/237677441880?text=Hello%20I%20would%20like%20to%20learn%20more%20about%20The%20New%20Beginning"
+  class="whatsapp-float"
+  target="_blank"
+  aria-label="Chat with us on WhatsApp"
+>
+  💬
+</a>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const links = document.querySelectorAll("a");
+
+    links.forEach(link => {
+      const href = link.getAttribute("href");
+      if (href && !href.startsWith("http") && !href.startsWith("#")) {
+        link.addEventListener("click", function (e) {
+          e.preventDefault();
+          document.body.classList.add("fade-out");
+          setTimeout(() => {
+            window.location.href = href;
+          }, 400);
+        });
+      }
+    });
+  });
+</script>
+
+<script>
+  const reveals = document.querySelectorAll(".reveal");
+
+  function revealOnScroll() {
+    const windowHeight = window.innerHeight;
+    const revealPoint = 100;
+
+    reveals.forEach(el => {
+      const elementTop = el.getBoundingClientRect().top;
+      if (elementTop < windowHeight - revealPoint) {
+        el.classList.add("active");
+      }
+    });
+  }
+
+  window.addEventListener("scroll", revealOnScroll);
+  revealOnScroll();
+</script>
+
+<script>
+  const menuToggle = document.querySelector(".menu-toggle");
+  const nav = document.querySelector(".site-nav");
+
+  menuToggle.addEventListener("click", () => {
+    nav.classList.toggle("active");
+  });
+</script>
+
+</body>
+</html>
