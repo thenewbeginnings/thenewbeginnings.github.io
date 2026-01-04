@@ -1,4 +1,7 @@
-/* ===== GLOBAL RESET ===== */
+/* SAFETY FIX: never allow invisible page */
+body {
+  opacity: 1 !important;
+}/* ===== GLOBAL RESET ===== */
 * {
   box-sizing: border-box;
   margin: 0;
