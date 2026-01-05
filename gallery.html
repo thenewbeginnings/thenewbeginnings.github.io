@@ -7,8 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- SEO -->
-  <meta name="description"
-    content="Gallery showcasing The New Beginnings' work in rural education, digital access, and community engagement.">
+  <meta name="description" content="Gallery showcasing The New Beginnings' work in rural education, digital access, and community engagement.">
 
   <!-- Main stylesheet -->
   <link rel="stylesheet" href="css/style.css">
@@ -19,7 +18,7 @@
 <header class="site-header">
   <h1>The New Beginnings</h1>
 
-  <!-- HAMBURGER -->
+  <!-- Hamburger -->
   <button class="menu-toggle" aria-label="Toggle menu">
     <span></span>
     <span></span>
@@ -86,27 +85,26 @@
 </a>
 
 <script>
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function () {
 
-  /* PAGE ENTER ANIMATION */
+  /* Page enter animation */
   document.body.classList.add("page-enter");
 
-  /* MOBILE MENU */
+  /* Mobile menu */
   const menuToggle = document.querySelector(".menu-toggle");
   const nav = document.querySelector(".site-nav");
 
-  menuToggle.addEventListener("click", (e) => {
-    e.stopPropagation();
+  menuToggle.addEventListener("click", function () {
     menuToggle.classList.toggle("active");
     nav.classList.toggle("active");
   });
 
-  /* PAGE TRANSITIONS */
+  /* Page transitions */
   document.querySelectorAll("a:not(.no-transition)").forEach(link => {
     const href = link.getAttribute("href");
     if (!href || href.startsWith("http") || href.startsWith("#")) return;
 
-    link.addEventListener("click", e => {
+    link.addEventListener("click", function (e) {
       e.preventDefault();
       document.body.classList.add("fade-out");
       setTimeout(() => {
