@@ -108,69 +108,44 @@
   <p>© 2025 The New Beginnings. All rights reserved.</p>
 </footer>
 
-<!-- ✅ SINGLE CLEAN SCRIPT (FINAL & FIXED) -->
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
 
-    /* Remove loader */
-    const loader = document.getElementById("page-loader");
-    if (loader) loader.style.display = "none";
+  // Remove loader
+  const loader = document.getElementById("page-loader");
+  if (loader) loader.remove();
 
-    /* Page enter animation */
-    document.body.classList.add("page-enter");
+  // Page enter animation
+  document.body.classList.add("page-enter");
 
-    /* Page transitions */
-    const links = document.querySelectorAll("a:not(.no-transition)");
+  // ONE click handler for all links
+  document.body.addEventListener("click", (e) => {
+    const link = e.target.closest("a");
 
-    links.forEach(link => {
-      const href = link.getAttribute("href");
+    if (!link) return;
+    if (link.classList.contains("no-transition")) return;
 
-      if (
-        href &&
-        !href.startsWith("http") &&
-        !href.startsWith("https://") &&
-        !href.startsWith("#")
-      ) {
-        link.addEventListener("click", function (e) {
-          e.preventDefault();
-          document.body.classList.add("fade-out");
+    const href = link.getAttribute("href");
+    if (!href || href.startsWith("http") || href.startsWith("#")) return;
 
-          setTimeout(() => {
-            window.location.href = href;
-          }, 350);
-        });
-      }
-    });
+    e.preventDefault();
+    document.body.classList.add("fade-out");
 
-    /* Reveal on scroll */
-    const reveals = document.querySelectorAll(".reveal");
-
-    function revealOnScroll() {
-      const windowHeight = window.innerHeight;
-      const revealPoint = 100;
-
-      reveals.forEach(el => {
-        const elementTop = el.getBoundingClientRect().top;
-        if (elementTop < windowHeight - revealPoint) {
-          el.classList.add("active");
-        }
-      });
-    }
-
-    window.addEventListener("scroll", revealOnScroll);
-    revealOnScroll();
-
-    /* MOBILE MENU + HAMBURGER + WHATSAPP CONTROL */
-    const menuToggle = document.querySelector(".menu-toggle");
-    const nav = document.querySelector(".site-nav");
-
-    menuToggle.addEventListener("click", () => {
-      menuToggle.classList.toggle("active");
-      nav.classList.toggle("active");
-      document.body.classList.toggle("menu-open");
-    });
-
+    setTimeout(() => {
+      window.location.href = href;
+    }, 300);
   });
+
+  // Mobile menu
+  const menuToggle = document.querySelector(".menu-toggle");
+  const nav = document.querySelector(".site-nav");
+
+  menuToggle.addEventListener("click", () => {
+    menuToggle.classList.toggle("active");
+    nav.classList.toggle("active");
+    document.body.classList.toggle("menu-open");
+  });
+});
 </script>
 
 <!-- WHATSAPP FLOATING BUTTON -->
