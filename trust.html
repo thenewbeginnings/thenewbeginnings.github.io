@@ -108,16 +108,23 @@
   💬
 </a>
 
-<!-- ✅ TRANSITION + MENU SCRIPT -->
 <script>
 document.addEventListener("DOMContentLoaded", () => {
 
-  // Page enter animation
-  document.body.classList.add("page-enter");
+  const menuToggle = document.querySelector(".menu-toggle");
+  const nav = document.querySelector(".site-nav");
 
-  // ONE click handler for page transitions
+  /* ========== MOBILE MENU TOGGLE ========== */
+  menuToggle.addEventListener("click", () => {
+    menuToggle.classList.toggle("active");
+    nav.classList.toggle("active");
+    document.body.classList.toggle("menu-open");
+  });
+
+  /* ========== PAGE TRANSITIONS (SAFE) ========== */
   document.body.addEventListener("click", (e) => {
     const link = e.target.closest("a");
+
     if (!link) return;
     if (link.classList.contains("no-transition")) return;
 
@@ -125,21 +132,18 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!href || href.startsWith("http") || href.startsWith("#")) return;
 
     e.preventDefault();
+
+    /* 🔴 FORCE CLOSE MENU BEFORE NAVIGATION */
+    menuToggle.classList.remove("active");
+    nav.classList.remove("active");
+    document.body.classList.remove("menu-open");
+
+    /* Page exit animation */
     document.body.classList.add("fade-out");
 
     setTimeout(() => {
       window.location.href = href;
     }, 300);
-  });
-
-  // Mobile menu
-  const menuToggle = document.querySelector(".menu-toggle");
-  const nav = document.querySelector(".site-nav");
-
-  menuToggle.addEventListener("click", () => {
-    menuToggle.classList.toggle("active");
-    nav.classList.toggle("active");
-    document.body.classList.toggle("menu-open");
   });
 
 });
