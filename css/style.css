@@ -190,38 +190,19 @@ section {
 /* ===== MOBILE NAV OVERLAY (FINAL, CORRECT) ===== */
 @media (max-width: 768px) {
 
-  .menu-toggle {
-    display: block;
-  }
-
-  .site-logo {
-    max-width: 150px;
-  }
-
   .site-nav {
-    position: fixed;
-    inset: 0;
-    background: #0b5ed7;
-
-    display: flex;
+    display: none;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 22px;
-
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.35s ease;
-
-    z-index: 9998;
+    background: #0b5ed7;
+    padding: 20px 0;
+    gap: 16px;
   }
 
   .site-nav.active {
-    opacity: 1;
-    pointer-events: auto;
+    display: flex;
   }
 
   .site-nav a {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
