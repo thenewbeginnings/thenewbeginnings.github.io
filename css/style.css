@@ -163,23 +163,26 @@ body {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background: #25D366;
-  color: white;
   width: 56px;
   height: 56px;
+  background: #25D366;
+  color: #ffffff;
   border-radius: 50%;
   text-align: center;
   font-size: 26px;
   line-height: 56px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  z-index: 9999;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+  z-index: 10000; /* VERY IMPORTANT */
   text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+/* Hover effect */
 .whatsapp-float:hover {
   background: #1ebe5d;
 }
-
 /* ===== PAGE TRANSITION ===== */
 body.fade-out {
   opacity: 0;
