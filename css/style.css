@@ -28,6 +28,14 @@ body.fade-out {
   text-align: center;
   padding: 40px 20px;
 }
+/* === Fix header width issue === */
+.site-header {
+  width: 100vw !important;  /* ensures full width of the viewport */
+  margin: 0 auto !important;
+  position: relative;
+  left: 0;
+  right: 0;
+}
 
 /* ===== LOGO ===== */
 .site-logo {
