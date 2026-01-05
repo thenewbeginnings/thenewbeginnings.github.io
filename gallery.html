@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", () => {
   /* PAGE ENTER ANIMATION */
   document.body.classList.add("page-enter");
 
-  /* MOBILE MENU (SINGLE, SAFE HANDLER) */
+  /* MOBILE MENU */
   const menuToggle = document.querySelector(".menu-toggle");
   const nav = document.querySelector(".site-nav");
 
@@ -101,17 +101,13 @@ document.addEventListener("DOMContentLoaded", () => {
     nav.classList.toggle("active");
   });
 
-  /* PAGE TRANSITIONS (SAFE – NO BODY HIJACK) */
+  /* PAGE TRANSITIONS */
   document.querySelectorAll("a:not(.no-transition)").forEach(link => {
     const href = link.getAttribute("href");
     if (!href || href.startsWith("http") || href.startsWith("#")) return;
 
     link.addEventListener("click", e => {
       e.preventDefault();
-
-      menuToggle.classList.remove("active");
-      nav.classList.remove("active");
-
       document.body.classList.add("fade-out");
       setTimeout(() => {
         window.location.href = href;
