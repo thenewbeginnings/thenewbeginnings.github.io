@@ -243,3 +243,86 @@ body.fade-out {
     transform: rotate(360deg);
   }
 }
+/* ===== PAGE ENTER BASE ===== */
+.page-enter {
+  animation-duration: 0.6s;
+  animation-fill-mode: both;
+}
+
+/* ===== HOME PAGE: FADE + SLIDE UP ===== */
+.page-home.page-enter {
+  animation-name: homeEnter;
+}
+
+@keyframes homeEnter {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== ABOUT PAGE: SLIDE FROM LEFT ===== */
+.page-about.page-enter {
+  animation-name: aboutEnter;
+}
+
+@keyframes aboutEnter {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ===== PROJECTS PAGE: ZOOM IN ===== */
+.page-projects.page-enter {
+  animation-name: projectsEnter;
+}
+
+@keyframes projectsEnter {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ===== GALLERY PAGE: SLIDE FROM RIGHT ===== */
+.page-gallery.page-enter {
+  animation-name: galleryEnter;
+}
+
+@keyframes galleryEnter {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ===== CONTACT PAGE: FADE ONLY ===== */
+.page-contact.page-enter {
+  animation-name: contactEnter;
+}
+
+@keyframes contactEnter {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
