@@ -27,14 +27,7 @@ body.fade-out {
   color: #fff;
   text-align: center;
   padding: 40px 20px;
-}
-/* === Fix header width issue === */
-.site-header {
-  width: 100vw !important;  /* ensures full width of the viewport */
-  margin: 0 auto !important;
   position: relative;
-  left: 0;
-  right: 0;
 }
 
 /* ===== LOGO ===== */
@@ -50,7 +43,7 @@ body.fade-out {
   margin-bottom: 10px;
 }
 
-/* ===== NAV ===== */
+/* ===== NAV (DESKTOP) ===== */
 .site-nav {
   display: flex;
   justify-content: center;
@@ -67,7 +60,7 @@ body.fade-out {
 }
 
 .site-nav a:hover {
-  background: rgba(255,255,255,0.2);
+  background: rgba(255, 255, 255, 0.2);
 }
 
 /* ===== HAMBURGER BUTTON ===== */
@@ -79,7 +72,7 @@ body.fade-out {
   background: none;
   cursor: pointer;
   display: none;
-  margin-top: 15px;
+  margin: 15px auto 0;
 }
 
 .menu-toggle span {
@@ -139,7 +132,7 @@ body.fade-out {
   margin: 30px auto;
   padding: 30px;
   border-radius: 16px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .content h2 {
@@ -176,7 +169,7 @@ body.fade-out {
   text-decoration: none;
 }
 
-/* ===== CORRECT FIX: HIDE WHATSAPP WHEN MENU OPENS ===== */
+/* Hide WhatsApp when menu open */
 body.menu-open .whatsapp-float {
   display: none !important;
 }
@@ -188,16 +181,20 @@ section {
   transform: none !important;
 }
 
-/* ===== MOBILE NAV OVERLAY (CRITICAL FIX) ===== */
+/* ===== MOBILE NAV OVERLAY (FINAL, CORRECT) ===== */
 @media (max-width: 768px) {
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .site-logo {
+    max-width: 150px;
+  }
 
   .site-nav {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-
+    inset: 0;
     background: #0b5ed7;
 
     display: flex;
@@ -220,9 +217,5 @@ section {
 
   .site-nav a {
     font-size: 20px;
-  }
-}
-  .site-logo {
-    max-width: 150px;
   }
 }
