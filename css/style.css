@@ -161,7 +161,7 @@ body {
 /* ===== WHATSAPP FLOATING BUTTON ===== */
 .whatsapp-float {
   position: fixed;
-  bottom: 20px;
+  bottom: 90px;
   right: 20px;
   width: 56px;
   height: 56px;
