@@ -206,13 +206,44 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
 
 <script>
+document.addEventListener("DOMContentLoaded", () => {
+
   const menuToggle = document.querySelector(".menu-toggle");
   const nav = document.querySelector(".site-nav");
 
+  /* ========== MOBILE MENU TOGGLE ========== */
   menuToggle.addEventListener("click", () => {
     menuToggle.classList.toggle("active");
     nav.classList.toggle("active");
+    document.body.classList.toggle("menu-open");
   });
+
+  /* ========== PAGE TRANSITIONS (SAFE) ========== */
+  document.body.addEventListener("click", (e) => {
+    const link = e.target.closest("a");
+
+    if (!link) return;
+    if (link.classList.contains("no-transition")) return;
+
+    const href = link.getAttribute("href");
+    if (!href || href.startsWith("http") || href.startsWith("#")) return;
+
+    e.preventDefault();
+
+    /* 🔴 FORCE CLOSE MENU BEFORE NAVIGATION */
+    menuToggle.classList.remove("active");
+    nav.classList.remove("active");
+    document.body.classList.remove("menu-open");
+
+    /* Page exit animation */
+    document.body.classList.add("fade-out");
+
+    setTimeout(() => {
+      window.location.href = href;
+    }, 300);
+  });
+
+});
 </script>
 
 </body>
