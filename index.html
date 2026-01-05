@@ -44,11 +44,12 @@
 
   <h1 class="fade-in">The New Beginnings</h1>
 
+  <!-- HAMBURGER -->
   <button class="menu-toggle" aria-label="Toggle menu">
-  <span></span>
-  <span></span>
-  <span></span>
-</button>
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
 
   <nav class="site-nav">
     <a href="index.html">Home</a>
@@ -107,7 +108,7 @@
   <p>© 2025 The New Beginnings. All rights reserved.</p>
 </footer>
 
-<!-- ✅ SINGLE CLEAN SCRIPT (REPLACES ALL OTHERS) -->
+<!-- ✅ SINGLE CLEAN SCRIPT (FINAL & FIXED) -->
 <script>
   document.addEventListener("DOMContentLoaded", function () {
 
@@ -159,24 +160,28 @@
     window.addEventListener("scroll", revealOnScroll);
     revealOnScroll();
 
-    /* Mobile menu */
+    /* MOBILE MENU + HAMBURGER + WHATSAPP CONTROL */
     const menuToggle = document.querySelector(".menu-toggle");
     const nav = document.querySelector(".site-nav");
 
     menuToggle.addEventListener("click", () => {
+      menuToggle.classList.toggle("active");
       nav.classList.toggle("active");
+      document.body.classList.toggle("menu-open");
     });
 
   });
 </script>
+
 <!-- WHATSAPP FLOATING BUTTON -->
 <a
-  href="https://wa.me/237677441880?text=Hello%20I%20would%20like%20to%20learn%20more%20about%20The%20New%20Beginning"
+  href="https://wa.me/237677441880?text=Hello%20I%20would%20like%20to%20learn%20more%20about%20The%20New%20Beginnings"
   class="whatsapp-float no-transition"
   target="_blank"
   aria-label="Chat with us on WhatsApp"
 >
   💬
 </a>
+
 </body>
 </html>
