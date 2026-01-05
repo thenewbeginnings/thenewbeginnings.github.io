@@ -14,12 +14,8 @@
 
 <body class="page-gallery">
 
-<!-- ✅ HEADER (FULL WIDTH – FIXED) -->
+<!-- HEADER (NO LOGO, NOT FIXED) -->
 <header class="site-header">
-
-  <div class="logo-wrapper">
-    <img src="images/logo.png" alt="The New Beginning Logo" class="site-logo">
-  </div>
 
   <h1>The New Beginning</h1>
 
@@ -48,7 +44,6 @@
   </div>
 </div>
 
-<!-- ✅ CONTENT STARTS AFTER HEADER -->
 <main class="content">
   <section class="reveal">
 
@@ -80,7 +75,7 @@
   <p>© 2025 The New Beginning. All rights reserved.</p>
 </footer>
 
-<!-- ✅ WHATSAPP FLOAT (UNCHANGED & FIXED) -->
+<!-- WHATSAPP FLOAT (SAFE & FLOATING) -->
 <a
   href="https://wa.me/237677441880"
   class="whatsapp-float no-transition"
@@ -90,7 +85,7 @@
   💬
 </a>
 
-<!-- ✅ SCRIPTS -->
+<!-- SCRIPTS -->
 <script>
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -99,10 +94,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const menuToggle = document.querySelector(".menu-toggle");
   const nav = document.querySelector(".site-nav");
 
-  menuToggle.addEventListener("click", () => {
-    menuToggle.classList.toggle("active");
-    nav.classList.toggle("active");
-  });
+  if (menuToggle && nav) {
+    menuToggle.addEventListener("click", () => {
+      menuToggle.classList.toggle("active");
+      nav.classList.toggle("active");
+    });
+  }
 
   document.querySelectorAll("a:not(.no-transition)").forEach(link => {
     const href = link.getAttribute("href");
