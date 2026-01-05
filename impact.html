@@ -2,197 +2,41 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Impact | The New Beginning</title>
-
-  <!-- Mobile responsiveness -->
+  <title>About Us | The New Beginning</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-
-  <!-- Main stylesheet -->
   <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
 <header class="site-header">
   <h1>The New Beginning</h1>
-
-  <button class="menu-toggle" aria-label="Open menu">
-    ☰
-  </button>
-
-  <nav class="site-nav">
-    <a href="index.html">Home</a>
-    <a href="about.html">About Us</a>
-    <a href="projects.html">Projects</a>
-    <a href="impact.html">Impact</a>
-    <a href="trust.html">Trust</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="donate.html">Donate</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+  <div class="slogan"><span>Hope • Education • Digital Access • Financial Freedom</span></div>
+  <div class="nav-container">
+    <div id="menu-toggle" class="menu-toggle">☰</div>
+    <nav id="site-nav" class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="projects.html">Projects</a>
+      <a href="impact.html">Impact</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="donate.html">Donate</a>
+      <a href="contact.html">Contact</a>
+      <a href="trust.html">Trust</a>
+    </nav>
+  </div>
 </header>
 
-<div class="slogan-bar">
-  <div class="slogan-text">
-    Empowering Rural Communities Through Education, Bitcoin, and Digital Access
+<main class="page-content">
+  <div class="card">
+    <h2>About Us</h2>
+    <p>We are committed to community empowerment through education and digital inclusion.</p>
   </div>
-</div>
-
-<main class="content">
-  <section class="reveal">
-
-    <h2>Our Impact</h2>
-
-    <p>
-      The New Beginning is a growing, community-driven initiative focused on creating
-      meaningful and sustainable impact in rural communities through education,
-      digital access, and innovative financial tools.
-    </p>
-
-    <p>
-      While our work is still at an early stage, we are committed to transparency,
-      learning, and steady progress as we build long-term impact together with
-      communities.
-    </p>
-
-    <h3>What We Have Achieved So Far</h3>
-
-    <ul>
-      <li>Community engagement and needs assessment in rural settings</li>
-      <li>Online awareness and educational activities focused on digital access and inclusion</li>
-      <li>Project planning and proposal development for rural education and connectivity</li>
-      <li>Initial outreach to partners and potential sponsors</li>
-    </ul>
-
-    <h3>Who We Aim to Reach</h3>
-
-    <p>
-      Our work focuses on rural and underserved communities, with particular attention to:
-    </p>
-
-    <ul>
-      <li>Students and youth</li>
-      <li>Teachers and educators</li>
-      <li>Community leaders</li>
-      <li>Women and marginalized groups</li>
-    </ul>
-
-    <h3>Our Impact Areas</h3>
-
-    <h4>Education</h4>
-    <p>
-      Supporting learning opportunities and access to educational resources that
-      strengthen knowledge, skills, and confidence in rural communities.
-    </p>
-
-    <h4>Digital Access & Literacy</h4>
-    <p>
-      Reducing digital exclusion by promoting access to information, communication
-      tools, and basic digital skills.
-    </p>
-
-    <h4>Bitcoin & Financial Inclusion</h4>
-    <p>
-      Introducing Bitcoin as a learning tool for financial inclusion, transparency,
-      and participation in the digital economy.
-    </p>
-
-    <h3>How We Measure Progress</h3>
-
-    <p>
-      As our programs grow, we track progress using simple and transparent indicators,
-      including:
-    </p>
-
-    <ul>
-      <li>Number of participants engaged in learning and outreach activities</li>
-      <li>Access to digital tools and learning resources</li>
-      <li>Community feedback and participation</li>
-      <li>Capacity built among local leaders and educators</li>
-    </ul>
-
-    <h3>Our Commitment</h3>
-
-    <p>
-      We are committed to responsible use of resources, continuous learning, and
-      sharing updates as our impact grows. As projects are implemented, this page
-      will be updated with results, stories, and lessons learned.
-    </p>
-
-    <h3>Looking Ahead</h3>
-
-    <p>
-      With support from partners, donors, and communities, The New Beginning aims to
-      expand its reach and deepen its impact—bringing education, digital access, and
-      opportunity to rural communities that need it most.
-    </p>
-
-  </section>
 </main>
 
 <footer class="site-footer">
-  <p>© 2025 The New Beginning. All rights reserved.</p>
+  <p>&copy; 2026 The New Beginning</p>
 </footer>
 
-<!-- WhatsApp Floating Button -->
-<a
-  href="https://wa.me/237677441880?text=Hello%20I%20would%20like%20to%20learn%20more%20about%20The%20New%20Beginning"
-  class="whatsapp-float"
-  target="_blank"
-  aria-label="Chat with us on WhatsApp"
->
-  💬
-</a>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const links = document.querySelectorAll("a");
-
-    links.forEach(link => {
-      const href = link.getAttribute("href");
-      if (href && !href.startsWith("http") && !href.startsWith("#")) {
-        link.addEventListener("click", function (e) {
-          e.preventDefault();
-          document.body.classList.add("fade-out");
-          setTimeout(() => {
-            window.location.href = href;
-          }, 400);
-        });
-      }
-    });
-  });
-</script>
-
-<script>
-  const reveals = document.querySelectorAll(".reveal");
-
-  function revealOnScroll() {
-    const windowHeight = window.innerHeight;
-    const revealPoint = 100;
-
-    reveals.forEach(el => {
-      const elementTop = el.getBoundingClientRect().top;
-      if (elementTop < windowHeight - revealPoint) {
-        el.classList.add("active");
-      }
-    });
-  }
-
-  window.addEventListener("scroll", revealOnScroll);
-  revealOnScroll();
-</script>
-
-<script>
-  const menuToggle = document.querySelector(".menu-toggle");
-  const nav = document.querySelector(".site-nav");
-
-  menuToggle.addEventListener("click", () => {
-    nav.classList.toggle("active");
-  });
-</script>
-
+<script src="js/main.js"></script>
 </body>
 </html>
