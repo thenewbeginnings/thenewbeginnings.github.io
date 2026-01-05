@@ -160,10 +160,10 @@ body {
   }
 }
 
-/* ===== WHATSAPP FLOATING BUTTON ===== */
+/* ===== WHATSAPP FLOATING BUTTON (FINAL FIX) ===== */
 .whatsapp-float {
   position: fixed;
-  bottom: 20px;
+  bottom: 25px; /* back to bottom right */
   right: 20px;
   width: 56px;
   height: 56px;
@@ -174,13 +174,14 @@ body {
   font-size: 26px;
   line-height: 56px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
-  z-index: 10000;
+  z-index: 9999; /* stays above all */
   text-decoration: none;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+/* Hover effect */
 .whatsapp-float:hover {
   background: #1ebe5d;
 }
