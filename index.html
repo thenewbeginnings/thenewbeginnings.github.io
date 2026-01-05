@@ -3,26 +3,21 @@
 <head>
   <meta charset="UTF-8">
 
-  <title>
-    The New Beginnings | Empowering Rural Communities Through Education, Bitcoin & Digital Access
-  </title>
+  <title>The New Beginnings | Empowering Rural Communities</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- SEO META TAGS -->
+  <!-- SEO -->
   <meta name="description"
-    content="The New Beginnings empowers rural communities through education, Bitcoin, and digital access. We promote digital inclusion, community development, and financial freedom.">
-
-  <meta name="keywords"
-    content="rural development, community education, bitcoin education, digital access, financial inclusion, Cameroon">
+    content="Empowering rural communities through education, Bitcoin, and digital access.">
 
   <meta name="author" content="The New Beginnings">
 
   <!-- Open Graph -->
   <meta property="og:title"
-    content="The New Beginnings – Empowering Rural Communities Through Education, Bitcoin & Digital Access">
+    content="The New Beginnings – Empowering Rural Communities">
   <meta property="og:description"
-    content="A community-driven initiative advancing rural education, digital inclusion, and Bitcoin-enabled financial empowerment.">
+    content="Education, Bitcoin, and Digital Access for rural communities">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://thenewbeginnings.github.io/">
 
@@ -37,12 +32,12 @@
   <div class="loader"></div>
 </div>
 
-<header class="site-header slide-down">
+<header class="site-header">
   <div class="logo-wrapper">
     <img src="images/logo.png" alt="The New Beginnings Logo" class="site-logo">
   </div>
 
-  <h1 class="fade-in">The New Beginnings</h1>
+  <h1>The New Beginnings</h1>
 
   <!-- HAMBURGER -->
   <button class="menu-toggle" aria-label="Toggle menu">
@@ -70,37 +65,22 @@
 </div>
 
 <main class="content">
-  <section class="slide-up reveal">
-
+  <section class="reveal">
     <h2>Welcome to The New Beginnings</h2>
 
     <p>
-      The New Beginnings is a community-driven initiative focused on empowering rural
-      communities through education, Bitcoin, and digital access.
-    </p>
-
-    <p>
-      We work to bridge the digital divide by expanding learning opportunities and
-      promoting inclusive access to modern technologies.
-    </p>
-
-    <h3>Our Mission</h3>
-
-    <p>
-      Our mission is to support rural communities through education, digital access,
+      We empower rural communities through education, digital access,
       and innovative financial tools such as Bitcoin.
     </p>
 
-    <h3>Join Us</h3>
+    <h3>Our Mission</h3>
+    <p>
+      To bridge the digital divide and expand opportunity for underserved communities.
+    </p>
 
-    <div class="donate-cta reveal">
-      <p><strong>Support our work and help expand education and digital opportunity.</strong></p>
-
-      <a href="donate.html" class="donate-btn">
-        Donate with Bitcoin
-      </a>
+    <div class="donate-cta">
+      <a href="donate.html" class="donate-btn">Donate with Bitcoin</a>
     </div>
-
   </section>
 </main>
 
@@ -108,91 +88,48 @@
   <p>© 2025 The New Beginnings. All rights reserved.</p>
 </footer>
 
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-
-  // Remove loader
-  const loader = document.getElementById("page-loader");
-  if (loader) loader.remove();
-
-  // Page enter animation
-  document.body.classList.add("page-enter");
-
-  // ONE click handler for all links
-  document.body.addEventListener("click", (e) => {
-    const link = e.target.closest("a");
-
-    if (!link) return;
-    if (link.classList.contains("no-transition")) return;
-
-    const href = link.getAttribute("href");
-    if (!href || href.startsWith("http") || href.startsWith("#")) return;
-
-    e.preventDefault();
-    document.body.classList.add("fade-out");
-
-    setTimeout(() => {
-      window.location.href = href;
-    }, 300);
-  });
-
-  // Mobile menu
-  const menuToggle = document.querySelector(".menu-toggle");
-  const nav = document.querySelector(".site-nav");
-
-  menuToggle.addEventListener("click", () => {
-    menuToggle.classList.toggle("active");
-    nav.classList.toggle("active");
-    document.body.classList.toggle("menu-open");
-  });
-});
-</script>
-
-<!-- WHATSAPP FLOATING BUTTON -->
+<!-- WhatsApp Floating Button -->
 <a
-  href="https://wa.me/237677441880?text=Hello%20I%20would%20like%20to%20learn%20more%20about%20The%20New%20Beginnings"
+  href="https://wa.me/237677441880"
   class="whatsapp-float no-transition"
   target="_blank"
   aria-label="Chat with us on WhatsApp"
 >
   💬
 </a>
-  <script>
+
+<script>
 document.addEventListener("DOMContentLoaded", () => {
 
+  /* REMOVE LOADER */
+  const loader = document.getElementById("page-loader");
+  if (loader) loader.remove();
+
+  /* PAGE ENTER */
+  document.body.classList.add("page-enter");
+
+  /* MOBILE MENU (ONLY ONE HANDLER) */
   const menuToggle = document.querySelector(".menu-toggle");
   const nav = document.querySelector(".site-nav");
 
-  /* ========== MOBILE MENU TOGGLE ========== */
-  menuToggle.addEventListener("click", () => {
+  menuToggle.addEventListener("click", (e) => {
+    e.stopPropagation();
     menuToggle.classList.toggle("active");
     nav.classList.toggle("active");
-    document.body.classList.toggle("menu-open");
   });
 
-  /* ========== PAGE TRANSITIONS (SAFE) ========== */
-  document.body.addEventListener("click", (e) => {
-    const link = e.target.closest("a");
-
-    if (!link) return;
-    if (link.classList.contains("no-transition")) return;
-
+  /* PAGE TRANSITIONS */
+  document.querySelectorAll("a:not(.no-transition)").forEach(link => {
     const href = link.getAttribute("href");
     if (!href || href.startsWith("http") || href.startsWith("#")) return;
 
-    e.preventDefault();
-
-    /* 🔴 FORCE CLOSE MENU BEFORE NAVIGATION */
-    menuToggle.classList.remove("active");
-    nav.classList.remove("active");
-    document.body.classList.remove("menu-open");
-
-    /* Page exit animation */
-    document.body.classList.add("fade-out");
-
-    setTimeout(() => {
-      window.location.href = href;
-    }, 300);
+    link.addEventListener("click", e => {
+      e.preventDefault();
+      document.body.classList.add("fade-out");
+      setTimeout(() => {
+        window.location.href = href;
+      }, 300);
+    });
   });
 
 });
