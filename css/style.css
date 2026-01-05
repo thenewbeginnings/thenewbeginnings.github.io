@@ -267,3 +267,31 @@ body.fade-out {
   from { opacity: 0; }
   to { opacity: 1; }
 }
+/* === FORCE WHATSAPP TO FLOAT ABOVE EVERYTHING === */
+.whatsapp-float {
+  position: fixed !important;
+  bottom: 20px !important;
+  right: 20px !important;
+
+  width: 56px;
+  height: 56px;
+
+  background: #25D366;
+  color: #ffffff;
+  border-radius: 50%;
+  font-size: 26px;
+  line-height: 56px;
+  text-align: center;
+
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+  z-index: 2147483647; /* MAX SAFE Z-INDEX */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  pointer-events: auto;
+
+  /* CRITICAL: break out of transforms */
+  transform: none !important;
+}
