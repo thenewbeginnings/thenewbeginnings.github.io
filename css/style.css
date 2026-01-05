@@ -36,24 +36,46 @@ body.fade-out {
   margin-bottom: 10px;
 }
 
-/* ===== NAV (DESKTOP) ===== */
-.site-nav {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-  flex-wrap: wrap;
-}
+/* ===== MOBILE NAV FIX (FINAL & STABLE) ===== */
+@media (max-width: 768px) {
 
-.site-nav a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  padding: 8px 14px;
-  border-radius: 6px;
-}
+  /* Show hamburger */
+  .menu-toggle {
+    display: block;
+    margin: 15px auto 0;
+    z-index: 10001;
+  }
 
-.site-nav a:hover {
-  background: rgba(255, 255, 255, 0.2);
+  /* Hide nav by default */
+  .site-nav {
+    position: fixed;
+    inset: 0;
+    background: #0b5ed7;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 22px;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition: opacity 0.3s ease;
+    z-index: 10000;
+  }
+
+  /* Show nav when active */
+  .site-nav.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  .site-nav a {
+    font-size: 20px;
+  }
 }
 
 /* ===== HAMBURGER BUTTON ===== */
