@@ -152,3 +152,15 @@ img {
   background: #041f4a;
   margin-top: 2rem;
 }
+/* HOME PAGE LOGO */
+.brand-home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.brand-home img {
+  height: 60px;
+  width: auto;
+}
