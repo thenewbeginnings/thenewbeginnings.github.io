@@ -122,12 +122,13 @@ body {
   font-weight: bold;
 }
 
-/* ===== FOOTER ===== */
+/* ===== FOOTER (FIXED) ===== */
 .site-footer {
   background: #0b5ed7;
   color: white;
   text-align: center;
   padding: 18px;
+  padding-bottom: 80px; /* space for WhatsApp button */
   margin-top: 40px;
 }
 
@@ -158,6 +159,7 @@ body {
     max-width: 150px;
   }
 }
+
 /* ===== WHATSAPP FLOATING BUTTON ===== */
 .whatsapp-float {
   position: fixed;
@@ -172,38 +174,27 @@ body {
   font-size: 26px;
   line-height: 56px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
-  z-index: 10000; /* VERY IMPORTANT */
+  z-index: 10000;
   text-decoration: none;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* Hover effect */
 .whatsapp-float:hover {
   background: #1ebe5d;
 }
-/* ===== PAGE TRANSITION ===== */
-body.fade-out {
-  opacity: 0;
-  transition: opacity 0.4s ease;
-}
-/* ================================
-   PAGE TRANSITIONS & ANIMATIONS
-================================ */
 
-/* Initial hidden state */
+/* ===== PAGE TRANSITION ===== */
 body {
   opacity: 1;
   transition: opacity 0.35s ease;
 }
 
-/* Fade out when leaving page */
 body.fade-out {
   opacity: 0;
 }
 
-/* Slide-in animation on load */
 .page-enter {
   animation: slideIn 0.45s ease-out forwards;
 }
@@ -219,9 +210,7 @@ body.fade-out {
   }
 }
 
-/* ================================
-   LOADING SPINNER
-================================ */
+/* ===== LOADER ===== */
 #page-loader {
   position: fixed;
   inset: 0;
@@ -246,86 +235,34 @@ body.fade-out {
     transform: rotate(360deg);
   }
 }
-/* ===== PAGE ENTER BASE ===== */
-.page-enter {
-  animation-duration: 0.6s;
-  animation-fill-mode: both;
-}
 
-/* ===== HOME PAGE: FADE + SLIDE UP ===== */
-.page-home.page-enter {
-  animation-name: homeEnter;
-}
-
+/* ===== PAGE-SPECIFIC ANIMATIONS ===== */
+.page-home.page-enter { animation-name: homeEnter; }
 @keyframes homeEnter {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-/* ===== ABOUT PAGE: SLIDE FROM LEFT ===== */
-.page-about.page-enter {
-  animation-name: aboutEnter;
-}
-
+.page-about.page-enter { animation-name: aboutEnter; }
 @keyframes aboutEnter {
-  from {
-    opacity: 0;
-    transform: translateX(-40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+  from { opacity: 0; transform: translateX(-40px); }
+  to { opacity: 1; transform: translateX(0); }
 }
 
-/* ===== PROJECTS PAGE: ZOOM IN ===== */
-.page-projects.page-enter {
-  animation-name: projectsEnter;
-}
-
+.page-projects.page-enter { animation-name: projectsEnter; }
 @keyframes projectsEnter {
-  from {
-    opacity: 0;
-    transform: scale(0.96);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1); }
 }
 
-/* ===== GALLERY PAGE: SLIDE FROM RIGHT ===== */
-.page-gallery.page-enter {
-  animation-name: galleryEnter;
-}
-
+.page-gallery.page-enter { animation-name: galleryEnter; }
 @keyframes galleryEnter {
-  from {
-    opacity: 0;
-    transform: translateX(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+  from { opacity: 0; transform: translateX(40px); }
+  to { opacity: 1; transform: translateX(0); }
 }
 
-/* ===== CONTACT PAGE: FADE ONLY ===== */
-.page-contact.page-enter {
-  animation-name: contactEnter;
-}
-
+.page-contact.page-enter { animation-name: contactEnter; }
 @keyframes contactEnter {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
