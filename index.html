@@ -31,10 +31,12 @@
 </head>
 
 <body>
+
 <!-- PAGE LOADER -->
 <div id="page-loader">
   <div class="loader"></div>
 </div>
+
 <header class="site-header slide-down">
   <div class="logo-wrapper">
     <img src="images/logo.png" alt="The New Beginning Logo" class="site-logo">
@@ -65,7 +67,7 @@
 </div>
 
 <main class="content">
-  <section class="slide-up">
+  <section class="slide-up reveal">
 
     <h2>Welcome to The New Beginning</h2>
 
@@ -103,9 +105,28 @@
   <p>© 2025 The New Beginning. All rights reserved.</p>
 </footer>
 
-<!-- ✅ PAGE TRANSITION SCRIPT (FIXED) -->
+<!-- WHATSAPP FLOATING BUTTON -->
+<a
+  href="https://wa.me/237677441880?text=Hello%20I%20would%20like%20to%20learn%20more%20about%20The%20New%20Beginning"
+  class="whatsapp-float no-transition"
+  target="_blank"
+  aria-label="Chat with us on WhatsApp"
+>
+  💬
+</a>
+
+<!-- ✅ SINGLE CLEAN SCRIPT (REPLACES ALL OTHERS) -->
 <script>
   document.addEventListener("DOMContentLoaded", function () {
+
+    /* Remove loader */
+    const loader = document.getElementById("page-loader");
+    if (loader) loader.style.display = "none";
+
+    /* Page enter animation */
+    document.body.classList.add("page-enter");
+
+    /* Page transitions */
     const links = document.querySelectorAll("a:not(.no-transition)");
 
     links.forEach(link => {
@@ -123,52 +144,39 @@
 
           setTimeout(() => {
             window.location.href = href;
-          }, 400);
+          }, 350);
         });
       }
     });
-  });
-</script>
 
-<!-- REVEAL ON SCROLL -->
-<script>
-  const reveals = document.querySelectorAll(".reveal");
+    /* Reveal on scroll */
+    const reveals = document.querySelectorAll(".reveal");
 
-  function revealOnScroll() {
-    const windowHeight = window.innerHeight;
-    const revealPoint = 100;
+    function revealOnScroll() {
+      const windowHeight = window.innerHeight;
+      const revealPoint = 100;
 
-    reveals.forEach(el => {
-      const elementTop = el.getBoundingClientRect().top;
-      if (elementTop < windowHeight - revealPoint) {
-        el.classList.add("active");
-      }
+      reveals.forEach(el => {
+        const elementTop = el.getBoundingClientRect().top;
+        if (elementTop < windowHeight - revealPoint) {
+          el.classList.add("active");
+        }
+      });
+    }
+
+    window.addEventListener("scroll", revealOnScroll);
+    revealOnScroll();
+
+    /* Mobile menu */
+    const menuToggle = document.querySelector(".menu-toggle");
+    const nav = document.querySelector(".site-nav");
+
+    menuToggle.addEventListener("click", () => {
+      nav.classList.toggle("active");
     });
-  }
 
-  window.addEventListener("scroll", revealOnScroll);
-  revealOnScroll();
-</script>
-
-<!-- MOBILE MENU -->
-<script>
-  const menuToggle = document.querySelector(".menu-toggle");
-  const nav = document.querySelector(".site-nav");
-
-  menuToggle.addEventListener("click", () => {
-    nav.classList.toggle("active");
   });
 </script>
-
-<!-- WHATSAPP FLOATING BUTTON -->
-<a
-  href="https://wa.me/237677441880?text=Hello%20I%20would%20like%20to%20learn%20more%20about%20The%20New%20Beginning"
-  class="whatsapp-float no-transition"
-  target="_blank"
-  aria-label="Chat with us on WhatsApp"
->
-  💬
-</a>
 
 </body>
 </html>
