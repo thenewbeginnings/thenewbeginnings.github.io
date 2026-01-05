@@ -2,113 +2,45 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Gallery | The New Beginning</title>
-  
+  <title>About Us | The New Beginning</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <meta name="description"
-    content="Gallery showcasing our work in rural education, digital access, and community engagement.">
-
   <link rel="stylesheet" href="css/style.css">
 </head>
+<body>
 
-<body class="page-gallery">
-
-<!-- HEADER (NO LOGO, NOT FIXED) -->
 <header class="site-header">
-
   <h1>The New Beginning</h1>
-
-  <button class="menu-toggle" aria-label="Toggle menu">
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
-
-  <nav class="site-nav">
-    <a href="index.html">Home</a>
-    <a href="about.html">About Us</a>
-    <a href="projects.html">Projects</a>
-    <a href="impact.html">Impact</a>
-    <a href="trust.html">Trust</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="donate.html">Donate</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-
+  <div class="slogan"><span>Hope • Education • Digital Access • Financial Freedom</span></div>
+  <div class="nav-container">
+    <div id="menu-toggle" class="menu-toggle">☰</div>
+    <nav id="site-nav" class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="projects.html">Projects</a>
+      <a href="impact.html">Impact</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="donate.html">Donate</a>
+      <a href="contact.html">Contact</a>
+      <a href="trust.html">Trust</a>
+    </nav>
+  </div>
 </header>
 
-<div class="slogan-bar">
-  <div class="slogan-text">
-    Empowering Rural Communities Through Education, Bitcoin, and Digital Access
-  </div>
-</div>
-
 <main class="page-content">
-  <section class="card">
+  <div class="card">
     <h2>Gallery</h2>
-
     <div class="gallery-grid">
       <img src="images/image1.jpg" alt="">
       <img src="images/image2.jpg" alt="">
       <img src="images/image3.jpg" alt="">
     </div>
-  </section>
+  </div>
 </main>
 
 <footer class="site-footer">
-  <p>© 2025 The New Beginning. All rights reserved.</p>
+  <p>&copy; 2026 The New Beginning</p>
 </footer>
 
-<!-- WHATSAPP FLOAT (SAFE & FLOATING) -->
-<a
-  href="https://wa.me/237677441880"
-  class="whatsapp-float no-transition"
-  target="_blank"
-  aria-label="Chat with us on WhatsApp"
->
-  💬
-</a>
-
-<!-- SCRIPTS -->
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-
-  document.body.classList.add("page-enter");
-
-  const menuToggle = document.querySelector(".menu-toggle");
-  const nav = document.querySelector(".site-nav");
-
-  if (menuToggle && nav) {
-    menuToggle.addEventListener("click", () => {
-      menuToggle.classList.toggle("active");
-      nav.classList.toggle("active");
-    });
-  }
-
-  document.querySelectorAll("a:not(.no-transition)").forEach(link => {
-    const href = link.getAttribute("href");
-    if (!href || href.startsWith("http") || href.startsWith("#")) return;
-
-    link.addEventListener("click", e => {
-      e.preventDefault();
-      document.body.classList.add("fade-out");
-      setTimeout(() => {
-        window.location.href = href;
-      }, 300);
-    });
-  });
-
-});
-</script>
-<script>
-  const toggle = document.querySelector(".menu-toggle");
-  const nav = document.querySelector(".site-nav");
-
-  toggle.addEventListener("click", () => {
-    toggle.classList.toggle("active");
-    nav.classList.toggle("show");
-  });
-</script>
+<script src="js/main.js"></script>
 </body>
 </html>
