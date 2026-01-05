@@ -164,24 +164,19 @@ body {
   position: fixed !important;
   bottom: 20px !important;
   right: 20px !important;
-
   width: 56px;
   height: 56px;
-
   background: #25D366;
   color: #ffffff;
   border-radius: 50%;
   font-size: 26px;
   line-height: 56px;
   text-align: center;
-
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
   z-index: 2147483647;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   pointer-events: auto;
   transform: none !important;
 }
@@ -190,7 +185,12 @@ body {
   background: #1ebe5d;
 }
 
-/* ===== PREVENT FIXED ELEMENT TRAPPING (CRITICAL FIX) ===== */
+/* ===== HIDE WHATSAPP WHEN MOBILE MENU IS OPEN ===== */
+.site-nav.active ~ .whatsapp-float {
+  display: none;
+}
+
+/* ===== PREVENT FIXED ELEMENT TRAPPING ===== */
 main,
 .content,
 section {
@@ -212,14 +212,8 @@ body.fade-out {
 }
 
 @keyframes slideIn {
-  from {
-    opacity: 0;
-    transform: translateY(18px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 /* ===== LOADER ===== */
@@ -276,6 +270,7 @@ body.fade-out {
   from { opacity: 0; }
   to { opacity: 1; }
 }
+
 /* ===== HAMBURGER MENU ANIMATION ===== */
 .menu-toggle {
   width: 32px;
@@ -296,19 +291,10 @@ body.fade-out {
   transition: all 0.35s ease;
 }
 
-.menu-toggle span:nth-child(1) {
-  top: 0;
-}
+.menu-toggle span:nth-child(1) { top: 0; }
+.menu-toggle span:nth-child(2) { top: 10px; }
+.menu-toggle span:nth-child(3) { top: 20px; }
 
-.menu-toggle span:nth-child(2) {
-  top: 10px;
-}
-
-.menu-toggle span:nth-child(3) {
-  top: 20px;
-}
-
-/* ===== ACTIVE (X ICON) ===== */
 .menu-toggle.active span:nth-child(1) {
   transform: rotate(45deg);
   top: 10px;
