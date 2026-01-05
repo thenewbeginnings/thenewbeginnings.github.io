@@ -176,21 +176,43 @@ Copy code
 </a>
 
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const links = document.querySelectorAll("a");
-    links.forEach(link => {
-      const href = link.getAttribute("href");
-      if (href && !href.startsWith("http") && !href.startsWith("#")) {
-        link.addEventListener("click", function (e) {
-          e.preventDefault();
-          document.body.classList.add("fade-out");
-          setTimeout(() => {
-            window.location.href = href;
-          }, 400);
-        });
-      }
-    });
+document.addEventListener("DOMContentLoaded", () => {
+
+  // Remove loader
+  const loader = document.getElementById("page-loader");
+  if (loader) loader.remove();
+
+  // Page enter animation
+  document.body.classList.add("page-enter");
+
+  // ONE click handler for all links
+  document.body.addEventListener("click", (e) => {
+    const link = e.target.closest("a");
+
+    if (!link) return;
+    if (link.classList.contains("no-transition")) return;
+
+    const href = link.getAttribute("href");
+    if (!href || href.startsWith("http") || href.startsWith("#")) return;
+
+    e.preventDefault();
+    document.body.classList.add("fade-out");
+
+    setTimeout(() => {
+      window.location.href = href;
+    }, 300);
   });
+
+  // Mobile menu
+  const menuToggle = document.querySelector(".menu-toggle");
+  const nav = document.querySelector(".site-nav");
+
+  menuToggle.addEventListener("click", () => {
+    menuToggle.classList.toggle("active");
+    nav.classList.toggle("active");
+    document.body.classList.toggle("menu-open");
+  });
+});
 </script>
 
 <script>
