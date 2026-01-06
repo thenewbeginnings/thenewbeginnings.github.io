@@ -25,7 +25,7 @@ img {
 
 /* HEADER */
 .site-header {
-  padding: 1rem;
+  padding: 0.8rem 1rem; /* UPDATED */
   background: #062a63;
   position: sticky;
   top: 0;
@@ -59,8 +59,10 @@ img {
 /* NAV */
 .nav-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
+  position: relative;
+  margin-top: 0.5rem;
 }
 
 .menu-toggle {
@@ -82,16 +84,18 @@ img {
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
+    z-index: 1100;
   }
 
   .site-nav {
     position: absolute;
-    top: 100%;
-    left: 0;
+    top: 48px; /* directly below hamburger */
+    right: 0;
     width: 100%;
     background: #062a63;
     flex-direction: column;
     display: none;
+    z-index: 1000;
   }
 
   .site-nav.active {
@@ -99,7 +103,7 @@ img {
   }
 
   .site-nav a {
-    padding: 1rem;
+    padding: 0.9rem 1rem;
     border-top: 1px solid #0b3c8c;
   }
 }
@@ -152,6 +156,7 @@ img {
   background: #041f4a;
   margin-top: 2rem;
 }
+
 /* HOME PAGE LOGO */
 .brand-home {
   display: flex;
@@ -164,6 +169,7 @@ img {
   height: 60px;
   width: auto;
 }
+
 /* SCROLL ANIMATIONS */
 .reveal {
   opacity: 0;
