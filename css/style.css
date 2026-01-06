@@ -37,6 +37,15 @@ img {
   font-size: 1.6rem;
 }
 
+/* HEADER SPACING FIX */
+.brand-home {
+  margin-bottom: 0.3rem;
+}
+
+.slogan {
+  margin-bottom: 0.3rem;
+}
+
 /* SLOGAN */
 .slogan {
   overflow: hidden;
@@ -80,22 +89,26 @@ img {
   text-decoration: underline;
 }
 
-/* MOBILE NAV */
+/* MOBILE NAV — FIXED */
 @media (max-width: 768px) {
+
   .menu-toggle {
     display: block;
-    z-index: 1100;
+    z-index: 1200;
+    margin-top: 0.3rem;
   }
 
   .site-nav {
-    position: absolute;
-    top: 48px; /* directly below hamburger */
-    right: 0;
+    position: fixed;
+    top: 110px; /* below logo + slogan */
+    left: 0;
     width: 100%;
+    max-height: calc(100vh - 110px);
     background: #062a63;
     flex-direction: column;
     display: none;
-    z-index: 1000;
+    overflow-y: auto;
+    z-index: 1100;
   }
 
   .site-nav.active {
