@@ -37,12 +37,12 @@ img {
   font-size: 1.6rem;
 }
 
-/* ===== LOGO (BALANCED FIX) ===== */
-/* Desktop default */
+/* ===== LOGO (DESKTOP REDUCED ONLY) ===== */
+/* Desktop */
 .site-logo {
   display: block;
   width: 100%;
-  max-width: 210px;   /* ⬅ REDUCED desktop size */
+  max-width: 180px;   /* ⬅ reduced desktop size */
   height: auto;
   margin: 0 auto 14px;
 }
@@ -57,7 +57,7 @@ img {
 /* Mobile phones */
 @media (max-width: 768px) {
   .site-logo {
-    max-width: 260px; /* ⬅ INCREASED mobile size */
+    max-width: 260px;
   }
 }
 
@@ -146,7 +146,7 @@ img {
   }
 }
 
-/* ===== CONTENT FRAME (REDUCED WIDTH) ===== */
+/* ===== CONTENT FRAME ===== */
 .page-content {
   padding: 2rem 1rem;
 }
