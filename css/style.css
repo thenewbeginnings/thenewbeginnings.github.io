@@ -220,3 +220,41 @@ img {
   opacity: 1;
   transform: scale(1);
 }
+/* ===== FORCE SINGLE-COLUMN CONTENT FRAME ===== */
+
+/* Main content wrapper */
+.page-content {
+  display: block !important;
+}
+
+/* Cards and sections must stack vertically */
+.card,
+.page-content > *,
+.content > *,
+section {
+  width: 100%;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Disable accidental multi-column layouts */
+.page-content,
+.content,
+section {
+  column-count: 1 !important;
+  column-gap: 0 !important;
+}
+
+/* Remove grid/flex from content containers (NOT gallery) */
+.page-content:not(.gallery-grid),
+.content:not(.gallery-grid) {
+  display: block !important;
+}
+
+/* Ensure text never splits into columns */
+.card p,
+.card ul,
+.card ol {
+  column-count: 1 !important;
+}
