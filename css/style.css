@@ -37,14 +37,14 @@ img {
   font-size: 1.6rem;
 }
 
-/* ===== LOGO (DESKTOP REDUCED BY 25%) ===== */
+/* ===== LOGO (DESKTOP ~⅓ SIZE) ===== */
 /* Desktop */
 .site-logo {
   display: block;
   width: 100%;
-  max-width: 135px;   /* ⬅ 180px → 135px (−25%) */
+  max-width: 90px;   /* ⬅ 135px → ~90px (⅓ size) */
   height: auto;
-  margin: 0 auto 14px;
+  margin: 0 auto 12px;
 }
 
 /* Tablets & small laptops */
