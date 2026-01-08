@@ -229,3 +229,23 @@ img {
 section {
   column-count: 1 !important;
 }
+/* ===============================
+   FORCE LOGO SMALLER ON DESKTOP
+   =============================== */
+
+/* Desktop screens only */
+@media (min-width: 1025px) {
+  .site-logo {
+    max-width: 70px !important;   /* ⬅ visibly smaller */
+    width: auto !important;
+    height: auto !important;
+  }
+
+  /* Prevent parent from stretching it */
+  .logo-wrapper,
+  .brand-home {
+    max-width: 100% !important;
+    display: flex;
+    justify-content: center;
+  }
+}
