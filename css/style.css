@@ -37,12 +37,24 @@ img {
   font-size: 1.6rem;
 }
 
-/* ===== HEADER SPACING FIX ===== */
-.brand-home {
-  margin-bottom: 0.3rem;
+/* ===== LOGO SIZE FIX (DESKTOP + MOBILE) ===== */
+.site-logo {
+  display: block;
+  width: 100%;
+  max-width: 260px;   /* DESKTOP SIZE */
+  height: auto;
+  margin: 0 auto 14px;
 }
 
-.slogan {
+/* MOBILE LOGO */
+@media (max-width: 768px) {
+  .site-logo {
+    max-width: 200px;
+  }
+}
+
+/* ===== HEADER SPACING ===== */
+.brand-home {
   margin-bottom: 0.3rem;
 }
 
@@ -91,11 +103,9 @@ img {
 
 /* ===== MOBILE NAV ===== */
 @media (max-width: 768px) {
-
   .menu-toggle {
     display: block;
     z-index: 1200;
-    margin-top: 0.3rem;
   }
 
   .site-nav {
@@ -124,25 +134,23 @@ img {
 /* ===== CONTENT FRAME (REDUCED WIDTH) ===== */
 .page-content {
   padding: 2rem 1rem;
-  display: flex;
-  justify-content: center;
 }
 
-/* THIS IS THE MAIN FIX */
+/* SINGLE CONTENT CARD */
 .card {
   background: #ffffff;
   color: #000000;
   padding: 2rem;
   border-radius: 8px;
 
-  max-width: 760px;   /* ⬅ reduced content frame */
+  max-width: 760px;   /* ⬅ reduced content width */
   width: 100%;
-  margin-bottom: 2rem;
+  margin: 0 auto 2rem;
 
   animation: fadeUp 0.9s ease;
 }
 
-/* Optional: slightly wider on large screens */
+/* Slightly wider on very large screens */
 @media (min-width: 1200px) {
   .card {
     max-width: 820px;
@@ -160,7 +168,7 @@ img {
   }
 }
 
-/* ===== GALLERY ===== */
+/* ===== GALLERY (SAFE – NO OVERFLOW) ===== */
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -169,6 +177,8 @@ img {
 
 .gallery-grid img {
   border-radius: 6px;
+  width: 100%;
+  height: auto;
   transition: transform 0.3s ease;
 }
 
@@ -182,19 +192,6 @@ img {
   padding: 1rem;
   background: #041f4a;
   margin-top: 2rem;
-}
-
-/* ===== HOME PAGE LOGO ===== */
-.brand-home {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.brand-home img {
-  height: 60px;
-  width: auto;
 }
 
 /* ===== SCROLL ANIMATIONS ===== */
@@ -220,41 +217,13 @@ img {
   opacity: 1;
   transform: scale(1);
 }
-/* ===== FORCE SINGLE-COLUMN CONTENT FRAME ===== */
 
-/* Main content wrapper */
-.page-content {
-  display: block !important;
-}
-
-/* Cards and sections must stack vertically */
+/* ===== FORCE SINGLE-COLUMN CONTENT ===== */
+.page-content,
 .card,
-.page-content > *,
-.content > *,
 section {
-  width: 100%;
+  column-count: 1 !important;
   max-width: 760px;
   margin-left: auto;
   margin-right: auto;
-}
-
-/* Disable accidental multi-column layouts */
-.page-content,
-.content,
-section {
-  column-count: 1 !important;
-  column-gap: 0 !important;
-}
-
-/* Remove grid/flex from content containers (NOT gallery) */
-.page-content:not(.gallery-grid),
-.content:not(.gallery-grid) {
-  display: block !important;
-}
-
-/* Ensure text never splits into columns */
-.card p,
-.card ul,
-.card ol {
-  column-count: 1 !important;
 }
