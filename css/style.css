@@ -11,7 +11,7 @@ body {
   width: 100%;
   height: auto;
   overflow-x: hidden;
-  overflow-y: auto; /* ✅ RESTORES SCROLLING */
+  overflow-y: auto;
 }
 
 body {
@@ -49,33 +49,21 @@ img {
   font-size: 1.6rem;
 }
 
-/* ===== LOGO — HARD DESKTOP REDUCTION (FINAL FIX) ===== */
+/* ===== LOGO (ENLARGED SIGNIFICANTLY) ===== */
+
+/* Desktop & large screens */
 .site-logo {
   display: block;
-  width: auto !important;
-  max-width: 90px !important;  /* ✅ DESKTOP ≈ ⅓ SIZE */
-  height: auto !important;
-  margin: 0 auto 12px;
+  width: 100%;
+  max-width: 900px;   /* ⬅ VERY LARGE (hero-size logo) */
+  height: auto;
+  margin: 0 auto 20px;
 }
 
 /* Tablets */
 @media (max-width: 1024px) {
   .site-logo {
-    max-width: 180px !important;
-  }
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-  .site-logo {
-    max-width: 240px !important;
-  }
-}
-
-/* Very small phones */
-@media (max-width: 480px) {
-  .site-logo {
-    max-width: 220px !important;
+    max-width: 600px;
   }
 }
 
@@ -152,7 +140,7 @@ img {
   }
 }
 
-/* ===== MAIN CONTENT (SCROLL SAFE) ===== */
+/* ===== MAIN CONTENT ===== */
 .page-content {
   padding: 2rem 1rem;
 }
@@ -228,24 +216,4 @@ img {
 .card,
 section {
   column-count: 1 !important;
-}
-/* ===============================
-   FORCE LOGO SMALLER ON DESKTOP
-   =============================== */
-
-/* Desktop screens only */
-@media (min-width: 1025px) {
-  .site-logo {
-    max-width: 70px !important;   /* ⬅ visibly smaller */
-    width: auto !important;
-    height: auto !important;
-  }
-
-  /* Prevent parent from stretching it */
-  .logo-wrapper,
-  .brand-home {
-    max-width: 100% !important;
-    display: flex;
-    justify-content: center;
-  }
 }
