@@ -37,12 +37,12 @@ img {
   font-size: 1.6rem;
 }
 
-/* ===== LOGO (DESKTOP REDUCED ONLY) ===== */
+/* ===== LOGO (DESKTOP REDUCED BY 25%) ===== */
 /* Desktop */
 .site-logo {
   display: block;
   width: 100%;
-  max-width: 180px;   /* ⬅ reduced desktop size */
+  max-width: 135px;   /* ⬅ 180px → 135px (−25%) */
   height: auto;
   margin: 0 auto 14px;
 }
