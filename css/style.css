@@ -78,3 +78,14 @@ footer {
     max-width: 420px;
   }
 }
+.logo-container {
+  text-align: center;
+  padding: 10px;
+}
+
+.site-logo {
+  width: 120px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
