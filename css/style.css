@@ -66,10 +66,10 @@ body {
   font-weight: bold;
 }
 
-/* CONTENT FRAME */
+/* CONTENT FRAME – DESKTOP */
 .content-frame {
   background: #ffffff;
-  max-width: 640px;   /* ✅ Reduced again by ~20% */
+  max-width: 640px;   /* Desktop width */
   margin: 40px auto;
   padding: 40px;
   border-radius: 12px;
@@ -116,7 +116,7 @@ body {
   color: #ffffff;
 }
 
-/* MOBILE STYLES */
+/* MOBILE STYLES – FIXED */
 @media (max-width: 768px) {
 
   .site-header {
@@ -146,8 +146,11 @@ body {
     align-self: flex-end;
   }
 
+  /* 🔥 MOBILE CONTENT FRAME FIX */
   .content-frame {
-    max-width: 92%;
-    padding: 24px;
+    max-width: 560px;   /* Narrower on phone */
+    width: 90%;
+    margin: 25px auto;
+    padding: 22px;
   }
 }
