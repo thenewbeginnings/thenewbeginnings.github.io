@@ -2,56 +2,264 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>ADARD – Aduk Association for Rural Development</title>
-  <meta name="description" content="Aduk Association for Rural Development (ADARD) – promoting unity, progress and sustainable rural development.">
+
+  <title>Contact | The New Beginning</title>
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- SEO -->
-  <meta name="keywords" content="ADARD, rural development, Aduk, community development, Cameroon NGO">
+  <meta name="description"
+    content="Contact The New Beginning to collaborate, support, or learn more about empowering rural communities through education, Bitcoin, and digital access.">
 
-  <!-- CSS -->
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <!-- Main stylesheet -->
   <link rel="stylesheet" href="css/style.css">
 
   <!-- GSAP -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <!-- Page-specific styles -->
+  <style>
+    .contact-list {
+      margin-top: 20px;
+    }
+
+    .contact-item {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+    }
+
+    .contact-link {
+      text-decoration: none;
+      color: #0b5ed7;
+      font-weight: 500;
+    }
+
+    .contact-link:hover {
+      text-decoration: underline;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-top: 15px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+  </style>
+
+  <!-- Scrolling slogan -->
+  <style>
+    .slogan-bar {
+      background: #0b3d20;
+      color: #ffffff;
+      overflow: hidden;
+      white-space: nowrap;
+      padding: 10px 0;
+    }
+
+    .slogan-text {
+      display: inline-block;
+      padding-left: 100%;
+      animation: scroll-slogan 18s linear infinite;
+      font-weight: bold;
+    }
+
+    @keyframes scroll-slogan {
+      from { transform: translateX(0); }
+      to { transform: translateX(-100%); }
+    }
+  </style>
 </head>
+
 <body>
 
-<header>
-  <div class="logo">ADARD</div>
+<header class="site-header">
+  <div class="logo-wrapper">
+    <img src="image/logo1.png" alt="The New Beginning Logo" class="site-logo">
+  </div>
 
-  <nav id="nav">
+  <h1>The New Beginning</h1>
+
+  <button class="menu-toggle" aria-label="Open menu">☰</button>
+
+  <nav class="site-nav">
     <a href="index.html">Home</a>
     <a href="about.html">About Us</a>
     <a href="projects.html">Projects</a>
     <a href="impact.html">Impact</a>
+    <a href="trust.html">Trust</a>
     <a href="gallery.html">Gallery</a>
     <a href="donate.html">Donate</a>
-    <a href="reports.html">trust</a>
-    <a href="contact.html">Contact Us</a>
+    <a href="contact.html" class="active">Contact</a>
   </nav>
-
-  <div class="hamburger" onclick="toggleMenu()">☰</div>
 </header>
 
-<section class="motto">
-  <marquee>UNITY • PROGRESS • DEVELOPMENT</marquee>
-</section>
+<!-- SCROLLING SLOGAN -->
+<div class="slogan-bar">
+  <div class="slogan-text">
+    Empowering Rural Communities Through Education, Bitcoin, and Digital Access
+  </div>
+</div>
 
+<!-- CONTENT FRAME (IDENTICAL TO HOME PAGE) -->
 <main class="content-frame">
-  <h1>Welcome to ADARD</h1>
-  <p>
-    Aduk Association for Rural Development (ADARD) is a community-based organization
-    committed to improving livelihoods through education, agriculture, infrastructure,
-    youth empowerment, and social cohesion.
-  </p>
+  <section class="animated-section">
+
+    <h2>Get in Touch</h2>
+
+    <p>
+      We welcome messages from rural communities, educators, development partners,
+      donors, and anyone interested in education, digital inclusion, and
+      Bitcoin-powered community development.
+    </p>
+
+    <p>
+      Whether you want to collaborate, support our work, or learn more about our
+      initiatives, feel free to reach out.
+    </p>
+
+    <!-- CONTACT DETAILS -->
+    <div class="contact-list">
+
+      <div class="contact-item">
+        <strong>Email:</strong>
+        <span>ndongson2001@yahoo.com</span>
+      </div>
+
+      <div class="contact-item">
+        <strong>Phone:</strong>
+        <a href="tel:+237677441880" class="contact-link">
+          +237 677 441 880
+        </a>
+      </div>
+
+      <div class="contact-item">
+        <strong>WhatsApp:</strong>
+        <a href="https://wa.me/237677441880" class="contact-link">
+          +237 677 441 880
+        </a>
+      </div>
+
+      <div class="contact-item">
+        <strong>Location:</strong>
+        <span>Cameroon</span>
+      </div>
+
+    </div>
+
+    <!-- CONTACT FORM -->
+    <h3 style="margin-top:30px;">Send Us a Message</h3>
+
+    <p>
+      Use the form below to share questions, partnership ideas, or messages of support.
+      We aim to respond as promptly as possible.
+    </p>
+
+    <form action="https://formspree.io/f/mojagaob" method="POST" class="contact-form">
+
+      <label>
+        <strong>Your Name</strong>
+        <input type="text" name="name" required>
+      </label>
+
+      <label>
+        <strong>Your Email</strong>
+        <input type="email" name="email" required>
+      </label>
+
+      <label>
+        <strong>Subject</strong>
+        <input type="text" name="subject" required>
+      </label>
+
+      <label>
+        <strong>Your Message</strong>
+        <textarea name="message" rows="5" required></textarea>
+      </label>
+
+      <button type="submit" class="donate-btn" style="align-self:flex-start;">
+        Send Message
+      </button>
+
+    </form>
+
+  </section>
 </main>
 
-<footer>
-  © 2026 ADARD – All Rights Reserved
+<footer class="site-footer">
+  <p>© 2025 The New Beginning. All rights reserved.</p>
 </footer>
 
-<script src="js/main.js"></script>
+<!-- WhatsApp Floating Button -->
+<a
+  href="https://wa.me/237677441880?text=Hello%20I%20would%20like%20to%20learn%20more%20about%20The%20New%20Beginning"
+  class="whatsapp-float"
+  target="_blank"
+  aria-label="Chat with us on WhatsApp"
+>
+  💬
+</a>
+
+<script>
+  /* Mobile menu */
+  const menuToggle = document.querySelector(".menu-toggle");
+  const nav = document.querySelector(".site-nav");
+  menuToggle.addEventListener("click", () => nav.classList.toggle("active"));
+
+  /* GSAP animations – IDENTICAL TO HOME PAGE */
+  gsap.from(".site-header", {
+    y: -80,
+    opacity: 0,
+    duration: 1,
+    ease: "power3.out"
+  });
+
+  gsap.from(".slogan-bar", {
+    opacity: 0,
+    duration: 1,
+    delay: 0.6
+  });
+
+  gsap.from(".content-frame", {
+    scrollTrigger: {
+      trigger: ".content-frame",
+      start: "top 80%"
+    },
+    y: 60,
+    opacity: 0,
+    duration: 1,
+    ease: "power2.out"
+  });
+
+  gsap.from(
+    ".animated-section h2, .animated-section p, .animated-section h3, .contact-item, form label, .donate-btn",
+    {
+      scrollTrigger: {
+        trigger: ".animated-section",
+        start: "top 75%"
+      },
+      y: 30,
+      opacity: 0,
+      duration: 0.8,
+      stagger: 0.12,
+      ease: "power2.out"
+    }
+  );
+</script>
+
 </body>
 </html>
