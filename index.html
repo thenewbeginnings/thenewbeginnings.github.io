@@ -31,6 +31,10 @@
   <!-- Main stylesheet -->
   <link rel="stylesheet" href="css/style.css">
 
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
   <!-- Scrolling slogan CSS -->
   <style>
     .slogan-bar {
@@ -49,24 +53,20 @@
     }
 
     @keyframes scroll-slogan {
-      0% {
-        transform: translateX(0);
-      }
-      100% {
-        transform: translateX(-100%);
-      }
+      from { transform: translateX(0); }
+      to { transform: translateX(-100%); }
     }
   </style>
 </head>
 
 <body>
 
-<header class="site-header slide-down">
+<header class="site-header">
   <div class="logo-wrapper">
     <img src="image/logo1.png" alt="The New beginnings Logo" class="site-logo">
   </div>
 
-  <h1 class="fade-in">The New beginnings</h1>
+  <h1>The New beginnings</h1>
 
   <button class="menu-toggle" aria-label="Open menu">☰</button>
 
@@ -91,15 +91,13 @@
 
 <!-- CONTENT FRAME -->
 <main class="content-frame">
-  <section class="slide-up">
+  <section class="animated-section">
 
     <h2>Welcome to The New beginnings</h2>
 
     <p>
       The New beginnings is a community-driven initiative focused on empowering rural
-      communities through education, Bitcoin, and digital access. We work to bridge
-      the digital divide by expanding learning opportunities and promoting inclusive
-      access to modern technologies.
+      communities through education, Bitcoin, and digital access.
     </p>
 
     <p>
@@ -109,11 +107,9 @@
     </p>
 
     <h3>Our Mission</h3>
-
     <p>
       Our mission is to support rural communities through education, digital access,
-      and innovative financial tools such as Bitcoin—helping people learn, connect,
-      and build resilient pathways for local development.
+      and innovative financial tools such as Bitcoin.
     </p>
 
     <h3>What We Do</h3>
@@ -121,55 +117,29 @@
     <h4>Rural Education & Learning Support</h4>
     <p>
       We strengthen education in rural communities by supporting digital learning,
-      teacher capacity, and access to educational resources that improve learning
-      outcomes and opportunity.
+      teacher capacity, and access to educational resources.
     </p>
 
     <h4>Digital Access & Literacy</h4>
     <p>
-      We promote digital inclusion by improving access to information, communication
-      tools, and digital skills—especially in rural and underserved communities.
+      We promote digital inclusion by improving access to information and digital skills.
     </p>
 
     <h4>Bitcoin & Financial Inclusion</h4>
     <p>
-      We introduce Bitcoin as a tool for financial inclusion, transparency, and
-      economic participation, helping rural communities engage with the global
-      digital economy.
+      We introduce Bitcoin as a tool for financial inclusion and economic participation.
     </p>
-
-    <h4>Community Development & Empowerment</h4>
-    <p>
-      Through workshops, outreach programs, and partnerships, we support community
-      leadership, local initiative, and sustainable development driven by education
-      and technology.
-    </p>
-
-    <h3>Why Bitcoin and Digital Access Matter</h3>
-
-    <ul>
-      <li>Financial inclusion without traditional barriers</li>
-      <li>Secure and transparent support for community initiatives</li>
-      <li>Cross-border learning and solidarity</li>
-      <li>Economic independence and innovation</li>
-    </ul>
 
     <h3>Our Vision</h3>
-
     <p>
       We envision rural communities that are educated, digitally connected, and
-      economically empowered—able to access knowledge, adopt innovation, and shape
-      their own development.
+      economically empowered.
     </p>
 
-    <div class="donate-cta reveal">
-      <p><strong>Support our work and help expand education and digital opportunity in rural communities.</strong></p>
+    <div class="donate-cta">
+      <p><strong>Support our work and help expand education and digital opportunity.</strong></p>
       <a href="donate.html" class="donate-btn">Donate with Bitcoin</a>
     </div>
-
-    <p>
-      Together, we can build stronger, more connected rural communities.
-    </p>
 
   </section>
 </main>
@@ -179,9 +149,47 @@
 </footer>
 
 <script>
+  /* Mobile menu */
   const menuToggle = document.querySelector(".menu-toggle");
   const nav = document.querySelector(".site-nav");
   menuToggle.addEventListener("click", () => nav.classList.toggle("active"));
+
+  /* GSAP ANIMATIONS */
+  gsap.from(".site-header", {
+    y: -80,
+    opacity: 0,
+    duration: 1,
+    ease: "power3.out"
+  });
+
+  gsap.from(".slogan-bar", {
+    opacity: 0,
+    duration: 1,
+    delay: 0.6
+  });
+
+  gsap.from(".content-frame", {
+    scrollTrigger: {
+      trigger: ".content-frame",
+      start: "top 80%"
+    },
+    y: 60,
+    opacity: 0,
+    duration: 1,
+    ease: "power2.out"
+  });
+
+  gsap.from(".animated-section h2, .animated-section p, .animated-section h3, .animated-section h4, .donate-cta", {
+    scrollTrigger: {
+      trigger: ".animated-section",
+      start: "top 75%"
+    },
+    y: 30,
+    opacity: 0,
+    duration: 0.8,
+    stagger: 0.15,
+    ease: "power2.out"
+  });
 </script>
 
 </body>
