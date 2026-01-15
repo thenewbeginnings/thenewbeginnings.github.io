@@ -21,6 +21,37 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
+  <!-- Page-specific CSS (image FIX) -->
+  <style>
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .gallery-item {
+      background: #ffffff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 220px;              /* FIXED HEIGHT */
+      object-fit: cover;          /* PREVENT STRETCHING */
+      display: block;
+    }
+
+    .gallery-item p {
+      padding: 12px;
+      font-size: 0.9rem;
+      color: #333;
+    }
+  </style>
+
   <!-- Scrolling slogan -->
   <style>
     .slogan-bar {
@@ -75,7 +106,7 @@
   </div>
 </div>
 
-<!-- CONTENT FRAME (IDENTICAL TO HOME PAGE) -->
+<!-- CONTENT FRAME -->
 <main class="content-frame">
   <section class="animated-section">
 
@@ -92,14 +123,15 @@
       learning, and responsible use of digital tools to strengthen rural livelihoods.
     </p>
 
+    <!-- FIXED IMAGES -->
     <div class="gallery">
 
-      <div class="gallery-item zoom-img">
+      <div class="gallery-item">
         <img src="images/image1.jpg" alt="Rural education and community learning session">
         <p>Rural education and community learning session</p>
       </div>
 
-      <div class="gallery-item zoom-img">
+      <div class="gallery-item">
         <img src="images/image2.jpg" alt="Community engagement and digital inclusion">
         <p>Community engagement and digital inclusion activities</p>
       </div>
@@ -155,7 +187,7 @@
   });
 
   gsap.from(
-    ".animated-section h2, .animated-section p, .animated-section .gallery-item",
+    ".animated-section h2, .animated-section p, .gallery-item",
     {
       scrollTrigger: {
         trigger: ".animated-section",
