@@ -7,59 +7,25 @@
   <!-- Mobile responsiveness -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- SEO -->
-  <meta name="description"
-    content="About The New Beginning – empowering rural communities through education, digital access, and Bitcoin-enabled financial inclusion.">
-
-  <meta name="keywords"
-    content="rural development, community education, bitcoin education, digital access, financial inclusion, Cameroon">
-
-  <meta name="author" content="The New Beginning">
-
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 
   <!-- Main stylesheet -->
   <link rel="stylesheet" href="css/style.css">
-
-  <!-- Scrolling slogan CSS -->
-  <style>
-    .slogan-bar {
-      background: #0b3d20;
-      color: #ffffff;
-      overflow: hidden;
-      white-space: nowrap;
-      padding: 10px 0;
-    }
-
-    .slogan-text {
-      display: inline-block;
-      padding-left: 100%;
-      animation: scroll-slogan 18s linear infinite;
-      font-weight: bold;
-    }
-
-    @keyframes scroll-slogan {
-      from { transform: translateX(0); }
-      to { transform: translateX(-100%); }
-    }
-  </style>
 </head>
 
 <body>
 
 <header class="site-header">
-  <div class="logo-wrapper">
-    <img src="image/logo1.png" alt="The New Beginning Logo" class="site-logo">
-  </div>
-
   <h1>The New Beginning</h1>
 
-  <button class="menu-toggle" aria-label="Open menu">☰</button>
+  <button class="menu-toggle" aria-label="Open menu">
+    ☰
+  </button>
 
   <nav class="site-nav">
     <a href="index.html">Home</a>
-    <a href="about.html" class="active">About Us</a>
+    <a href="about.html">About Us</a>
     <a href="projects.html">Projects</a>
     <a href="impact.html">Impact</a>
     <a href="trust.html">Trust</a>
@@ -69,15 +35,13 @@
   </nav>
 </header>
 
-<!-- SCROLLING SLOGAN -->
 <div class="slogan-bar">
   <div class="slogan-text">
     Empowering Rural Communities Through Education, Bitcoin, and Digital Access
   </div>
 </div>
 
-<!-- CONTENT FRAME -->
-<main class="content-frame">
+<main class="content">
   <section class="reveal">
 
     <h2>About The New Beginning</h2>
@@ -167,14 +131,25 @@
 </a>
 
 <script>
-  /* Mobile menu */
-  const menuToggle = document.querySelector(".menu-toggle");
-  const nav = document.querySelector(".site-nav");
-  menuToggle.addEventListener("click", () => nav.classList.toggle("active"));
+  document.addEventListener("DOMContentLoaded", function () {
+    const links = document.querySelectorAll("a");
+
+    links.forEach(link => {
+      const href = link.getAttribute("href");
+      if (href && !href.startsWith("http") && !href.startsWith("#")) {
+        link.addEventListener("click", function (e) {
+          e.preventDefault();
+          document.body.classList.add("fade-out");
+          setTimeout(() => {
+            window.location.href = href;
+          }, 400);
+        });
+      }
+    });
+  });
 </script>
 
 <script>
-  /* Reveal on scroll */
   const reveals = document.querySelectorAll(".reveal");
 
   function revealOnScroll() {
@@ -191,6 +166,15 @@
 
   window.addEventListener("scroll", revealOnScroll);
   revealOnScroll();
+</script>
+
+<script>
+  const menuToggle = document.querySelector(".menu-toggle");
+  const nav = document.querySelector(".site-nav");
+
+  menuToggle.addEventListener("click", () => {
+    nav.classList.toggle("active");
+  });
 </script>
 
 </body>
