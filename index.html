@@ -30,6 +30,33 @@
 
   <!-- Main stylesheet -->
   <link rel="stylesheet" href="css/style.css">
+
+  <!-- Scrolling slogan CSS -->
+  <style>
+    .slogan-bar {
+      background: #0b3d20;
+      color: #ffffff;
+      overflow: hidden;
+      white-space: nowrap;
+      padding: 10px 0;
+    }
+
+    .slogan-text {
+      display: inline-block;
+      padding-left: 100%;
+      animation: scroll-slogan 18s linear infinite;
+      font-weight: bold;
+    }
+
+    @keyframes scroll-slogan {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -55,6 +82,7 @@
   </nav>
 </header>
 
+<!-- SCROLLING SLOGAN -->
 <div class="slogan-bar">
   <div class="slogan-text">
     Empowering Rural Communities Through Education, Bitcoin, and Digital Access
