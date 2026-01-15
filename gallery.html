@@ -21,7 +21,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
-  <!-- Page-specific CSS (image FIX) -->
+  <!-- Page-specific CSS -->
   <style>
     .gallery {
       display: grid;
@@ -40,8 +40,8 @@
 
     .gallery-item img {
       width: 100%;
-      height: 220px;              /* FIXED HEIGHT */
-      object-fit: cover;          /* PREVENT STRETCHING */
+      height: 220px;
+      object-fit: cover;
       display: block;
     }
 
@@ -50,10 +50,7 @@
       font-size: 0.9rem;
       color: #333;
     }
-  </style>
 
-  <!-- Scrolling slogan -->
-  <style>
     .slogan-bar {
       background: #0b3d20;
       color: #ffffff;
@@ -123,16 +120,17 @@
       learning, and responsible use of digital tools to strengthen rural livelihoods.
     </p>
 
-    <!-- FIXED IMAGES -->
     <div class="gallery">
 
+      <!-- ✅ FIXED PATH -->
       <div class="gallery-item">
-        <img src="images/image2.jpg" alt="Rural education and community learning session">
+        <img src="image/image1.jpg" alt="Rural education and community learning session">
         <p>Rural education and community learning session</p>
       </div>
 
+      <!-- ✅ FIXED PATH -->
       <div class="gallery-item">
-        <img src="images/image1.jpg" alt="Community engagement and digital inclusion">
+        <img src="image/image2.jpg" alt="Community engagement and digital inclusion">
         <p>Community engagement and digital inclusion activities</p>
       </div>
 
@@ -156,12 +154,10 @@
 </a>
 
 <script>
-  /* Mobile menu */
   const menuToggle = document.querySelector(".menu-toggle");
   const nav = document.querySelector(".site-nav");
   menuToggle.addEventListener("click", () => nav.classList.toggle("active"));
 
-  /* GSAP animations – SAME AS HOME PAGE */
   gsap.from(".site-header", {
     y: -80,
     opacity: 0,
@@ -186,20 +182,17 @@
     ease: "power2.out"
   });
 
-  gsap.from(
-    ".animated-section h2, .animated-section p, .gallery-item",
-    {
-      scrollTrigger: {
-        trigger: ".animated-section",
-        start: "top 75%"
-      },
-      y: 30,
-      opacity: 0,
-      duration: 0.8,
-      stagger: 0.15,
-      ease: "power2.out"
-    }
-  );
+  gsap.from(".gallery-item", {
+    scrollTrigger: {
+      trigger: ".gallery",
+      start: "top 80%"
+    },
+    y: 30,
+    opacity: 0,
+    duration: 0.8,
+    stagger: 0.15,
+    ease: "power2.out"
+  });
 </script>
 
 </body>
