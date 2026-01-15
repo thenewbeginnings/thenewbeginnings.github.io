@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <title>About | The New Beginning</title>
 
-  <!-- Mobile responsiveness -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Google Font -->
@@ -17,7 +16,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
-  <!-- Scrolling slogan CSS -->
+  <!-- Scrolling slogan -->
   <style>
     .slogan-bar {
       background: #0b3d20;
@@ -44,6 +43,10 @@
 <body>
 
 <header class="site-header">
+  <div class="logo-wrapper">
+    <img src="image/logo1.png" alt="The New Beginning Logo" class="site-logo">
+  </div>
+
   <h1>The New Beginning</h1>
 
   <button class="menu-toggle" aria-label="Open menu">☰</button>
@@ -67,7 +70,7 @@
   </div>
 </div>
 
-<!-- CONTENT FRAME -->
+<!-- CONTENT FRAME (NOW IDENTICAL TO HOME PAGE) -->
 <main class="content-frame">
   <section class="animated-section">
 
@@ -76,21 +79,18 @@
     <p>
       The New Beginning is a community-driven initiative dedicated to empowering
       rural communities through education, digital access, and innovative financial
-      tools. We work with underserved rural populations to expand opportunity,
-      strengthen local capacity, and support sustainable community development.
+      tools.
     </p>
 
     <p>
       We believe that education and access to technology are essential for improving
-      livelihoods and building resilient communities. By combining learning,
-      digital inclusion, and responsible use of Bitcoin, we help rural communities
-      connect to knowledge, opportunity, and the wider digital economy.
+      livelihoods and building resilient communities.
     </p>
 
     <p>
       Our work is grounded in local realities. We collaborate closely with community
       members, educators, youth, and leaders to design practical initiatives that
-      respond to real needs while introducing tools that support long-term growth.
+      respond to real needs.
     </p>
 
     <h3>Our Approach</h3>
@@ -98,46 +98,38 @@
     <h4>Community-Centered Development</h4>
     <p>
       We place rural communities at the center of our work, ensuring that programs
-      are locally informed, culturally relevant, and driven by community priorities.
+      are locally informed and driven by community priorities.
     </p>
 
     <h4>Education as a Foundation</h4>
     <p>
-      Education is the foundation of development. We focus on learning support,
-      digital literacy, and skills-building that enable individuals and communities
-      to improve outcomes in education and daily life.
+      We focus on learning support, digital literacy, and skills-building that enable
+      individuals and communities to improve outcomes.
     </p>
 
     <h4>Digital Access & Innovation</h4>
     <p>
-      We promote digital access and responsible technology use to reduce isolation,
-      improve communication, and expand access to information and learning resources
-      in rural areas.
+      We promote digital access and responsible technology use in rural areas.
     </p>
 
     <h4>Bitcoin for Inclusion</h4>
     <p>
-      We introduce Bitcoin as a tool for financial inclusion, transparency, and
-      economic participation—particularly where traditional financial systems
-      are limited or inaccessible.
+      We introduce Bitcoin as a tool for financial inclusion and economic participation.
     </p>
 
     <h3>Our Values</h3>
-
     <ul>
-      <li>Community participation and local ownership</li>
+      <li>Community participation and ownership</li>
       <li>Access to education and knowledge</li>
-      <li>Inclusion and opportunity for rural populations</li>
+      <li>Inclusion and opportunity</li>
       <li>Transparency and responsible innovation</li>
-      <li>Sustainable, people-centered development</li>
+      <li>Sustainable development</li>
     </ul>
 
     <h3>Our Vision</h3>
-
     <p>
       We envision rural communities that are educated, digitally connected, and
-      economically empowered—able to access learning, adopt innovation, and shape
-      their own development with confidence and dignity.
+      economically empowered.
     </p>
 
   </section>
@@ -147,23 +139,13 @@
   <p>© 2025 The New Beginning. All rights reserved.</p>
 </footer>
 
-<!-- WhatsApp Floating Button -->
-<a
-  href="https://wa.me/237677441880?text=Hello%20I%20would%20like%20to%20learn%20more%20about%20The%20New%20Beginning"
-  class="whatsapp-float"
-  target="_blank"
-  aria-label="Chat with us on WhatsApp"
->
-  💬
-</a>
-
 <script>
   /* Mobile menu */
   const menuToggle = document.querySelector(".menu-toggle");
   const nav = document.querySelector(".site-nav");
   menuToggle.addEventListener("click", () => nav.classList.toggle("active"));
 
-  /* GSAP ANIMATIONS (MATCH HOME PAGE) */
+  /* GSAP animations – SAME AS HOME PAGE */
   gsap.from(".site-header", {
     y: -80,
     opacity: 0,
