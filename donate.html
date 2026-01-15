@@ -2,56 +2,258 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>ADARD – Aduk Association for Rural Development</title>
-  <meta name="description" content="Aduk Association for Rural Development (ADARD) – promoting unity, progress and sustainable rural development.">
+
+  <title>Donate | The New Beginning</title>
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- SEO -->
-  <meta name="keywords" content="ADARD, rural development, Aduk, community development, Cameroon NGO">
+  <meta name="description"
+    content="Support The New Beginning – empowering rural communities through education, digital access, and Bitcoin-enabled financial inclusion.">
 
-  <!-- CSS -->
+  <meta name="keywords"
+    content="donate bitcoin, rural education support, digital inclusion, community development, Cameroon">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <!-- Main stylesheet -->
   <link rel="stylesheet" href="css/style.css">
 
   <!-- GSAP -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <!-- Scrolling slogan -->
+  <style>
+    .slogan-bar {
+      background: #0b3d20;
+      color: #ffffff;
+      overflow: hidden;
+      white-space: nowrap;
+      padding: 10px 0;
+    }
+
+    .slogan-text {
+      display: inline-block;
+      padding-left: 100%;
+      animation: scroll-slogan 18s linear infinite;
+      font-weight: bold;
+    }
+
+    @keyframes scroll-slogan {
+      from { transform: translateX(0); }
+      to { transform: translateX(-100%); }
+    }
+
+    .btc-box {
+      background: #f9f9f9;
+      padding: 15px;
+      border-radius: 10px;
+      word-break: break-all;
+      margin-top: 15px;
+    }
+
+    .btc-box code {
+      font-size: 0.9rem;
+    }
+
+    .qr-img {
+      margin-top: 20px;
+      border-radius: 10px;
+      max-width: 200px;
+    }
+  </style>
 </head>
+
 <body>
 
-<header>
-  <div class="logo">ADARD</div>
+<header class="site-header">
+  <div class="logo-wrapper">
+    <img src="image/logo1.png" alt="The New Beginning Logo" class="site-logo">
+  </div>
 
-  <nav id="nav">
+  <h1>The New Beginning</h1>
+
+  <button class="menu-toggle" aria-label="Open menu">☰</button>
+
+  <nav class="site-nav">
     <a href="index.html">Home</a>
     <a href="about.html">About Us</a>
     <a href="projects.html">Projects</a>
     <a href="impact.html">Impact</a>
+    <a href="trust.html">Trust</a>
     <a href="gallery.html">Gallery</a>
-    <a href="donate.html">Donate</a>
-    <a href="reports.html">trust</a>
-    <a href="contact.html">Contact Us</a>
+    <a href="donate.html" class="active">Donate</a>
+    <a href="contact.html">Contact</a>
   </nav>
-
-  <div class="hamburger" onclick="toggleMenu()">☰</div>
 </header>
 
-<section class="motto">
-  <marquee>UNITY • PROGRESS • DEVELOPMENT</marquee>
-</section>
+<!-- SCROLLING SLOGAN -->
+<div class="slogan-bar">
+  <div class="slogan-text">
+    Empowering Rural Communities Through Education, Bitcoin, and Digital Access
+  </div>
+</div>
 
+<!-- CONTENT FRAME (IDENTICAL TO HOME PAGE) -->
 <main class="content-frame">
-  <h1>Welcome to ADARD</h1>
-  <p>
-    Aduk Association for Rural Development (ADARD) is a community-based organization
-    committed to improving livelihoods through education, agriculture, infrastructure,
-    youth empowerment, and social cohesion.
-  </p>
+  <section class="animated-section">
+
+    <h2>Support Rural Community Development</h2>
+
+    <p>
+      Your support helps <strong>The New Beginning</strong> strengthen rural education,
+      expand digital access, and empower communities through transparent and inclusive
+      tools. Every contribution supports practical, community-driven development.
+    </p>
+
+    <h3>Why Your Support Matters</h3>
+
+    <p>
+      Many rural communities face challenges accessing quality education, digital
+      tools, and economic opportunities. Limited connectivity and financial exclusion
+      restrict learning, innovation, and growth.
+    </p>
+
+    <ul>
+      <li>Support education and digital learning in rural communities</li>
+      <li>Improve access to information and digital tools</li>
+      <li>Promote responsible Bitcoin education and financial inclusion</li>
+      <li>Strengthen community-led development initiatives</li>
+    </ul>
+
+    <h3>Why We Use Bitcoin</h3>
+
+    <p>
+      Bitcoin enables direct, transparent, and borderless support for our work. It
+      allows us to receive contributions efficiently while promoting digital
+      financial literacy and independence in communities we serve.
+    </p>
+
+    <ul>
+      <li>Direct and transparent support</li>
+      <li>Reduced dependence on restrictive financial systems</li>
+      <li>Global solidarity with rural communities</li>
+      <li>Learning opportunities around digital finance</li>
+    </ul>
+
+    <h3>How Your Contribution Is Used</h3>
+
+    <ul>
+      <li>Educational materials and learning support</li>
+      <li>Digital tools, connectivity, and access resources</li>
+      <li>Community workshops and outreach programs</li>
+      <li>Local capacity building and sustainability efforts</li>
+    </ul>
+
+    <h3>Donate with Bitcoin</h3>
+
+    <p>
+      You can support our work by sending Bitcoin directly to the wallet address
+      below. Every contribution—large or small—helps expand opportunity and
+      strengthen rural communities.
+    </p>
+
+    <div class="btc-box">
+      <strong>Bitcoin Wallet Address:</strong><br>
+      <code>
+        bc1qmxkpr5k2yvvlsnmtyrg6gkqten5wz5pusr28aqe6lgt49r003qxs209qrn
+      </code>
+    </div>
+
+    <p>You may copy the address above or scan the QR code below.</p>
+
+    <img
+      src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=bc1qmxkpr5k2yvvlsnmtyrg6gkqten5wz5pusr28aqe6lgt49r003qxs209qrn"
+      alt="Bitcoin donation QR code"
+      class="qr-img"
+    >
+
+    <p style="font-size:14px; color:#555;">
+      ⚠️ Please send only Bitcoin (BTC) to this address.
+      Sending other cryptocurrencies may result in loss of funds.
+    </p>
+
+    <h3>Transparency & Accountability</h3>
+
+    <p>
+      We are committed to responsible and transparent use of all contributions.
+      Funds are used solely to support education, digital access, and rural
+      community development. Updates and reports will be shared as our work
+      progresses.
+    </p>
+
+    <h3>Thank You</h3>
+
+    <p>
+      By supporting <strong>The New Beginning</strong>, you are investing in rural
+      education, digital inclusion, and long-term community resilience.
+    </p>
+
+  </section>
 </main>
 
-<footer>
-  © 2026 ADARD – All Rights Reserved
+<footer class="site-footer">
+  <p>© 2025 The New Beginning. All rights reserved.</p>
 </footer>
 
-<script src="js/main.js"></script>
+<!-- WhatsApp Floating Button -->
+<a
+  href="https://wa.me/237677441880?text=Hello%20I%20would%20like%20to%20learn%20more%20about%20The%20New%20Beginning"
+  class="whatsapp-float"
+  target="_blank"
+  aria-label="Chat with us on WhatsApp"
+>
+  💬
+</a>
+
+<script>
+  /* Mobile menu */
+  const menuToggle = document.querySelector(".menu-toggle");
+  const nav = document.querySelector(".site-nav");
+  menuToggle.addEventListener("click", () => nav.classList.toggle("active"));
+
+  /* GSAP animations – IDENTICAL TO HOME PAGE */
+  gsap.from(".site-header", {
+    y: -80,
+    opacity: 0,
+    duration: 1,
+    ease: "power3.out"
+  });
+
+  gsap.from(".slogan-bar", {
+    opacity: 0,
+    duration: 1,
+    delay: 0.6
+  });
+
+  gsap.from(".content-frame", {
+    scrollTrigger: {
+      trigger: ".content-frame",
+      start: "top 80%"
+    },
+    y: 60,
+    opacity: 0,
+    duration: 1,
+    ease: "power2.out"
+  });
+
+  gsap.from(
+    ".animated-section h2, .animated-section p, .animated-section h3, .animated-section li, .btc-box, .qr-img",
+    {
+      scrollTrigger: {
+        trigger: ".animated-section",
+        start: "top 75%"
+      },
+      y: 30,
+      opacity: 0,
+      duration: 0.8,
+      stagger: 0.12,
+      ease: "power2.out"
+    }
+  );
+</script>
+
 </body>
 </html>
