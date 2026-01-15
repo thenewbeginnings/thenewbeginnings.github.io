@@ -66,10 +66,10 @@ body {
   font-weight: bold;
 }
 
-/* CONTENT FRAME – DESKTOP */
+/* CONTENT FRAME – DEFAULT (DESKTOP / CHROMEBOOK) */
 .content-frame {
   background: #ffffff;
-  max-width: 640px;   /* Desktop width */
+  max-width: 640px;
   margin: 40px auto;
   padding: 40px;
   border-radius: 12px;
@@ -116,7 +116,7 @@ body {
   color: #ffffff;
 }
 
-/* MOBILE STYLES – FIXED */
+/* TABLETS / LARGE PHONES */
 @media (max-width: 768px) {
 
   .site-header {
@@ -146,11 +146,19 @@ body {
     align-self: flex-end;
   }
 
-  /* 🔥 MOBILE CONTENT FRAME FIX */
+  /* Tablet width */
   .content-frame {
-    max-width: 560px;   /* Narrower on phone */
-    width: 90%;
+    max-width: 520px;
+    padding: 26px;
     margin: 25px auto;
+  }
+}
+
+/* SMALL PHONES (THIS IS THE KEY FIX) */
+@media (max-width: 480px) {
+  .content-frame {
+    max-width: 420px;
     padding: 22px;
+    margin: 20px auto;
   }
 }
