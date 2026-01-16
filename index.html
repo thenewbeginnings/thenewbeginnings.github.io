@@ -26,7 +26,7 @@
     content="A community-driven initiative based in Bamenda, North West Region of Cameroon, advancing rural education, digital inclusion, and Bitcoin-enabled financial empowerment.">
 
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://ndongson2026.github.io/">
+  <meta property="og:url" content="https://thenewbeginnings.github.io/">
 
   <!-- Main stylesheet -->
   <link rel="stylesheet" href="css/style.css">
@@ -56,16 +56,37 @@
       from { transform: translateX(0); }
       to { transform: translateX(-100%); }
     }
-
-    .location-section {
-      margin-top: 60px;
-      text-align: center;
-    }
-
-    .map-container {
-      margin-top: 20px;
-    }
   </style>
+
+  <!-- SCHEMA.ORG NGO STRUCTURED DATA -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NGO",
+    "name": "The New Beginnings",
+    "url": "https://thenewbeginnings.github.io/",
+    "logo": "https://thenewbeginnings.github.io/image/logo1.png",
+    "description": "The New Beginnings is a community-driven NGO based in Bamenda, North West Region of Cameroon, empowering rural communities through education, digital access, and Bitcoin-enabled financial inclusion.",
+    "foundingLocation": {
+      "@type": "Place",
+      "name": "Bamenda, North West Region, Cameroon"
+    },
+    "areaServed": {
+      "@type": "AdministrativeArea",
+      "name": "North West Region, Cameroon"
+    },
+    "sameAs": [
+      "https://wa.me/237677441880"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "General inquiries",
+      "telephone": "+237677441880",
+      "availableLanguage": ["English"]
+    }
+  }
+  </script>
+
 </head>
 
 <body>
@@ -80,7 +101,7 @@
   <button class="menu-toggle" aria-label="Open menu">☰</button>
 
   <nav class="site-nav">
-    <a href="index.html">Home</a>
+    <a href="index.html" class="active">Home</a>
     <a href="about.html">About Us</a>
     <a href="projects.html">Projects</a>
     <a href="impact.html">Impact</a>
@@ -100,7 +121,6 @@
 
 <!-- CONTENT FRAME -->
 <main class="content-frame">
-
   <section class="animated-section">
 
     <h2>Welcome to The New Beginnings</h2>
@@ -160,33 +180,21 @@
     </div>
 
   </section>
-
-  <!-- LOCATION SECTION (ADDED HERE) -->
-  <section class="location-section">
-    <h3>Our Location</h3>
-    <p>
-      The New Beginnings is based in <strong>Bamenda, North West Region of Cameroon</strong>,
-      serving surrounding rural communities.
-    </p>
-
-    <div class="map-container">
-      <iframe
-        src="https://www.google.com/maps?q=Bamenda,+North+West+Region,+Cameroon&output=embed"
-        width="100%"
-        height="350"
-        style="border:0; border-radius:12px;"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
-    </div>
-  </section>
-
 </main>
 
 <footer class="site-footer">
   <p>© 2025 The New Beginnings — Bamenda, North West Region, Cameroon. All rights reserved.</p>
 </footer>
+
+<!-- Floating WhatsApp Button -->
+<a
+  href="https://wa.me/237677441880"
+  class="whatsapp-float"
+  target="_blank"
+  aria-label="Chat with us on WhatsApp"
+>
+  💬
+</a>
 
 <script>
   /* Mobile menu */
@@ -219,9 +227,9 @@
     ease: "power2.out"
   });
 
-  gsap.from(".animated-section h2, .animated-section p, .animated-section h3, .animated-section h4, .donate-cta, .location-section", {
+  gsap.from(".animated-section h2, .animated-section p, .animated-section h3, .animated-section h4, .donate-cta", {
     scrollTrigger: {
-      trigger: ".content-frame",
+      trigger: ".animated-section",
       start: "top 75%"
     },
     y: 30,
@@ -231,16 +239,6 @@
     ease: "power2.out"
   });
 </script>
-
-<!-- Floating WhatsApp Button -->
-<a
-  href="https://wa.me/237677441880"
-  class="whatsapp-float"
-  target="_blank"
-  aria-label="Chat with us on WhatsApp"
->
-  💬
-</a>
 
 </body>
 </html>
