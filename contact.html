@@ -9,7 +9,7 @@
 
   <!-- SEO -->
   <meta name="description"
-    content="Contact The New The New Beginnings to collaborate, support, or learn more about empowering rural communities through education, Bitcoin, and digital access.">
+    content="Contact The New Beginnings to collaborate, support, or learn more about empowering rural communities through education, Bitcoin, and digital access in Cameroon.">
 
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
@@ -59,6 +59,10 @@
       border-radius: 6px;
       border: 1px solid #ccc;
     }
+
+    .map-container {
+      margin-top: 20px;
+    }
   </style>
 
   <!-- Scrolling slogan -->
@@ -89,10 +93,10 @@
 
 <header class="site-header">
   <div class="logo-wrapper">
-    <img src="image/logo1.png" alt="The New The New Beginnings Logo" class="site-logo">
+    <img src="image/logo1.png" alt="The New Beginnings Logo" class="site-logo">
   </div>
 
-  <h1>The New The New Beginnings</h1>
+  <h1>The New Beginnings</h1>
 
   <button class="menu-toggle" aria-label="Open menu">☰</button>
 
@@ -115,54 +119,50 @@
   </div>
 </div>
 
-<!-- CONTENT FRAME (IDENTICAL TO HOME PAGE) -->
+<!-- CONTENT FRAME -->
 <main class="content-frame">
   <section class="animated-section">
 
-    <h2>Get in Touch</h2>
+    <h2>Contact Us</h2>
 
     <p>
-      We welcome messages from rural communities, educators, development partners,
-      donors, and anyone interested in education, digital inclusion, and
-      Bitcoin-powered community development.
+      We welcome partnerships, donations, and collaboration opportunities.
+      Feel free to reach out to us.
     </p>
 
+    <h3>Our Office</h3>
     <p>
-      Whether you want to collaborate, support our work, or learn more about our
-      initiatives, feel free to reach out.
+      <strong>The New Beginnings</strong><br>
+      Bamenda, North West Region<br>
+      Cameroon
     </p>
 
-    <!-- CONTACT DETAILS -->
-    <div class="contact-list">
+    <h3>Phone / WhatsApp</h3>
+    <p>
+      <a href="https://wa.me/237677441880" class="contact-link">
+        +237 677 441 880
+      </a>
+    </p>
 
-      <div class="contact-item">
-        <strong>Email:</strong>
-        <span>ndongson2001@yahoo.com</span>
-      </div>
+    <h3>Email</h3>
+    <p>
+      <em>(Add your official email here when available)</em>
+    </p>
 
-      <div class="contact-item">
-        <strong>Phone:</strong>
-        <a href="tel:+237677441880" class="contact-link">
-          +237 677 441 880
-        </a>
-      </div>
-
-      <div class="contact-item">
-        <strong>WhatsApp:</strong>
-        <a href="https://wa.me/237677441880" class="contact-link">
-          +237 677 441 880
-        </a>
-      </div>
-
-      <div class="contact-item">
-        <strong>Location:</strong>
-        <span>Cameroon</span>
-      </div>
-
+    <h3>Our Location</h3>
+    <div class="map-container">
+      <iframe
+        src="https://www.google.com/maps?q=Bamenda,+North+West+Region,+Cameroon&output=embed"
+        width="100%"
+        height="350"
+        style="border:0; border-radius:12px;"
+        allowfullscreen=""
+        loading="lazy">
+      </iframe>
     </div>
 
     <!-- CONTACT FORM -->
-    <h3 style="margin-top:30px;">Send Us a Message</h3>
+    <h3 style="margin-top:40px;">Send Us a Message</h3>
 
     <p>
       Use the form below to share questions, partnership ideas, or messages of support.
@@ -201,12 +201,12 @@
 </main>
 
 <footer class="site-footer">
-  <p>© 2025 The New The New Beginnings. All rights reserved.</p>
+  <p>© 2025 The New Beginnings — Bamenda, North West Region, Cameroon. All rights reserved.</p>
 </footer>
 
 <!-- WhatsApp Floating Button -->
 <a
-  href="https://wa.me/237677441880?text=Hello%20I%20would%20like%20to%20learn%20more%20about%20The%20New%20The New Beginnings"
+  href="https://wa.me/237677441880"
   class="whatsapp-float"
   target="_blank"
   aria-label="Chat with us on WhatsApp"
@@ -220,7 +220,7 @@
   const nav = document.querySelector(".site-nav");
   menuToggle.addEventListener("click", () => nav.classList.toggle("active"));
 
-  /* GSAP animations – IDENTICAL TO HOME PAGE */
+  /* GSAP animations */
   gsap.from(".site-header", {
     y: -80,
     opacity: 0,
@@ -246,7 +246,7 @@
   });
 
   gsap.from(
-    ".animated-section h2, .animated-section p, .animated-section h3, .contact-item, form label, .donate-btn",
+    ".animated-section h2, .animated-section p, .animated-section h3, form label, .donate-btn, iframe",
     {
       scrollTrigger: {
         trigger: ".animated-section",
@@ -260,14 +260,6 @@
     }
   );
 </script>
-<!-- Floating WhatsApp Button -->
-<a
-  href="https://wa.me/237677441880"
-  class="whatsapp-float"
-  target="_blank"
-  aria-label="Chat with us on WhatsApp"
->
-  💬
-</a>
+
 </body>
 </html>
