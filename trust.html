@@ -213,7 +213,7 @@
   </section>
 </main>
 
-<footer class="site-footer">
+<footer class="site-footer animated-footer">
 
   <div class="footer-content">
 
@@ -275,6 +275,33 @@
     }
   );
 </script>
+<script>
+  /* FOOTER ANIMATION */
+  gsap.from(".animated-footer", {
+    scrollTrigger: {
+      trigger: ".animated-footer",
+      start: "top 85%",
+    },
+    y: 40,
+    opacity: 0,
+    duration: 1,
+    ease: "power2.out"
+  });
 
+  gsap.from(
+    ".animated-footer h3, .animated-footer h4, .animated-footer p, .animated-footer li",
+    {
+      scrollTrigger: {
+        trigger: ".animated-footer",
+        start: "top 85%",
+      },
+      y: 20,
+      opacity: 0,
+      duration: 0.6,
+      stagger: 0.12,
+      ease: "power2.out"
+    }
+  );
+</script>
 </body>
 </html>
