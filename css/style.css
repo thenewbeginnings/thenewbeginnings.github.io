@@ -254,3 +254,10 @@ body {
     display: inline-block;
   }
 }
+.site-footer a {
+  transition: color 0.3s ease;
+}
+
+.site-footer a:hover {
+  color: #9fe0b5;
+}
