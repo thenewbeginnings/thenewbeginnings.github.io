@@ -10,7 +10,7 @@ body {
   align-items: center;
   justify-content: space-between;
   background: #145a32;
-  padding: 15px 20px;
+  padding: 20px 20px; /* increased padding to fit larger logo */
   color: #ffffff;
   flex-wrap: wrap;
 }
@@ -22,14 +22,14 @@ body {
 }
 
 .site-logo {
-  width: 120px;
-  height: auto;
+  height: 90px;      /* bigger logo */
+  width: auto;       /* keep proportions */
   display: block;
 }
 
 /* SITE TITLE */
 .site-header h1 {
-  font-size: 1.2rem;
+  font-size: 1.3rem; /* slightly bigger */
   margin: 0 15px;
   color: #ffffff;
 }
@@ -149,6 +149,10 @@ body {
     align-items: flex-start;
   }
 
+  .site-logo {
+    height: 70px;   /* slightly smaller on tablets */
+  }
+
   .site-nav {
     display: none;
     flex-direction: column;
@@ -180,12 +184,18 @@ body {
 
 /* SMALL PHONES */
 @media (max-width: 480px) {
+
+  .site-logo {
+    height: 60px;  /* comfortable size for small screens */
+  }
+
   .content-frame {
     max-width: 420px;
     padding: 22px;
     margin: 20px auto;
   }
 }
+
 /* FOOTER WITH QUICK LINKS */
 .site-footer {
   background: #145a32;
@@ -254,6 +264,7 @@ body {
     display: inline-block;
   }
 }
+
 .site-footer a {
   transition: color 0.3s ease;
 }
