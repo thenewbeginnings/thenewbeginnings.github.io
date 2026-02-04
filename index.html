@@ -111,7 +111,7 @@
 
 <main class="content-frame">
 
-  <section class="valentine-campaign">
+  <section class="valentine-campaign animated-section">
     <div class="campaign-inner">
       <h2>💖 Valentine’s for Education & Digital Access</h2>
       <p>
@@ -153,7 +153,6 @@
       </p>
     </div>
 
-    <!-- QUICK LINKS (NOW MATCHES ABOUT PAGE) -->
     <div class="footer-links">
       <h4>Quick Links</h4>
       <ul>
@@ -179,11 +178,79 @@
 <a href="https://wa.me/237677441880" class="whatsapp-float" target="_blank" aria-label="Chat with us on WhatsApp">💬</a>
 
 <script>
+  /* Mobile menu */
   const menuToggle = document.querySelector(".menu-toggle");
   const nav = document.querySelector(".site-nav");
   if (menuToggle && nav) {
     menuToggle.addEventListener("click", () => nav.classList.toggle("active"));
   }
+
+  /* GSAP animations – SAME AS ABOUT PAGE */
+  gsap.from(".site-header", {
+    y: -80,
+    opacity: 0,
+    duration: 1,
+    ease: "power3.out"
+  });
+
+  gsap.from(".slogan-bar", {
+    opacity: 0,
+    duration: 1,
+    delay: 0.6
+  });
+
+  gsap.from(".content-frame", {
+    scrollTrigger: {
+      trigger: ".content-frame",
+      start: "top 80%"
+    },
+    y: 60,
+    opacity: 0,
+    duration: 1,
+    ease: "power2.out"
+  });
+
+  gsap.from(
+    ".animated-section h2, .animated-section p, .animated-section h3, .animated-section h4, .animated-section li, .donate-cta",
+    {
+      scrollTrigger: {
+        trigger: ".animated-section",
+        start: "top 75%"
+      },
+      y: 30,
+      opacity: 0,
+      duration: 0.8,
+      stagger: 0.12,
+      ease: "power2.out"
+    }
+  );
+
+  /* FOOTER ANIMATION */
+  gsap.from(".animated-footer", {
+    scrollTrigger: {
+      trigger: ".animated-footer",
+      start: "top 85%",
+    },
+    y: 40,
+    opacity: 0,
+    duration: 1,
+    ease: "power2.out"
+  });
+
+  gsap.from(
+    ".animated-footer h3, .animated-footer h4, .animated-footer p, .animated-footer li",
+    {
+      scrollTrigger: {
+        trigger: ".animated-footer",
+        start: "top 85%",
+      },
+      y: 20,
+      opacity: 0,
+      duration: 0.6,
+      stagger: 0.12,
+      ease: "power2.out"
+    }
+  );
 </script>
 
 </body>
