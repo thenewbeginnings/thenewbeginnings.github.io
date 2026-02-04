@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8">
 
-  <title>The New Beginnings | Empowering Rural Communities Through Education, Bitcoin & Digital Access</title>
+  <title>
+    The New Beginnings | Empowering Rural Communities Through Education, Bitcoin & Digital Access
+  </title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -19,8 +21,10 @@
   <!-- Open Graph -->
   <meta property="og:title"
     content="The New Beginnings – Empowering Rural Communities Through Education, Bitcoin & Digital Access">
+
   <meta property="og:description"
     content="A community-driven initiative based in Bamenda, North West Region of Cameroon, advancing rural education, digital inclusion, and Bitcoin-enabled financial empowerment.">
+
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://thenewbeginnings.github.io/">
 
@@ -40,12 +44,14 @@
       white-space: nowrap;
       padding: 10px 0;
     }
+
     .slogan-text {
       display: inline-block;
       padding-left: 100%;
       animation: scroll-slogan 18s linear infinite;
       font-weight: bold;
     }
+
     @keyframes scroll-slogan {
       from { transform: translateX(0); }
       to { transform: translateX(-100%); }
@@ -59,7 +65,7 @@
     "@type": "NGO",
     "name": "The New Beginnings",
     "url": "https://thenewbeginnings.github.io/",
-    "logo": "https://thenewbeginnings.github.io/image/tologo.png",
+    "logo": "https://thenewbeginnings.github.io/image/logo1.png",
     "description": "The New Beginnings is a community-driven NGO based in Bamenda, North West Region of Cameroon, empowering rural communities through education, digital access, and Bitcoin-enabled financial inclusion.",
     "foundingLocation": {
       "@type": "Place",
@@ -69,7 +75,9 @@
       "@type": "AdministrativeArea",
       "name": "North West Region, Cameroon"
     },
-    "sameAs": ["https://wa.me/237677441880"],
+    "sameAs": [
+      "https://wa.me/237677441880"
+    ],
     "contactPoint": {
       "@type": "ContactPoint",
       "contactType": "General inquiries",
@@ -78,13 +86,14 @@
     }
   }
   </script>
+
 </head>
 
 <body>
 
 <header class="site-header">
   <div class="logo-wrapper">
-    <img src="image/tologo.png" alt="The New Beginnings Logo" class="site-logo">
+    <img src="image/logo1.png" alt="The New Beginnings Logo" class="site-logo">
   </div>
 
   <h1>The New Beginnings</h1>
@@ -103,15 +112,18 @@
   </nav>
 </header>
 
+<!-- SCROLLING SLOGAN -->
 <div class="slogan-bar">
   <div class="slogan-text">
     Empowering Rural Communities Through Education, Bitcoin, and Digital Access
   </div>
 </div>
 
+<!-- CONTENT FRAME -->
 <main class="content-frame">
 
-  <section class="valentine-campaign animated-section">
+  <!-- VALENTINE CAMPAIGN (INSERTED BELOW HERO) -->
+  <section class="valentine-campaign">
     <div class="campaign-inner">
       <h2>💖 Valentine’s for Education & Digital Access</h2>
       <p>
@@ -121,23 +133,69 @@
       </p>
       <div class="campaign-buttons">
         <a href="projects.html#valentines" class="btn-primary">Support the Campaign</a>
-        <a href="donate.html" class="btn-secondary">Donate / Support</a>
+        <a href="donate.html" class="btn-secondary">Donate / Volunteer</a>
       </div>
     </div>
   </section>
 
   <section class="animated-section">
+
     <h2>Welcome to The New Beginnings</h2>
+
     <p>
       The New Beginnings is a community-driven initiative based in
       <strong>Bamenda, North West Region of Cameroon</strong>, focused on empowering
       rural communities through education, Bitcoin, and digital access.
     </p>
 
+    <p>
+      Our work supports teachers, youth, and community leaders in using digital tools
+      and open financial systems to strengthen education, improve livelihoods, and
+      foster sustainable rural development.
+    </p>
+
+    <h3>Our Mission</h3>
+    <p>
+      Our mission is to support rural communities through education, digital access,
+      and innovative financial tools such as Bitcoin.
+    </p>
+
+    <h3>Where We Work</h3>
+    <p>
+      Our work is rooted in Bamenda and surrounding rural communities in the
+      North West Region of Cameroon, where we collaborate with local educators,
+      youth groups, and community leaders.
+    </p>
+
+    <h3>What We Do</h3>
+
+    <h4>Rural Education & Learning Support</h4>
+    <p>
+      We strengthen education in rural communities by supporting digital learning,
+      teacher capacity, and access to educational resources.
+    </p>
+
+    <h4>Digital Access & Literacy</h4>
+    <p>
+      We promote digital inclusion by improving access to information and digital skills.
+    </p>
+
+    <h4>Bitcoin & Financial Inclusion</h4>
+    <p>
+      We introduce Bitcoin as a tool for financial inclusion and economic participation.
+    </p>
+
+    <h3>Our Vision</h3>
+    <p>
+      We envision rural communities that are educated, digitally connected, and
+      economically empowered.
+    </p>
+
     <div class="donate-cta">
       <p><strong>Support our work and help expand education and digital opportunity.</strong></p>
       <a href="donate.html" class="donate-btn">Donate with Bitcoin</a>
     </div>
+
   </section>
 </main>
 
@@ -175,17 +233,23 @@
 
 </footer>
 
-<a href="https://wa.me/237677441880" class="whatsapp-float" target="_blank" aria-label="Chat with us on WhatsApp">💬</a>
+<!-- Floating WhatsApp Button -->
+<a
+  href="https://wa.me/237677441880"
+  class="whatsapp-float"
+  target="_blank"
+  aria-label="Chat with us on WhatsApp"
+>
+  💬
+</a>
 
 <script>
   /* Mobile menu */
   const menuToggle = document.querySelector(".menu-toggle");
   const nav = document.querySelector(".site-nav");
-  if (menuToggle && nav) {
-    menuToggle.addEventListener("click", () => nav.classList.toggle("active"));
-  }
+  menuToggle.addEventListener("click", () => nav.classList.toggle("active"));
 
-  /* GSAP animations – SAME AS ABOUT PAGE */
+  /* GSAP ANIMATIONS */
   gsap.from(".site-header", {
     y: -80,
     opacity: 0,
@@ -210,21 +274,20 @@
     ease: "power2.out"
   });
 
-  gsap.from(
-    ".animated-section h2, .animated-section p, .animated-section h3, .animated-section h4, .animated-section li, .donate-cta",
-    {
-      scrollTrigger: {
-        trigger: ".animated-section",
-        start: "top 75%"
-      },
-      y: 30,
-      opacity: 0,
-      duration: 0.8,
-      stagger: 0.12,
-      ease: "power2.out"
-    }
-  );
+  gsap.from(".animated-section h2, .animated-section p, .animated-section h3, .animated-section h4, .donate-cta", {
+    scrollTrigger: {
+      trigger: ".animated-section",
+      start: "top 75%"
+    },
+    y: 30,
+    opacity: 0,
+    duration: 0.8,
+    stagger: 0.15,
+    ease: "power2.out"
+  });
+</script>
 
+<script>
   /* FOOTER ANIMATION */
   gsap.from(".animated-footer", {
     scrollTrigger: {
