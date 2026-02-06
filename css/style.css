@@ -10,7 +10,7 @@ body {
   align-items: center;
   justify-content: space-between;
   background: #145a32;
-  padding: 24px 20px; /* slightly more space for bigger logo */
+  padding: 32px 20px; /* more space for bigger logo */
   color: #ffffff;
   flex-wrap: wrap;
 }
@@ -22,8 +22,8 @@ body {
 }
 
 .site-logo {
-  height: 105px;      /* bigger logo on desktop */
-  width: auto;       /* keep proportions */
+  height: 210px;      /* ⬅️ DOUBLED from 105px */
+  width: auto;       
   display: block;
 }
 
@@ -66,7 +66,7 @@ body {
   font-weight: bold;
 }
 
-/* CONTENT FRAME – DEFAULT (DESKTOP / CHROMEBOOK) */
+/* CONTENT FRAME – DEFAULT */
 .content-frame {
   background: #ffffff;
   max-width: 640px;
@@ -150,7 +150,7 @@ body {
   }
 
   .site-logo {
-    height: 85px;   /* bigger on tablets */
+    height: 170px;   /* ⬅️ DOUBLED from 85px */
   }
 
   .site-nav {
@@ -186,7 +186,7 @@ body {
 @media (max-width: 480px) {
 
   .site-logo {
-    height: 75px;  /* bigger on small phones */
+    height: 150px;  /* ⬅️ DOUBLED from 75px */
   }
 
   .content-frame {
