@@ -279,3 +279,46 @@ body {
 .site-footer a:hover {
   color: #9fe0b5;
 }
+/* 🔒 Prevent overflow on mobile */
+.content-frame {
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+/* Ensure all form elements respect container width */
+.contact-form,
+.contact-form * {
+  box-sizing: border-box;
+}
+
+/* Force inputs and textarea to stay inside frame */
+.contact-form input,
+.contact-form textarea {
+  max-width: 100%;
+  width: 100%;
+}
+
+/* Fix iframe (map) overflow */
+.map-container iframe {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+}
+
+/* Extra safety for very small screens */
+@media (max-width: 480px) {
+  .content-frame {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  .contact-form {
+    max-width: 100%;
+  }
+
+  .contact-form input,
+  .contact-form textarea,
+  .donate-btn {
+    width: 100%;
+  }
+}
