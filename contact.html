@@ -2,9 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-
   <title>Contact | The New Beginnings</title>
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- SEO -->
@@ -13,22 +11,20 @@
 
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-
-  <!-- Main stylesheet -->
   <link rel="stylesheet" href="css/style.css">
 
   <!-- GSAP -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
-  <!-- Page-specific styles -->
   <style>
     .contact-form {
       display: flex;
       flex-direction: column;
-      gap: 15px;
+      gap: 14px;
       margin-top: 15px;
       max-width: 520px;
+      width: 100%;
     }
 
     .contact-form label {
@@ -39,11 +35,15 @@
     .contact-form input,
     .contact-form textarea {
       width: 100%;
-      padding: 10px;
+      padding: 12px;           /* ⬅️ slightly larger tap area */
       border-radius: 6px;
       border: 1px solid #ccc;
       font-family: inherit;
-      font-size: 0.95rem;
+      font-size: 1rem;
+    }
+
+    .contact-form textarea {
+      resize: vertical;
     }
 
     .contact-form input:focus,
@@ -54,10 +54,26 @@
 
     .map-container {
       margin-top: 20px;
+      width: 100%;
+    }
+
+    /* ✅ MOBILE OPTIMIZATION */
+    @media (max-width: 480px) {
+      .contact-form {
+        max-width: 100%;
+      }
+
+      .donate-btn {
+        width: 100%;          /* ⬅️ full-width button on mobile */
+        text-align: center;
+      }
+
+      .map-container iframe {
+        height: 240px;        /* ⬅️ shorter map for small screens */
+      }
     }
   </style>
 
-  <!-- Scrolling slogan -->
   <style>
     .slogan-bar {
       background: #0b3d20;
@@ -87,11 +103,8 @@
   <div class="logo-wrapper">
     <img src="image/tologo.png" alt="The New Beginnings Logo" class="site-logo">
   </div>
-
   <h1>The New Beginnings</h1>
-
   <button class="menu-toggle" aria-label="Open menu">☰</button>
-
   <nav class="site-nav">
     <a href="index.html">Home</a>
     <a href="about.html">About Us</a>
@@ -114,30 +127,7 @@
   <section class="animated-section">
 
     <h2>Contact Us</h2>
-
-    <p>
-      We welcome partnerships, donations, and collaboration opportunities.
-      Feel free to reach out to us.
-    </p>
-
-    <h3>Our Office</h3>
-    <p>
-      <strong>The New Beginnings</strong><br>
-      Bamenda, North West Region<br>
-      Cameroon
-    </p>
-
-    <h3>Phone / WhatsApp</h3>
-    <p>
-      <a href="https://wa.me/237677441880" class="contact-link">
-        +237 677 441 880
-      </a>
-    </p>
-
-    <h3>Email</h3>
-    <p>
-      <em>ndongson2001@yahoo.com</em>
-    </p>
+    <p>We welcome partnerships, donations, and collaboration opportunities.</p>
 
     <h3>Our Location</h3>
     <div class="map-container">
@@ -153,49 +143,27 @@
     <h3 style="margin-top:40px;">Send Us a Message</h3>
 
     <form action="https://formspree.io/f/mojagaob" method="POST" class="contact-form">
+      <label>Your Name
+        <input type="text" name="name" required>
+      </label>
 
-      <label for="name">Your Name</label>
-      <input type="text" id="name" name="name" placeholder="Enter your name" required>
+      <label>Your Email
+        <input type="email" name="_replyto" required>
+      </label>
 
-      <label for="email">Your Email</label>
-      <input type="email" id="email" name="_replyto" placeholder="Enter your email" required>
+      <label>Subject
+        <input type="text" name="subject" required>
+      </label>
 
-      <label for="subject">Subject</label>
-      <input type="text" id="subject" name="subject" placeholder="Subject of your message" required>
+      <label>Your Message
+        <textarea name="message" rows="5" required></textarea>
+      </label>
 
-      <label for="message">Your Message</label>
-      <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
-
-      <button type="submit" class="donate-btn" style="align-self:flex-start;">
-        Send Message
-      </button>
-
+      <button type="submit" class="donate-btn">Send Message</button>
     </form>
 
   </section>
 </main>
-
-<footer class="site-footer animated-footer">
-  <p class="footer-copy">
-    © 2025 The New Beginnings. All rights reserved.
-  </p>
-</footer>
-
-<a href="https://wa.me/237677441880" class="whatsapp-float" target="_blank" aria-label="Chat with us on WhatsApp">💬</a>
-
-<script>
-  const menuToggle = document.querySelector(".menu-toggle");
-  const nav = document.querySelector(".site-nav");
-  menuToggle.addEventListener("click", () => nav.classList.toggle("active"));
-
-  gsap.from(".site-header", { y: -80, opacity: 0, duration: 1 });
-  gsap.from(".slogan-bar", { opacity: 0, duration: 1, delay: 0.6 });
-
-  gsap.from(".content-frame", {
-    scrollTrigger: { trigger: ".content-frame", start: "top 80%" },
-    y: 60, opacity: 0, duration: 1
-  });
-</script>
 
 </body>
 </html>
