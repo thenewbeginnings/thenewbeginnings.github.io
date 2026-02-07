@@ -59,14 +59,17 @@ body {
   border-bottom: 2px solid #9fe0b5;
 }
 
-/* HAMBURGER MENU */
+/* HAMBURGER MENU (COMPACT FIX) */
 .menu-toggle {
   display: none;
-  font-size: 24px;
+  font-size: 20px;        /* ⬅️ compact size */
   background: none;
   border: none;
-  color: white;
+  color: #ffffff;
   cursor: pointer;
+  padding: 4px 6px;      /* ⬅️ tighter clickable area */
+  line-height: 1;        /* ⬅️ prevents tall button */
+  border-radius: 4px;   /* subtle rounding */
 }
 
 /* SLOGAN BAR */
@@ -219,6 +222,11 @@ body {
   .donate-btn {
     width: 100%;
     text-align: center;
+  }
+
+  .menu-toggle {
+    font-size: 18px;   /* even tighter on very small phones */
+    padding: 3px 5px;
   }
 }
 
