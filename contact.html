@@ -23,33 +23,17 @@
 
   <!-- Page-specific styles -->
   <style>
-    .contact-list {
-      margin-top: 20px;
-    }
-
-    .contact-item {
-      display: flex;
-      gap: 10px;
-      align-items: center;
-      margin-bottom: 12px;
-      flex-wrap: wrap;
-    }
-
-    .contact-link {
-      text-decoration: none;
-      color: #0b5ed7;
-      font-weight: 500;
-    }
-
-    .contact-link:hover {
-      text-decoration: underline;
-    }
-
     .contact-form {
       display: flex;
       flex-direction: column;
       gap: 15px;
       margin-top: 15px;
+      max-width: 520px;
+    }
+
+    .contact-form label {
+      font-weight: 600;
+      font-size: 0.9rem;
     }
 
     .contact-form input,
@@ -58,6 +42,14 @@
       padding: 10px;
       border-radius: 6px;
       border: 1px solid #ccc;
+      font-family: inherit;
+      font-size: 0.95rem;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      outline: none;
+      border-color: #1f7a3d;
     }
 
     .map-container {
@@ -87,36 +79,6 @@
       to { transform: translateX(-100%); }
     }
   </style>
-
-  <!-- Schema.org NGO Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "NGO",
-    "name": "The New Beginnings",
-    "url": "https://thenewbeginnings.github.io/",
-    "logo": "https://thenewbeginnings.github.io/image/logo1.png",
-    "description": "The New Beginnings is a community-driven NGO based in Bamenda, North West Region of Cameroon, empowering rural communities through education, digital access, and Bitcoin-enabled financial inclusion.",
-    "foundingLocation": {
-      "@type": "Place",
-      "name": "Bamenda, North West Region, Cameroon"
-    },
-    "areaServed": {
-      "@type": "AdministrativeArea",
-      "name": "North West Region, Cameroon"
-    },
-    "sameAs": [
-      "https://wa.me/237677441880"
-    ],
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "contactType": "General inquiries",
-      "telephone": "+237677441880",
-      "availableLanguage": ["English"]
-    }
-  }
-  </script>
-
 </head>
 
 <body>
@@ -142,14 +104,12 @@
   </nav>
 </header>
 
-<!-- SCROLLING SLOGAN -->
 <div class="slogan-bar">
   <div class="slogan-text">
     Empowering Rural Communities Through Education, Bitcoin, and Digital Access
   </div>
 </div>
 
-<!-- CONTENT FRAME -->
 <main class="content-frame">
   <section class="animated-section">
 
@@ -186,40 +146,25 @@
         width="100%"
         height="350"
         style="border:0; border-radius:12px;"
-        allowfullscreen=""
         loading="lazy">
       </iframe>
     </div>
 
-    <!-- CONTACT FORM -->
     <h3 style="margin-top:40px;">Send Us a Message</h3>
-
-    <p>
-      Use the form below to share questions, partnership ideas, or messages of support.
-      We aim to respond as promptly as possible.
-    </p>
 
     <form action="https://formspree.io/f/mojagaob" method="POST" class="contact-form">
 
-      <label>
-        <strong>Your Name</strong>
-        <input type="text" name="name" required>
-      </label>
+      <label for="name">Your Name</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required>
 
-      <label>
-        <strong>Your Email</strong>
-        <input type="email" name="email" required>
-      </label>
+      <label for="email">Your Email</label>
+      <input type="email" id="email" name="_replyto" placeholder="Enter your email" required>
 
-      <label>
-        <strong>Subject</strong>
-        <input type="text" name="subject" required>
-      </label>
+      <label for="subject">Subject</label>
+      <input type="text" id="subject" name="subject" placeholder="Subject of your message" required>
 
-      <label>
-        <strong>Your Message</strong>
-        <textarea name="message" rows="5" required></textarea>
-      </label>
+      <label for="message">Your Message</label>
+      <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
 
       <button type="submit" class="donate-btn" style="align-self:flex-start;">
         Send Message
@@ -231,121 +176,26 @@
 </main>
 
 <footer class="site-footer animated-footer">
-
-  <div class="footer-content">
-
-    <div class="footer-brand">
-      <h3>The New Beginnings</h3>
-      <p>
-        Empowering rural communities through education, digital access,
-        and inclusive financial tools.
-      </p>
-    </div>
-
-    <div class="footer-links">
-      <h4>Quick Links</h4>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="impact.html">Impact</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="donate.html">Donate</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-
-  </div>
-
   <p class="footer-copy">
     © 2025 The New Beginnings. All rights reserved.
   </p>
-
 </footer>
 
-<!-- WhatsApp Floating Button -->
-<a
-  href="https://wa.me/237677441880"
-  class="whatsapp-float"
-  target="_blank"
-  aria-label="Chat with us on WhatsApp"
->
-  💬
-</a>
+<a href="https://wa.me/237677441880" class="whatsapp-float" target="_blank" aria-label="Chat with us on WhatsApp">💬</a>
 
 <script>
-  /* Mobile menu */
   const menuToggle = document.querySelector(".menu-toggle");
   const nav = document.querySelector(".site-nav");
   menuToggle.addEventListener("click", () => nav.classList.toggle("active"));
 
-  /* GSAP animations */
-  gsap.from(".site-header", {
-    y: -80,
-    opacity: 0,
-    duration: 1,
-    ease: "power3.out"
-  });
-
-  gsap.from(".slogan-bar", {
-    opacity: 0,
-    duration: 1,
-    delay: 0.6
-  });
+  gsap.from(".site-header", { y: -80, opacity: 0, duration: 1 });
+  gsap.from(".slogan-bar", { opacity: 0, duration: 1, delay: 0.6 });
 
   gsap.from(".content-frame", {
-    scrollTrigger: {
-      trigger: ".content-frame",
-      start: "top 80%"
-    },
-    y: 60,
-    opacity: 0,
-    duration: 1,
-    ease: "power2.out"
+    scrollTrigger: { trigger: ".content-frame", start: "top 80%" },
+    y: 60, opacity: 0, duration: 1
   });
-
-  gsap.from(
-    ".animated-section h2, .animated-section p, .animated-section h3, form label, .donate-btn, iframe",
-    {
-      scrollTrigger: {
-        trigger: ".animated-section",
-        start: "top 75%"
-      },
-      y: 30,
-      opacity: 0,
-      duration: 0.8,
-      stagger: 0.12,
-      ease: "power2.out"
-    }
-  );
 </script>
-<script>
-  /* FOOTER ANIMATION */
-  gsap.from(".animated-footer", {
-    scrollTrigger: {
-      trigger: ".animated-footer",
-      start: "top 85%",
-    },
-    y: 40,
-    opacity: 0,
-    duration: 1,
-    ease: "power2.out"
-  });
 
-  gsap.from(
-    ".animated-footer h3, .animated-footer h4, .animated-footer p, .animated-footer li",
-    {
-      scrollTrigger: {
-        trigger: ".animated-footer",
-        start: "top 85%",
-      },
-      y: 20,
-      opacity: 0,
-      duration: 0.6,
-      stagger: 0.12,
-      ease: "power2.out"
-    }
-  );
-</script>
 </body>
 </html>
