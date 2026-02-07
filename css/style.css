@@ -62,14 +62,14 @@ body {
 /* HAMBURGER MENU (COMPACT FIX) */
 .menu-toggle {
   display: none;
-  font-size: 20px;        /* ⬅️ compact size */
+  font-size: 20px;
   background: none;
   border: none;
   color: #ffffff;
   cursor: pointer;
-  padding: 4px 6px;      /* ⬅️ tighter clickable area */
-  line-height: 1;        /* ⬅️ prevents tall button */
-  border-radius: 4px;   /* subtle rounding */
+  padding: 4px 6px;
+  line-height: 1;
+  border-radius: 4px;
 }
 
 /* SLOGAN BAR */
@@ -82,10 +82,10 @@ body {
   margin-top: 0;
 }
 
-/* CONTENT FRAME – RESPONSIVE FIX */
+/* CONTENT FRAME – WIDER ON DESKTOP */
 .content-frame {
   background: #ffffff;
-  max-width: 640px;
+  max-width: 800px;   /* ⬅️ increased by 25% from 640px */
   width: 100%;
   margin: 30px auto;
   padding: 32px 24px;
@@ -225,7 +225,7 @@ body {
   }
 
   .menu-toggle {
-    font-size: 18px;   /* even tighter on very small phones */
+    font-size: 18px;
     padding: 3px 5px;
   }
 }
