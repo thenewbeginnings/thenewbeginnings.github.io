@@ -307,11 +307,3 @@ body {
   max-width: 100%;
   display: block;
 }
-.content-card {
-  background: #ffffff;
-  border-radius: 12px;
-  padding: 30px;
-  margin: 30px auto;
-  max-width: 900px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-}
