@@ -307,20 +307,3 @@ body {
   max-width: 100%;
   display: block;
 }
-/* CONTENT FRAME CARDS */
-.content-card {
-  background: #ffffff;
-  color: #222;
-  max-width: 900px;
-  margin: 30px auto;
-  padding: 40px;
-  border-radius: 14px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-}
-
-@media (max-width: 768px) {
-  .content-card {
-    padding: 22px;
-    margin: 20px 12px;
-  }
-}
