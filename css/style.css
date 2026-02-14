@@ -50,13 +50,17 @@ body {
   text-decoration: none;
   margin: 0 10px;
   font-weight: 500;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: background 0.2s ease, color 0.2s ease;
 }
 
-/* ACTIVE MENU LINK */
+/* ACTIVE MENU LINK – CLEAN (NO UNDERLINE) */
 .site-nav a.active {
   color: #9fe0b5;
-  font-weight: bold;
-  border-bottom: 2px solid #9fe0b5;
+  font-weight: 600;
+  background: rgba(159, 224, 181, 0.18);
+  border-bottom: none;   /* ✅ underline removed */
 }
 
 /* HAMBURGER MENU */
@@ -137,7 +141,7 @@ body {
   color: #ffffff;
 }
 
-/* ================= FLOATING WHATSAPP BUTTON (FIXED & PROFESSIONAL) ================= */
+/* ================= FLOATING WHATSAPP BUTTON ================= */
 .whatsapp-float {
   position: fixed;
   bottom: 20px;
