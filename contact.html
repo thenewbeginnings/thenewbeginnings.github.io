@@ -7,7 +7,6 @@
   window.dataLayer = window.dataLayer || [];  
   function gtag(){dataLayer.push(arguments);}  
   gtag('js', new Date());  
-  
   gtag('config', 'G-LEJV45EEDK');  
 </script>  
   <meta charset="UTF-8">        
@@ -139,7 +138,6 @@
 
   <button class="menu-toggle" aria-label="Open menu">☰</button>
 
-  <!-- ✅ Buttons now placed exactly like Home page -->
   <div class="header-cta">
     <a href="donate.html" class="btn-primary">Donate</a>
     <a href="contact.html" class="btn-secondary">Contact Us</a>
@@ -149,31 +147,36 @@
   <nav class="site-nav">
     <a href="index.html">Home</a>
     <a href="about.html">About Us</a>
-    <a href="projects.html" class="active">Projects</a>
+    <a href="projects.html">Projects</a>
     <a href="impact.html">Impact</a>
     <a href="trust.html">Trust</a>
     <a href="gallery.html">Gallery</a>
     <a href="donate.html">Donate</a>
-    <a href="contact.html">Contact</a>
+    <a href="contact.html" class="active">Contact</a>
   </nav>
 </header>
         
-<!-- SCROLLING SLOGAN -->        
 <div class="slogan-bar">        
   <div class="slogan-text">        
     Empowering Rural Communities Through Education, Bitcoin, and Digital Access        
   </div>        
 </div>        
         
-<!-- CONTENT FRAME -->        
 <main class="content-frame">        
   <section class="animated-section">        
         
     <h2>Contact Us</h2>        
         
-    <p>        
-      We welcome partnerships, donations, and collaboration opportunities.        
-      Feel free to reach out to us.        
+    <p>
+      Let’s build something meaningful together. Whether you’re interested in partnering with us,
+      supporting our work, or getting involved in our projects, we’d love to hear from you.
+      Your message could be the start of real impact in rural communities.
+    </p>
+
+    <p>
+      We welcome partnerships, donations, volunteers, media inquiries, and collaboration
+      opportunities. Every connection helps us expand education, digital access, and opportunity
+      for those who need it most.
     </p>        
         
     <h3>Our Office</h3>        
@@ -187,12 +190,14 @@
     <p>        
       <a href="https://wa.me/237677441880" class="contact-link">        
         +237 677 441 880        
-      </a>        
+      </a><br>
+      Quick questions? Send us a message on WhatsApp and we’ll respond as soon as we can.
     </p>        
         
     <h3>Email</h3>        
     <p>        
-      <em>ndongson2001@yahoo.com</em>        
+      <em>ndongson2001@yahoo.com</em><br>
+      For partnerships, support inquiries, or detailed proposals, feel free to email us.
     </p>        
         
     <h3>Our Location</h3>        
@@ -207,11 +212,10 @@
       </iframe>        
     </div>        
         
-    <!-- CONTACT FORM -->        
     <h3 style="margin-top:40px;">Send Us a Message</h3>        
         
     <p>        
-      Use the form below to share questions, partnership ideas, or messages of support.        
+      Use the form below to share questions, partnership ideas, or messages of support.
       We aim to respond as promptly as possible.        
     </p>        
         
@@ -247,9 +251,7 @@
 </main>        
         
 <footer class="site-footer animated-footer">        
-        
   <div class="footer-content">        
-        
     <div class="footer-brand">        
       <h3>The New Beginnings</h3>        
       <p>        
@@ -270,106 +272,20 @@
         <li><a href="contact.html">Contact</a></li>        
       </ul>        
     </div>        
-        
   </div>        
         
   <p class="footer-copy">        
     © 2025 The New Beginnings — Bamenda, North West Region, Cameroon. All rights reserved.
   </p>        
-        
 </footer>        
         
-<!-- WhatsApp Floating Button -->        
-<a        
-  href="https://wa.me/237677441880"        
-  class="whatsapp-float"        
-  target="_blank"        
-  aria-label="Chat with us on WhatsApp"        
->        
-  💬        
-</a>        
+<a href="https://wa.me/237677441880" class="whatsapp-float" target="_blank" aria-label="Chat with us on WhatsApp">💬</a>        
         
 <script>        
-  /* Mobile menu */        
   const menuToggle = document.querySelector(".menu-toggle");        
   const nav = document.querySelector(".site-nav");        
   menuToggle.addEventListener("click", () => nav.classList.toggle("active"));        
-        
-  /* GSAP animations */        
-  gsap.from(".site-header", {        
-    y: -80,        
-    opacity: 0,        
-    duration: 1,        
-    ease: "power3.out"        
-  });        
-        
-  gsap.from(".slogan-bar", {        
-    opacity: 0,        
-    duration: 1,        
-    delay: 0.6        
-  });        
-        
-  gsap.from(".content-frame", {        
-    scrollTrigger: {        
-      trigger: ".content-frame",        
-      start: "top 80%"        
-    },        
-    y: 60,        
-    opacity: 0,        
-    duration: 1,        
-    ease: "power2.out"        
-  });        
-        
-  gsap.from(        
-    ".animated-section h2, .animated-section p, .animated-section h3, form label, .donate-btn, iframe",        
-    {        
-      scrollTrigger: {        
-        trigger: ".animated-section",        
-        start: "top 75%"        
-      },        
-      y: 30,        
-      opacity: 0,        
-      duration: 0.8,        
-      stagger: 0.12,        
-      ease: "power2.out"        
-    }        
-  );        
 </script>        
-<script>        
-  /* FOOTER ANIMATION */        
-  gsap.from(".animated-footer", {        
-    scrollTrigger: {        
-      trigger: ".animated-footer",        
-      start: "top 85%",        
-    },        
-    y: 40,        
-    opacity: 0,        
-    duration: 1,        
-    ease: "power2.out"        
-  });        
         
-  gsap.from(        
-    ".animated-footer h3, .animated-footer h4, .animated-footer p, .animated-footer li",        
-    {        
-      scrollTrigger: {        
-        trigger: ".animated-footer",        
-        start: "top 85%",        
-      },        
-      y: 20,        
-      opacity: 0,        
-      duration: 0.6,        
-      stagger: 0.12,        
-      ease: "power2.out"        
-    }        
-  );        
-</script>      
-  <a      
-  href="https://wa.me/237677441880"      
-  class="whatsapp-float"      
-  target="_blank"      
-  aria-label="Chat with us on WhatsApp"      
->      
-  WhatsApp      
-</a>      
 </body>        
-</html>       
+</html>
