@@ -75,6 +75,12 @@
   <h1>The New Beginnings</h1>
   <button class="menu-toggle" aria-label="Open menu">☰</button>
 
+  <div class="header-cta">
+    <a href="donate.html" class="btn-primary">Donate</a>
+    <a href="contact.html" class="btn-secondary">Contact Us</a>
+    <a href="contact.html" class="btn-outline">Join Our Community</a>
+  </div>
+
   <nav class="site-nav">
     <a href="index.html">Home</a>
     <a href="about.html">About Us</a>
@@ -95,10 +101,16 @@
 
 <main class="content-frame">
   <section class="animated-section">
+
     <h2>Support Rural Community Development</h2>
-    <p>Your support helps strengthen rural education and digital access.</p>
+
+    <p>
+      Your support helps strengthen rural education, expand digital access, and empower
+      communities through inclusive financial tools.
+    </p>
 
     <h3>Donate with Bitcoin</h3>
+
     <div class="btc-box">
       <strong>Bitcoin Wallet Address:</strong><br>
       <code>bc1qmxkpr5k2yvvlsnmtyrg6gkqten5wz5pusr28aqe6lgt49r003qxs209qrn</code>
@@ -109,17 +121,72 @@
       alt="Bitcoin donation QR code"
       class="qr-img"
     >
+
   </section>
 </main>
 
 <footer class="site-footer animated-footer">
-  <p class="footer-copy">© 2025 The New Beginnings. All rights reserved.</p>
+  <div class="footer-content">
+    <div class="footer-brand">
+      <h3>The New Beginnings</h3>
+      <p>
+        Empowering rural communities through education, digital access,
+        and inclusive financial tools.
+      </p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="impact.html">Impact</a></li>
+        <li><a href="trust.html">Trust</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="donate.html">Donate</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <p class="footer-copy">
+    © 2025 The New Beginnings. All rights reserved.
+  </p>
 </footer>
+
+<!-- Floating WhatsApp -->
+<a
+  href="https://wa.me/237677441880"
+  class="whatsapp-float"
+  target="_blank"
+  aria-label="Chat with us on WhatsApp"
+>
+  WhatsApp
+</a>
 
 <script>
   const menuToggle = document.querySelector(".menu-toggle");
   const nav = document.querySelector(".site-nav");
   menuToggle.addEventListener("click", () => nav.classList.toggle("active"));
+
+  gsap.from(".site-header", { y: -80, opacity: 0, duration: 1, ease: "power3.out" });
+  gsap.from(".slogan-bar", { opacity: 0, duration: 1, delay: 0.6 });
+
+  gsap.from(".content-frame", {
+    scrollTrigger: { trigger: ".content-frame", start: "top 80%" },
+    y: 60, opacity: 0, duration: 1, ease: "power2.out"
+  });
+
+  gsap.from(".animated-section h2, .animated-section p, .animated-section h3, .btc-box, .qr-img", {
+    scrollTrigger: { trigger: ".animated-section", start: "top 75%" },
+    y: 30, opacity: 0, duration: 0.8, stagger: 0.12, ease: "power2.out"
+  });
+
+  gsap.from(".animated-footer", {
+    scrollTrigger: { trigger: ".animated-footer", start: "top 85%" },
+    y: 40, opacity: 0, duration: 1, ease: "power2.out"
+  });
 </script>
 
 </body>
