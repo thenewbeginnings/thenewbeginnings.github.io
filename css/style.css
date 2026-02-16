@@ -382,3 +382,18 @@ body {
     flex-wrap: wrap;
   }
 }
+/* FIX: Ensure content is visible on all pages (Donate, Contact, etc.) */
+.content-frame {
+  max-width: 1100px;
+  margin: 140px auto 60px; /* pushes content below fixed header */
+  padding: 24px;
+  background: #ffffff;
+  border-radius: 16px;
+  min-height: auto;
+  overflow: visible;
+}
+
+.animated-section {
+  opacity: 1 !important;  /* ensure content is visible even if GSAP fails */
+  transform: none !important;
+}
