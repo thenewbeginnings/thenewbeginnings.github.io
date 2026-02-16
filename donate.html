@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-LEJV45EEDK"></script>
@@ -11,17 +9,29 @@
   </script>
 
   <meta charset="UTF-8">
+
   <title>Donate | The New Beginnings</title>
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- SEO -->
+  <!-- SEO META TAGS -->
   <meta name="description"
     content="Support The New Beginnings – empowering rural communities through education, digital access, and Bitcoin-enabled financial inclusion.">
+
   <meta name="keywords"
     content="donate bitcoin, rural education support, digital inclusion, community development, Cameroon">
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <meta name="author" content="The New Beginnings">
+
+  <!-- Open Graph -->
+  <meta property="og:title"
+    content="Donate to The New Beginnings – Support Education & Digital Access in Rural Cameroon">
+
+  <meta property="og:description"
+    content="Support The New Beginnings to expand education, digital access, and financial inclusion in rural communities in Cameroon.">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://thenewbeginnings.github.io/donate.html">
 
   <!-- Main stylesheet -->
   <link rel="stylesheet" href="css/style.css">
@@ -30,6 +40,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
+  <!-- Scrolling slogan CSS -->
   <style>
     .slogan-bar {
       background: #0b3d20;
@@ -48,6 +59,7 @@
       from { transform: translateX(0); }
       to { transform: translateX(-100%); }
     }
+
     .btc-box {
       background: #f9f9f9;
       padding: 15px;
@@ -55,111 +67,41 @@
       word-break: break-all;
       margin-top: 15px;
     }
+
+    .btc-box code {
+      font-size: 0.9rem;
+    }
+
     .qr-img {
       margin-top: 20px;
       border-radius: 10px;
       max-width: 200px;
     }
   </style>
+
+  <!-- SCHEMA.ORG NGO STRUCTURED DATA -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NGO",
+    "name": "The New Beginnings",
+    "url": "https://thenewbeginnings.github.io/",
+    "logo": "https://thenewbeginnings.github.io/image/logo1.png",
+    "description": "The New Beginnings is a community-driven NGO based in Bamenda, North West Region of Cameroon, empowering rural communities through education, digital access, and Bitcoin-enabled financial inclusion.",
+    "foundingLocation": {
+      "@type": "Place",
+      "name": "Bamenda, North West Region, Cameroon"
+    },
+    "areaServed": {
+      "@type": "AdministrativeArea",
+      "name": "North West Region, Cameroon"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "General inquiries",
+      "telephone": "+237677441880",
+      "availableLanguage": ["English"]
+    }
+  }
+  </script>
 </head>
-
-<body>
-
-<header class="site-header">
-  <div class="logo-wrapper">
-    <img src="image/tologo.png" alt="The New Beginnings Logo" class="site-logo">
-  </div>
-
-  <h1>The New Beginnings</h1>
-  <button class="menu-toggle" aria-label="Open menu">☰</button>
-
-  <nav class="site-nav">
-    <a href="index.html">Home</a>
-    <a href="about.html">About Us</a>
-    <a href="projects.html">Projects</a>
-    <a href="impact.html">Impact</a>
-    <a href="trust.html">Trust</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="donate.html" class="active">Donate</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
-
-<div class="slogan-bar">
-  <div class="slogan-text">
-    Empowering Rural Communities Through Education, Bitcoin, and Digital Access
-  </div>
-</div>
-
-<main class="content-frame">
-  <section class="animated-section">
-
-    <h2>Support Rural Community Development</h2>
-
-    <p>
-      Your support helps <strong>The New Beginnings</strong> strengthen rural education,
-      expand digital access, and empower communities.
-    </p>
-
-    <h3>Donate with Bitcoin</h3>
-
-    <div class="btc-box">
-      <strong>Bitcoin Wallet Address:</strong><br>
-      <code>bc1qmxkpr5k2yvvlsnmtyrg6gkqten5wz5pusr28aqe6lgt49r003qxs209qrn</code>
-    </div>
-
-    <img
-      src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=bc1qmxkpr5k2yvvlsnmtyrg6gkqten5wz5pusr28aqe6lgt49r003qxs209qrn"
-      alt="Bitcoin donation QR code"
-      class="qr-img"
-    >
-
-  </section>
-</main>
-
-<footer class="site-footer animated-footer">
-  <div class="footer-content">
-    <div class="footer-brand">
-      <h3>The New Beginnings</h3>
-      <p>
-        Empowering rural communities through education, digital access,
-        and inclusive financial tools.
-      </p>
-    </div>
-
-    <div class="footer-links">
-      <h4>Quick Links</h4>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="impact.html">Impact</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="donate.html">Donate</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-  </div>
-
-  <p class="footer-copy">
-    © 2025 The New Beginnings. All rights reserved.
-  </p>
-</footer>
-
-<a
-  href="https://wa.me/237677441880"
-  class="whatsapp-float"
-  target="_blank"
-  aria-label="Chat with us on WhatsApp"
->
-  💬
-</a>
-
-<script>
-  const menuToggle = document.querySelector(".menu-toggle");
-  const nav = document.querySelector(".site-nav");
-  menuToggle.addEventListener("click", () => nav.classList.toggle("active"));
-</script>
-
-</body>
-</html>
