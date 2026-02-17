@@ -319,27 +319,6 @@
 >
   WhatsApp
 </a>
-  <script>
-  // Fade in on page load
-  window.addEventListener("load", () => {
-    document.body.classList.add("page-loaded");
-  });
-
-  // Fade out before navigating
-  document.querySelectorAll("a").forEach(link => {
-    link.addEventListener("click", function (e) {
-      const href = this.getAttribute("href");
-
-      // Only apply to internal links
-      if (href && href.indexOf("http") !== 0 && !href.startsWith("#")) {
-        e.preventDefault();
-        document.body.classList.remove("page-loaded");
-        setTimeout(() => {
-          window.location.href = href;
-        }, 300);
-      }
-    });
-  });
-</script>
+  
 </body>
 </html>
