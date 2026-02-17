@@ -5,7 +5,7 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #1f7a3d;
+  background: #e9f7ef; /* ✅ Light green background */
   overflow-x: hidden;
 }
 
@@ -236,6 +236,7 @@ body {
   text-decoration: none;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
+
 /* FOOTER QUICK LINKS FIX */
 .footer-links ul {
   list-style: none;       /* remove bullets */
