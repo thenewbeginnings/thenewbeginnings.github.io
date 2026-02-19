@@ -2,145 +2,45 @@
 <html lang="en">        
 <head>   
   <!-- Google tag (gtag.js) -->  
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-LEJV45EEDK"></script>  
-<script>  
-  window.dataLayer = window.dataLayer || [];  
-  function gtag(){dataLayer.push(arguments);}  
-  gtag('js', new Date());  
-  gtag('config', 'G-LEJV45EEDK');  
-</script>  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LEJV45EEDK"></script>  
+  <script>  
+    window.dataLayer = window.dataLayer || [];  
+    function gtag(){dataLayer.push(arguments);}  
+    gtag('js', new Date());  
+
+    gtag('config', 'G-LEJV45EEDK', {
+      page_title: 'Contact Page',
+      page_path: '/contact.html'
+    });
+  </script>  
+
   <meta charset="UTF-8">        
-        
   <title>Contact | The New Beginnings</title>        
-        
   <meta name="viewport" content="width=device-width, initial-scale=1.0">        
-        
-  <!-- SEO -->        
-  <meta name="description"        
+
+  <meta name="description"
     content="Contact The New Beginnings to collaborate, support, or learn more about empowering rural communities through education, Bitcoin, and digital access in Cameroon.">        
-        
-  <!-- Google Font -->        
+
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">        
-        
-  <!-- Main stylesheet -->        
   <link rel="stylesheet" href="css/style.css">        
-        
-  <!-- GSAP -->        
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>        
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>        
-        
-  <!-- Page-specific styles -->        
-  <style>        
-    .contact-list {        
-      margin-top: 20px;        
-    }        
-        
-    .contact-item {        
-      display: flex;        
-      gap: 10px;        
-      align-items: center;        
-      margin-bottom: 12px;        
-      flex-wrap: wrap;        
-    }        
-        
-    .contact-link {        
-      text-decoration: none;        
-      color: #0b5ed7;        
-      font-weight: 500;        
-    }        
-        
-    .contact-link:hover {        
-      text-decoration: underline;        
-    }        
-        
-    .contact-form {        
-      display: flex;        
-      flex-direction: column;        
-      gap: 15px;        
-      margin-top: 15px;        
-    }        
-        
-    .contact-form input,        
-    .contact-form textarea {        
-      width: 100%;        
-      padding: 10px;        
-      border-radius: 6px;        
-      border: 1px solid #ccc;        
-    }        
-        
-    .map-container {        
-      margin-top: 20px;        
-    }        
-  </style>        
-        
-  <!-- Scrolling slogan -->        
-  <style>        
-    .slogan-bar {        
-      background: #0b3d20;        
-      color: #ffffff;        
-      overflow: hidden;        
-      white-space: nowrap;        
-      padding: 10px 0;        
-    }        
-        
-    .slogan-text {        
-      display: inline-block;        
-      padding-left: 100%;        
-      animation: scroll-slogan 18s linear infinite;        
-      font-weight: bold;        
-    }        
-        
-    @keyframes scroll-slogan {        
-      from { transform: translateX(0); }        
-      to { transform: translateX(-100%); }        
-    }        
-  </style>        
-        
-  <!-- Schema.org NGO Structured Data -->        
-  <script type="application/ld+json">        
-  {        
-    "@context": "https://schema.org",        
-    "@type": "NGO",        
-    "name": "The New Beginnings",        
-    "url": "https://thenewbeginnings.github.io/",        
-    "logo": "https://thenewbeginnings.github.io/image/logo1.png",        
-    "description": "The New Beginnings is a community-driven NGO based in Bamenda, North West Region of Cameroon, empowering rural communities through education, digital access, and Bitcoin-enabled financial inclusion.",        
-    "foundingLocation": {        
-      "@type": "Place",        
-      "name": "Bamenda, North West Region, Cameroon"        
-    },        
-    "areaServed": {        
-      "@type": "AdministrativeArea",        
-      "name": "North West Region, Cameroon"        
-    },        
-    "sameAs": [        
-      "https://wa.me/237677441880"        
-    ],        
-    "contactPoint": {        
-      "@type": "ContactPoint",        
-      "contactType": "General inquiries",        
-      "telephone": "+237677441880",        
-      "availableLanguage": ["English"]        
-    }        
-  }        
-  </script>        
-        
 </head>        
-        
+
 <body>        
-        
+
 <header class="site-header">
   <div class="logo-wrapper">
     <img src="image/tologo.png" alt="The New Beginnings Logo" class="site-logo">
   </div>
 
   <h1>The New Beginnings</h1>
-
   <button class="menu-toggle" aria-label="Open menu">☰</button>
 
   <div class="header-cta">
-    <a href="donate.html" class="btn-primary">Donate</a>
-    <a href="contact.html" class="btn-secondary">Contact Us</a>
+    <a href="donate.html" class="btn-primary" id="cta-donate">Donate</a>
+    <a href="contact.html" class="btn-secondary" id="cta-contact">Contact Us</a>
     <a href="contact.html" class="btn-outline">Join Our Community</a>
   </div>
 
@@ -155,13 +55,13 @@
     <a href="contact.html" class="active">Contact</a>
   </nav>
 </header>
-        
-<div class="slogan-bar">        
-  <div class="slogan-text">        
-    Empowering Rural Communities Through Education, Bitcoin, and Digital Access        
-  </div>        
-</div>        
-        
+
+<div class="slogan-bar">
+  <div class="slogan-text">
+    Empowering Rural Communities Through Education, Bitcoin, and Digital Access
+  </div>
+</div>
+
 <main class="content-frame">        
   <section class="animated-section">        
         
@@ -170,56 +70,18 @@
     <p>
       Let us build something meaningful together. Whether you are interested in partnering with us,
       supporting our work, or getting involved in our projects, we would love to hear from you.
-      Your message could be the start of real impact in rural communities.
     </p>
 
-    <p>
-      We welcome partnerships, donations, volunteers, media inquiries, and collaboration
-      opportunities. Every connection helps us expand education, digital access, and opportunity
-      for those who need it most.
-    </p>        
-        
-    <h3>Our Office</h3>        
-    <p>        
-      <strong>The New Beginnings</strong><br>        
-      Bamenda, North West Region<br>        
-      Cameroon        
-    </p>        
-        
     <h3>Phone / WhatsApp</h3>        
     <p>        
-      <a href="https://wa.me/237677441880" class="contact-link">        
+      <a href="https://wa.me/237677441880" class="contact-link" id="whatsapp-text">        
         +237 677 441 880        
-      </a><br>
-      Quick questions? Send us a message on WhatsApp and we will respond as soon as we can.
+      </a>
     </p>        
         
-    <h3>Email</h3>        
-    <p>        
-      <em>ndongson2001@yahoo.com</em><br>
-      For partnerships, support inquiries, or detailed proposals, feel free to email us.
-    </p>        
+    <h3>Send Us a Message</h3>        
         
-    <h3>Our Location</h3>        
-    <div class="map-container">        
-      <iframe        
-        src="https://www.google.com/maps?q=Bamenda,+North+West+Region,+Cameroon&output=embed"        
-        width="100%"        
-        height="350"        
-        style="border:0; border-radius:12px;"        
-        allowfullscreen=""        
-        loading="lazy">        
-      </iframe>        
-    </div>        
-        
-    <h3 style="margin-top:40px;">Send Us a Message</h3>        
-        
-    <p>        
-      Use the form below to share questions, partnership ideas, or messages of support.
-      We aim to respond as promptly as possible.        
-    </p>        
-        
-    <form action="https://formspree.io/f/mojagaob" method="POST" class="contact-form">        
+    <form action="https://formspree.io/f/mojagaob" method="POST" class="contact-form" id="contact-form">        
         
       <label>        
         <strong>Your Name</strong>        
@@ -241,50 +103,44 @@
         <textarea name="message" rows="5" required></textarea>        
       </label>        
         
-      <button type="submit" class="donate-btn" style="align-self:flex-start;">        
-        Send Message        
-      </button>        
+      <button type="submit" class="donate-btn">Send Message</button>        
         
     </form>        
         
   </section>        
 </main>        
-        
-<footer class="site-footer animated-footer">        
-  <div class="footer-content">        
-    <div class="footer-brand">        
-      <h3>The New Beginnings</h3>        
-      <p>        
-        Empowering rural communities through education, digital access,        
-        and inclusive financial tools.        
-      </p>        
-    </div>        
-        
-    <div class="footer-links">        
-      <h4>Quick Links</h4>        
-      <ul>        
-        <li><a href="index.html">Home</a></li>        
-        <li><a href="about.html">About Us</a></li>        
-        <li><a href="projects.html">Projects</a></li>        
-        <li><a href="impact.html">Impact</a></li>        
-        <li><a href="gallery.html">Gallery</a></li>        
-        <li><a href="donate.html">Donate</a></li>        
-        <li><a href="contact.html">Contact</a></li>        
-      </ul>        
-    </div>        
-  </div>        
-        
-  <p class="footer-copy">        
-    © 2025 The New Beginnings — Bamenda, North West Region, Cameroon. All rights reserved.
-  </p>        
+
+<footer class="site-footer animated-footer">
+  <p class="footer-copy">© 2025 The New Beginnings — Bamenda, Cameroon.</p>
 </footer>        
-        
-<a href="https://wa.me/237677441880" class="whatsapp-float" target="_blank" aria-label="Chat with us on WhatsApp">WhatsApp</a>        
-        
+
+<a href="https://wa.me/237677441880" class="whatsapp-float" target="_blank" id="whatsapp-float">WhatsApp</a>        
+
 <script>        
   const menuToggle = document.querySelector(".menu-toggle");        
   const nav = document.querySelector(".site-nav");        
   menuToggle.addEventListener("click", () => nav.classList.toggle("active"));        
+
+  // TRACK EVENTS
+  document.getElementById("whatsapp-text").addEventListener("click", () => {
+    gtag('event', 'contact_intent', { method: 'whatsapp_text_click' });
+  });
+
+  document.getElementById("whatsapp-float").addEventListener("click", () => {
+    gtag('event', 'contact_intent', { method: 'whatsapp_floating_click' });
+  });
+
+  document.getElementById("cta-donate").addEventListener("click", () => {
+    gtag('event', 'cta_click', { location: 'header_donate' });
+  });
+
+  document.getElementById("cta-contact").addEventListener("click", () => {
+    gtag('event', 'cta_click', { location: 'header_contact' });
+  });
+
+  document.getElementById("contact-form").addEventListener("submit", () => {
+    gtag('event', 'form_submit', { form_name: 'contact_form' });
+  });
 </script>        
   
 </body>        
