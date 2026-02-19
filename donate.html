@@ -1,185 +1,236 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LEJV45EEDK"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
 
-    gtag('config', 'G-LEJV45EEDK', {
-      page_title: 'Donate Page',
-      page_path: '/donate.html'
-    });
-  </script>
-
-  <meta charset="UTF-8">
-  <title>Donate | The New Beginnings</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <meta name="description" content="Support The New Beginnings – empowering rural communities through education, digital access, and Bitcoin-enabled financial inclusion.">
-  <meta name="keywords" content="donate bitcoin, rural education support, digital inclusion, community development, Cameroon">
-  <meta name="author" content="The New Beginnings">
-
-  <meta property="og:title" content="Donate to The New Beginnings – Support Education & Digital Access in Rural Cameroon">
-  <meta property="og:description" content="Support The New Beginnings to expand education, digital access, and financial inclusion in rural communities in Cameroon.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://thenewbeginnings.github.io/donate.html">
-
-  <link rel="stylesheet" href="css/style.css">
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-
-  <style>
-    .slogan-bar {
-      background: #0b3d20;
-      color: #ffffff;
-      overflow: hidden;
-      white-space: nowrap;
-      padding: 10px 0;
-    }
-    .slogan-text {
-      display: inline-block;
-      padding-left: 100%;
-      animation: scroll-slogan 18s linear infinite;
-      font-weight: bold;
-    }
-    @keyframes scroll-slogan {
-      from { transform: translateX(0); }
-      to { transform: translateX(-100%); }
-    }
-    .btc-box {
-      background: #f9f9f9;
-      padding: 15px;
-      border-radius: 10px;
-      word-break: break-all;
-      margin-top: 15px;
-      cursor: pointer;
-    }
-    .qr-img {
-      margin-top: 20px;
-      border-radius: 10px;
-      max-width: 200px;
-      cursor: pointer;
-    }
-  </style>
-</head>
-
-<body>
-
-<header class="site-header">
-  <div class="logo-wrapper">
-    <img src="image/tologo.png" alt="The New Beginnings Logo" class="site-logo">
-  </div>
-
-  <h1>The New Beginnings</h1>
-  <button class="menu-toggle" aria-label="Open menu">☰</button>
-
-  <div class="header-cta">
-    <a href="donate.html" class="btn-primary" id="cta-donate">Donate</a>
-    <a href="contact.html" class="btn-secondary" id="cta-contact">Contact Us</a>
-    <a href="contact.html" class="btn-outline">Join Our Community</a>
-  </div>
-
-  <nav class="site-nav">
-    <a href="index.html">Home</a>
-    <a href="about.html">About Us</a>
-    <a href="projects.html">Projects</a>
-    <a href="impact.html">Impact</a>
-    <a href="trust.html">Trust</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="donate.html" class="active">Donate</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
-
-<div class="slogan-bar">
-  <div class="slogan-text">
-    Empowering Rural Communities Through Education, Bitcoin, and Digital Access
-  </div>
-</div>
-
-<main class="content-frame">
-  <section class="animated-section">
-
-    <h2>Support Rural Community Development</h2>
-
-    <p>Your support helps expand <strong>education, digital access, and opportunity</strong> in rural communities.</p>
-
-    <ul>
-      <li>📚 Learning materials</li>
-      <li>💻 Digital tools</li>
-      <li>🌐 Digital skills training</li>
-      <li>🤝 Community programs</li>
-    </ul>
-
-    <h3>Donate with Bitcoin</h3>
-
-    <div class="btc-box" id="btc-wallet">
-      <strong>Bitcoin Wallet Address:</strong><br>
-      <code id="btc-address">bc1qmxkpr5k2yvvlsnmtyrg6gkqten5wz5pusr28aqe6lgt49r003qxs209qrn</code>
-    </div>
-
-    <p>You may copy the address above or scan the QR code below.</p>
-
-    <img
-      src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=bc1qmxkpr5k2yvvlsnmtyrg6gkqten5wz5pusr28aqe6lgt49r003qxs209qrn"
-      alt="Bitcoin donation QR code"
-      class="qr-img"
-      id="btc-qr"
-    />
-
-    <p><strong>Support education. Support digital access. Support new beginnings.</strong></p>
-
-  </section>
-</main>
-
-<footer class="site-footer animated-footer">
-  <p class="footer-copy">
-    © 2025 The New Beginnings — Bamenda, Cameroon.
-  </p>
-</footer>
-
-<!-- Floating WhatsApp -->
-<a
-  href="https://wa.me/237677441880"
-  class="whatsapp-float"
-  target="_blank"
-  aria-label="Chat with us on WhatsApp"
-  id="whatsapp-link"
->
-  WhatsApp
-</a>
-
-<script>
-  // MENU
-  const menuToggle = document.querySelector(".menu-toggle");
-  const nav = document.querySelector(".site-nav");
-  menuToggle.addEventListener("click", () => nav.classList.toggle("active"));
-
-  // TRACK EVENTS
-  document.getElementById("btc-wallet").addEventListener("click", () => {
-    gtag('event', 'donation_intent', { method: 'bitcoin_wallet_click' });
-  });
-
-  document.getElementById("btc-qr").addEventListener("click", () => {
-    gtag('event', 'donation_intent', { method: 'qr_code_click' });
-  });
-
-  document.getElementById("whatsapp-link").addEventListener("click", () => {
-    gtag('event', 'contact_intent', { method: 'whatsapp_click' });
-  });
-
-  document.getElementById("cta-donate").addEventListener("click", () => {
-    gtag('event', 'cta_click', { location: 'header_donate' });
-  });
-
-  document.getElementById("cta-contact").addEventListener("click", () => {
-    gtag('event', 'cta_click', { location: 'header_contact' });
-  });
-</script>
-
-</body>
-</html>
+  
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+  <!-- Google tag (gtag.js) -->  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LEJV45EEDK"></script>  
+  <script>  
+    window.dataLayer = window.dataLayer || [];  
+    function gtag(){dataLayer.push(arguments);}  
+    gtag('js', new Date());  
+    gtag('config', 'G-LEJV45EEDK');  
+  </script>  
+  
+  <meta charset="UTF-8">  
+  <title>Donate | The New Beginnings</title>  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  
+  <!-- SEO META TAGS -->  
+  <meta name="description" content="Support The New Beginnings – empowering rural communities through education, digital access, and Bitcoin-enabled financial inclusion.">  
+  <meta name="keywords" content="donate bitcoin, rural education support, digital inclusion, community development, Cameroon">  
+  <meta name="author" content="The New Beginnings">  
+  
+  <!-- Open Graph -->  
+  <meta property="og:title" content="Donate to The New Beginnings – Support Education & Digital Access in Rural Cameroon">  
+  <meta property="og:description" content="Support The New Beginnings to expand education, digital access, and financial inclusion in rural communities in Cameroon.">  
+  <meta property="og:type" content="website">  
+  <meta property="og:url" content="https://thenewbeginnings.github.io/donate.html">  
+  
+  <!-- Main stylesheet -->  
+  <link rel="stylesheet" href="css/style.css">  
+  
+  <!-- GSAP -->  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>  
+  
+  <style>  
+    .slogan-bar {  
+      background: #0b3d20;  
+      color: #ffffff;  
+      overflow: hidden;  
+      white-space: nowrap;  
+      padding: 10px 0;  
+    }  
+    .slogan-text {  
+      display: inline-block;  
+      padding-left: 100%;  
+      animation: scroll-slogan 18s linear infinite;  
+      font-weight: bold;  
+    }  
+    @keyframes scroll-slogan {  
+      from { transform: translateX(0); }  
+      to { transform: translateX(-100%); }  
+    }  
+    .btc-box {  
+      background: #f9f9f9;  
+      padding: 15px;  
+      border-radius: 10px;  
+      word-break: break-all;  
+      margin-top: 15px;  
+    }  
+    .qr-img {  
+      margin-top: 20px;  
+      border-radius: 10px;  
+      max-width: 200px;  
+    }  
+  </style>  
+</head>  
+  
+<body>  
+  
+<header class="site-header">  
+  <div class="logo-wrapper">  
+    <img src="image/tologo.png" alt="The New Beginnings Logo" class="site-logo">  
+  </div>  
+  
+  <h1>The New Beginnings</h1>  
+  <button class="menu-toggle" aria-label="Open menu">☰</button>  
+  
+  <div class="header-cta">  
+    <a href="donate.html" class="btn-primary">Donate</a>  
+    <a href="contact.html" class="btn-secondary">Contact Us</a>  
+    <a href="contact.html" class="btn-outline">Join Our Community</a>  
+  </div>  
+  
+  <nav class="site-nav">  
+    <a href="index.html">Home</a>  
+    <a href="about.html">About Us</a>  
+    <a href="projects.html">Projects</a>  
+    <a href="impact.html">Impact</a>  
+    <a href="trust.html">Trust</a>  
+    <a href="gallery.html">Gallery</a>  
+    <a href="donate.html" class="active">Donate</a>  
+    <a href="contact.html">Contact</a>  
+  </nav>  
+</header>  
+  
+<div class="slogan-bar">  
+  <div class="slogan-text">  
+    Empowering Rural Communities Through Education, Bitcoin, and Digital Access  
+  </div>  
+</div>  
+  
+<main class="content-frame">  
+  <section class="animated-section">  
+  
+    <h2>Support Rural Community Development</h2>  
+  
+    <p>  
+      Your support helps expand <strong>education, digital access, and opportunity</strong> in rural communities.  
+      Many children and youth still learn without books, internet, or basic digital tools.  
+      With your support, we can change that.  
+    </p>  
+  
+    <h3>Why Your Support Matters</h3>  
+  
+    <p>  
+      Every contribution helps us reach more learners and communities with practical support that creates  
+      long-term impact.  
+    </p>  
+  
+    <ul>  
+      <li>📚 Learning materials for children and youth</li>  
+      <li>💻 Digital tools and access to online resources</li>  
+      <li>🌐 Digital skills and literacy training</li>  
+      <li>🤝 Community-led education and outreach programs</li>  
+    </ul>  
+  
+    <p>  
+      This work is about <strong>empowering communities</strong>, not handouts — helping people build skills,  
+      confidence, and opportunities for the future.  
+    </p>  
+  
+    <h3>Donate with Bitcoin</h3>  
+  
+    <p>  
+      You can support our work by sending Bitcoin to the wallet address below.  
+      Every contribution, big or small, helps create real impact on the ground.  
+    </p>  
+  
+    <div class="btc-box">  
+      <strong>Bitcoin Wallet Address:</strong><br>  
+      <code>bc1qmxkpr5k2yvvlsnmtyrg6gkqten5wz5pusr28aqe6lgt49r003qxs209qrn</code>  
+    </div>  
+  
+    <p>You may copy the address above or scan the QR code below.</p>  
+  
+    <img  
+      src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=bc1qmxkpr5k2yvvlsnmtyrg6gkqten5wz5pusr28aqe6lgt49r003qxs209qrn"  
+      alt="Bitcoin donation QR code"  
+      class="qr-img"  
+    />  
+  
+    <p style="font-size:14px; color:#555;">  
+      ⚠️ Please send <strong>Bitcoin (BTC) only</strong>.    
+      Sending other cryptocurrencies may result in loss of funds.  
+    </p>  
+  
+    <h3>Thank You</h3>  
+  
+    <p>  
+      Your support helps create <strong>new opportunities for learning, connection, and growth</strong> in rural communities.  
+      Together, we can build stronger foundations for education and digital inclusion.  
+    </p>  
+  
+    <p><strong>Support education. Support digital access. Support new beginnings.</strong></p>  
+  
+  </section>  
+</main>  
+  
+<footer class="site-footer animated-footer">  
+  <div class="footer-content">  
+    <div class="footer-brand">  
+      <h3>The New Beginnings</h3>  
+      <p>  
+        Empowering rural communities through education, digital access,  
+        and inclusive financial tools.  
+      </p>  
+    </div>  
+  
+    <div class="footer-links">  
+      <h4>Quick Links</h4>  
+      <ul>  
+        <li><a href="index.html">Home</a></li>  
+        <li><a href="about.html">About Us</a></li>  
+        <li><a href="projects.html">Projects</a></li>  
+        <li><a href="impact.html">Impact</a></li>  
+        <li><a href="trust.html">Trust</a></li>  
+        <li><a href="gallery.html">Gallery</a></li>  
+        <li><a href="donate.html">Donate</a></li>  
+        <li><a href="contact.html">Contact</a></li>  
+      </ul>  
+    </div>  
+  </div>  
+  
+  <p class="footer-copy">  
+    © 2025 The New Beginnings — Bamenda, North West Region, Cameroon. All rights reserved.  
+  </p>  
+</footer>  
+  
+<!-- Floating WhatsApp -->  
+<a  
+  href="https://wa.me/237677441880"  
+  class="whatsapp-float"  
+  target="_blank"  
+  aria-label="Chat with us on WhatsApp"  
+>  
+  WhatsApp  
+</a>  
+  
+<script>  
+  const menuToggle = document.querySelector(".menu-toggle");  
+  const nav = document.querySelector(".site-nav");  
+  menuToggle.addEventListener("click", () => nav.classList.toggle("active"));  
+  
+  gsap.from(".site-header", { y: -80, opacity: 0, duration: 1, ease: "power3.out" });  
+  gsap.from(".slogan-bar", { opacity: 0, duration: 1, delay: 0.6 });  
+  
+  gsap.from(".content-frame", {  
+    scrollTrigger: { trigger: ".content-frame", start: "top 80%" },  
+    y: 60, opacity: 0, duration: 1, ease: "power2.out"  
+  });  
+  
+  gsap.from(".animated-section h2, .animated-section p, .animated-section h3, .btc-box, .qr-img", {  
+    scrollTrigger: { trigger: ".animated-section", start: "top 75%" },  
+    y: 30, opacity: 0, duration: 0.8, stagger: 0.12, ease: "power2.out"  
+  });  
+  
+  gsap.from(".animated-footer", {  
+    scrollTrigger: { trigger: ".animated-footer", start: "top 85%" },  
+    y: 40, opacity: 0, duration: 1, ease: "power2.out"  
+  });  
+</script>  
+  
+</body>  
+</html>  
