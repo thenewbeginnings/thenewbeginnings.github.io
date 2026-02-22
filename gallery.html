@@ -2,35 +2,30 @@
 <html lang="en">
 <head>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-LEJV45EEDK"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LEJV45EEDK"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LEJV45EEDK');
+  </script>
 
-  gtag('config', 'G-LEJV45EEDK');
-</script>
   <meta charset="UTF-8">
-
   <title>Gallery | The New Beginnings</title>
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- SEO -->
   <meta name="description"
     content="Gallery of The New Beginnings – images from rural education, digital access initiatives, and community engagement.">
-
   <meta name="keywords"
     content="rural development, education gallery, digital inclusion, community engagement, Cameroon">
 
-  <!-- Main stylesheet -->
   <link rel="stylesheet" href="css/style.css">
 
   <!-- GSAP -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
-  <!-- Page-specific CSS -->
   <style>
     .gallery {
       display: grid;
@@ -38,55 +33,29 @@
       gap: 20px;
       margin-top: 30px;
     }
-
     .gallery-item {
       background: #ffffff;
       border-radius: 10px;
-      overflow: hidden; /* keeps zoom inside card */
+      overflow: hidden;
       box-shadow: 0 6px 18px rgba(0,0,0,0.08);
       text-align: center;
-      will-change: transform, opacity;
     }
-
     .gallery-item img {
       width: 100%;
       height: 220px;
       object-fit: cover;
       object-position: top;
       display: block;
-      transition: transform 0.4s ease; /* smooth zoom */
+      transition: transform 0.4s ease;
     }
-
-    /* ✅ IMAGE ZOOM ON HOVER */
     .gallery-item:hover img {
       transform: scale(1.08);
     }
-
     .gallery-item p {
       padding: 12px;
       font-size: 0.9rem;
       color: #333;
       background: #ffffff;
-    }
-
-    .slogan-bar {
-      background: #0b3d20;
-      color: #ffffff;
-      overflow: hidden;
-      white-space: nowrap;
-      padding: 10px 0;
-    }
-
-    .slogan-text {
-      display: inline-block;
-      padding-left: 100%;
-      animation: scroll-slogan 18s linear infinite;
-      font-weight: bold;
-    }
-
-    @keyframes scroll-slogan {
-      from { transform: translateX(0); }
-      to { transform: translateX(-100%); }
     }
   </style>
 </head>
@@ -97,12 +66,9 @@
   <div class="logo-wrapper">
     <img src="image/tologo.png" alt="The New Beginnings Logo" class="site-logo">
   </div>
-
   <h1>The New Beginnings</h1>
-
   <button class="menu-toggle" aria-label="Open menu">☰</button>
 
-  <!-- ✅ Buttons now placed exactly like Home page -->
   <div class="header-cta">
     <a href="donate.html" class="btn-primary">Donate</a>
     <a href="contact.html" class="btn-secondary">Contact Us</a>
@@ -110,19 +76,18 @@
   </div>
 
   <nav class="site-nav">
-  <a href="index.html">Home</a>
-  <a href="about.html">About Us</a>
-  <a href="projects.html">Projects</a>
-  <a href="impact.html">Impact</a>
-  <a href="trust.html">Trust</a>
-  <a href="gallery.html" class="active">Gallery</a>
-  <a href="donate.html">Donate</a>
-  <a href="contact.html">Contact</a>
-</nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="projects.html">Projects</a>
+    <a href="impact.html">Impact</a>
+    <a href="trust.html">Trust</a>
+    <a href="gallery.html" class="active">Gallery</a>
+    <a href="donate.html">Donate</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 </header>
-<!-- SCROLLING SLOGAN -->
-<div id="slogan-container"></div>
 
+<div id="slogan-container"></div>
 <script>
   fetch("slogan.html")
     .then(res => res.text())
@@ -131,164 +96,41 @@
     });
 </script>
 
-<!-- CONTENT FRAME -->
 <main class="content-frame">
   <section class="animated-section">
-<h2>Our Work in Pictures</h2>
+    <h2>Our Work in Pictures</h2>
 
-<p>
-  This gallery shares moments from our work in rural communities. The photos show:
-</p>
+    <p>This gallery shares moments from our work in rural communities.</p>
 
-<ul>
-  <li>Community meetings</li>
-  <li>Youth learning activities</li>
-  <li>Early digital learning support</li>
-  <li>Engagement with students and educators</li>
-</ul>
-
-<p>
-  Each image tells a story of small steps toward better access to education and digital
-  opportunities in rural areas. These moments reflect the everyday efforts being made
-  to open digital doors for young people in underserved communities.
-</p>
     <div class="gallery">
-
       <div class="gallery-item">
-        <img src="image/image2.jpg" alt="Founder – The New Beginnings (Rural Education & Digital Access) https://thenewbeginnings.github.io�">
-        <p>Founder – The New Beginnings (Rural Education & Digital Access) https://thenewbeginnings.github.io</p>
+        <img src="image/image2.jpg" alt="Founder of The New Beginnings with community members">
+        <p>Founder of The New Beginnings engaging with community members</p>
       </div>
-
     </div>
 
   </section>
 </main>
 
 <footer class="site-footer animated-footer">
-
   <div class="footer-content">
-
     <div class="footer-brand">
       <h3>The New Beginnings</h3>
-      <p>
-        Empowering rural communities through education, digital access,
-        and inclusive financial tools.
-      </p>
+      <p>Empowering rural communities through education and digital access.</p>
     </div>
-
-    <div class="footer-links">
-      <h4>Quick Links</h4>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="impact.html">Impact</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="donate.html">Donate</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-
   </div>
-
   <p class="footer-copy">
-    © 2025 The New Beginnings — Bamenda, North West Region, Cameroon. All rights reserved.
+    © 2025 The New Beginnings — Bamenda, North West Region, Cameroon.
   </p>
-
 </footer>
 
-<!-- Floating WhatsApp Button -->
-<a
-  href="https://wa.me/237677441880"
-  class="whatsapp-float"
-  target="_blank"
-  aria-label="Chat with us on WhatsApp"
->
-  💬
-</a>
+<a href="https://wa.me/237677441880" class="whatsapp-float" target="_blank">💬</a>
 
 <script>
   const menuToggle = document.querySelector(".menu-toggle");
   const nav = document.querySelector(".site-nav");
   menuToggle.addEventListener("click", () => nav.classList.toggle("active"));
-
-  gsap.from(".site-header", {
-    y: -80,
-    opacity: 0,
-    duration: 1,
-    ease: "power3.out"
-  });
-
-  gsap.from(".slogan-bar", {
-    opacity: 0,
-    duration: 1,
-    delay: 0.6
-  });
-
-  gsap.from(".content-frame", {
-    scrollTrigger: {
-      trigger: ".content-frame",
-      start: "top 80%"
-    },
-    y: 60,
-    opacity: 0,
-    duration: 1,
-    ease: "power2.out"
-  });
-
-  /* TEXT + IMAGE SCROLL ANIMATION */
-  gsap.from(
-    ".animated-section h2, .animated-section p, .gallery-item",
-    {
-      scrollTrigger: {
-        trigger: ".animated-section",
-        start: "top 75%"
-      },
-      y: 30,
-      opacity: 0,
-      scale: 0.97,
-      duration: 0.8,
-      stagger: 0.15,
-      ease: "power2.out"
-    }
-  );
 </script>
-<script>
-  /* FOOTER ANIMATION */
-  gsap.from(".animated-footer", {
-    scrollTrigger: {
-      trigger: ".animated-footer",
-      start: "top 85%",
-    },
-    y: 40,
-    opacity: 0,
-    duration: 1,
-    ease: "power2.out"
-  });
 
-  gsap.from(
-    ".animated-footer h3, .animated-footer h4, .animated-footer p, .animated-footer li",
-    {
-      scrollTrigger: {
-        trigger: ".animated-footer",
-        start: "top 85%",
-      },
-      y: 20,
-      opacity: 0,
-      duration: 0.6,
-      stagger: 0.12,
-      ease: "power2.out"
-    }
-  );
-</script>
-  <a
-  href="https://wa.me/237677441880"
-  class="whatsapp-float"
-  target="_blank"
-  aria-label="Chat with us on WhatsApp"
->
-  WhatsApp
-</a>
- 
 </body>
 </html>
