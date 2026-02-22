@@ -295,3 +295,18 @@ body {
   display: block;
   transition: transform 0.4s ease;
 }
+.gallery-item img {  
+  width: 100%;  
+  height: auto;  
+  max-height: 420px;  
+  object-fit: cover;  
+  object-position: center;  
+  display: block;  
+  transition: transform 0.4s ease;  
+}
+
+@media (max-width: 768px) {
+  .gallery-item img {
+    max-height: 260px;  /* keep mobile smaller */
+  }
+}
