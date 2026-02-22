@@ -5,7 +5,7 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #e9f7ef; /* ✅ Light green background */
+  background: #e9f7ef; /* Light green background */
   overflow-x: hidden;
 }
 
@@ -60,7 +60,6 @@ body {
   color: #9fe0b5;
   font-weight: 600;
   background: rgba(159, 224, 181, 0.18);
-  border-bottom: none;
 }
 
 /* HAMBURGER MENU */
@@ -127,15 +126,15 @@ body {
   text-align: center;
   padding: 6px 10px;
   font-weight: bold;
-  margin-bottom: 10px; /* 🔧 Reduce gap under slogan */
+  margin-bottom: 10px;
 }
 
 /* CONTENT FRAME */
 .content-frame {
   background: #ffffff;
-  max-width: 900px;       /* 🔧 Wider than before */
-  width: 80%;             /* 🔧 Reduced by one-fifth */
-  margin: 16px auto;     /* 🔧 Reduced gap from slogan */
+  max-width: 900px;
+  width: 80%;
+  margin: 16px auto;
   padding: 24px 20px;
   border-radius: 12px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
@@ -145,7 +144,7 @@ body {
 /* MOBILE FIX */
 @media (max-width: 768px) {
   .content-frame {
-    width: 95%;           /* 🔧 Better fit on momo */
+    width: 95%;
     padding: 16px 14px;
     margin-top: 10px;
   }
@@ -217,6 +216,28 @@ body {
   color: #ffffff;
 }
 
+/* FOOTER QUICK LINKS */
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin: 6px 0;
+}
+
+.footer-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer-links a:hover {
+  color: #9fe0b5;
+  text-decoration: underline;
+}
+
 /* FLOATING WHATSAPP */
 .whatsapp-float {
   position: fixed;
@@ -237,27 +258,6 @@ body {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
 
-/* FOOTER QUICK LINKS FIX */
-.footer-links ul {
-  list-style: none;       /* remove bullets */
-  padding: 0;
-  margin: 0;
-}
-
-.footer-links li {
-  margin: 6px 0;
-}
-
-.footer-links a {
-  color: #ffffff;        /* make links white */
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.footer-links a:hover {
-  color: #9fe0b5;        /* soft green on hover */
-  text-decoration: underline;
-}
 /* Page Loader */
 #page-loader {
   position: fixed;
@@ -265,14 +265,13 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: #1f7a3d; /* same green as your site */
+  background: #1f7a3d;
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 99999;
 }
 
-/* Spinner */
 .spinner {
   width: 60px;
   height: 60px;
@@ -282,15 +281,17 @@ body {
   animation: spin 1s linear infinite;
 }
 
-/* Animation */
 @keyframes spin {
   to { transform: rotate(360deg); }
 }
+
+/* GALLERY IMAGE FIX (Desktop + Mobile) */
 .gallery-item img {
   width: 100%;
-  height: 220px;
+  height: auto;
+  max-height: 280px;
   object-fit: cover;
-  object-position: top;
+  object-position: center;
   display: block;
   transition: transform 0.4s ease;
 }
