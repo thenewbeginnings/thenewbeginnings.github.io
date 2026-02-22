@@ -50,13 +50,18 @@
     
     .gallery-item img {  
   width: 100%;  
-  height: auto;  
-  max-height: 260px;  
+  height: 320px;          /* 👈 force visible height on desktop */
   object-fit: cover;  
   object-position: center;  
   display: block;  
   transition: transform 0.4s ease;  
-}  
+}
+
+@media (max-width: 768px) {
+  .gallery-item img {
+    height: 220px;        /* 👈 smaller on mobile */
+  }
+}
     
     /* ✅ IMAGE ZOOM ON HOVER */    
     .gallery-item:hover img {    
